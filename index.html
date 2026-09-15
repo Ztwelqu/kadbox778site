@@ -1538,6 +1538,335 @@ section[id],div[id]{scroll-margin-top:118px!important}
 }
 </style>
 
+
+<style id="kadbox778-mobile-final-polish">
+/* V30 — финальная мобильная доводка.
+   Только адаптивные правила: desktop не затрагивается. */
+
+@media(max-width:760px){
+  html{
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+
+  body{
+    overflow-x:hidden!important;
+  }
+
+  /* Шапка: логотип + бургер без риска горизонтального переполнения */
+  .header-inner{
+    height:74px!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    gap:8px!important;
+  }
+  .brand{
+    width:min(210px,66vw)!important;
+    height:64px!important;
+    min-width:0!important;
+  }
+  .header-book{
+    display:none!important;
+  }
+  .menu-toggle{
+    width:46px!important;
+    height:46px!important;
+    min-width:46px!important;
+    min-height:46px!important;
+    justify-self:end!important;
+  }
+  .main-nav{
+    top:70px!important;
+    left:10px!important;
+    right:10px!important;
+    max-height:calc(100dvh - 84px)!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain;
+  }
+  .main-nav a{
+    min-height:44px!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+
+  /* Hero */
+  .hero-copy{
+    padding:38px 0 24px!important;
+  }
+  .hero-title-clean{
+    font-size:clamp(38px,11vw,54px)!important;
+    line-height:.94!important;
+    max-width:100%!important;
+  }
+  .hero-title-line{
+    max-width:100%!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+  .hero-title-line--accent{
+    font-size:.60em!important;
+    line-height:1.05!important;
+  }
+  .hero-lead--clean{
+    margin-top:18px!important;
+  }
+  .hero-service-line{
+    font-size:13px!important;
+    line-height:1.5!important;
+  }
+  .hero-note-line{
+    font-size:14px!important;
+    line-height:1.45!important;
+  }
+  .hero-actions{
+    gap:10px!important;
+  }
+  .hero-actions .ui-btn{
+    min-height:48px!important;
+  }
+  .hero-art{
+    height:300px!important;
+  }
+
+  /* Заголовки и карточки */
+  .site-section{
+    padding:54px 0!important;
+  }
+  .section-head{
+    gap:14px!important;
+    margin-bottom:22px!important;
+  }
+  .section-head h2{
+    font-size:clamp(32px,9.2vw,40px)!important;
+    line-height:1.04!important;
+    overflow-wrap:anywhere;
+  }
+  .section-head p{
+    line-height:1.5!important;
+  }
+  .asset-card,
+  .benefit-card,
+  .review-card{
+    border-radius:18px!important;
+  }
+
+  /* Все поля 16px: iPhone не будет приближать страницу при фокусе */
+  input,
+  textarea,
+  select,
+  .asset-form input,
+  .asset-form textarea,
+  .modal-form input,
+  .modal-form textarea,
+  .contact-form-panel--premium input,
+  .contact-form-panel--premium textarea,
+  .price-catalog-search{
+    font-size:16px!important;
+  }
+
+  /* Обычные модальные окна */
+  .modal{
+    padding:8px!important;
+    align-items:flex-start!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain;
+  }
+  .modal-card{
+    width:100%!important;
+    max-width:100%!important;
+    max-height:calc(100dvh - 16px)!important;
+    margin:auto 0!important;
+    padding:22px 16px 18px!important;
+    border-radius:18px!important;
+  }
+  .modal-card>h3{
+    padding-right:48px!important;
+    font-size:clamp(24px,7vw,30px)!important;
+    line-height:1.08!important;
+  }
+  .modal-close{
+    top:10px!important;
+    right:10px!important;
+    width:44px!important;
+    height:44px!important;
+    min-width:44px!important;
+    min-height:44px!important;
+  }
+  .modal-form{
+    gap:11px!important;
+  }
+
+  /* Модалка услуги */
+  .modal-card--service{
+    padding:18px 14px!important;
+  }
+  .service-modal-info h3{
+    padding-right:46px!important;
+    font-size:clamp(24px,7vw,30px)!important;
+    line-height:1.08!important;
+  }
+  .service-modal-list-wrap{
+    padding:13px!important;
+  }
+  .service-price-panel{
+    width:100%!important;
+    overflow:hidden!important;
+  }
+  .service-price-panel img{
+    width:100%!important;
+    height:auto!important;
+    max-width:100%!important;
+  }
+
+  /* Полный прайс */
+  .price-catalog-card{
+    height:100dvh!important;
+  }
+  .price-catalog-head{
+    padding-top:max(16px,env(safe-area-inset-top))!important;
+  }
+  .price-cat-btn{
+    min-height:42px!important;
+  }
+  .price-catalog-search{
+    min-height:46px!important;
+  }
+  .price-item{
+    min-width:0!important;
+  }
+
+  /* Галерея */
+  .modal-card--gallery{
+    max-height:calc(100dvh - 16px)!important;
+  }
+  .gallery-modal-head{
+    min-width:0!important;
+  }
+  .gallery-modal-head>div{
+    min-width:0!important;
+  }
+  .gallery-modal-head h3{
+    overflow-wrap:anywhere;
+  }
+  .gallery-stage{
+    min-height:280px!important;
+  }
+  .modal-card--gallery .gallery-stage>img{
+    max-width:100%!important;
+    object-fit:contain!important;
+  }
+
+  /* Контакты / карта */
+  .contact-panel--premium,
+  .contact-form-panel--premium,
+  .map-card--premium{
+    min-height:0!important;
+  }
+  .contact-form-panel--premium{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .contact-phone--premium{
+    overflow-wrap:anywhere!important;
+  }
+  .map-card--premium{
+    min-height:330px!important;
+  }
+
+  /* Footer */
+  .footer-nav{
+    justify-content:center!important;
+    flex-wrap:wrap!important;
+    row-gap:10px!important;
+  }
+  .footer-nav a{
+    min-height:40px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+  }
+
+  /* Сообщения формы не вылезают за экран */
+  .toast{
+    left:12px!important;
+    right:12px!important;
+    bottom:max(12px,env(safe-area-inset-bottom))!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+
+  /* Более приятные тапы на мобильных */
+  a,
+  button,
+  [role="button"]{
+    touch-action:manipulation;
+  }
+}
+
+@media(max-width:430px){
+  .container{
+    width:calc(100% - 20px)!important;
+  }
+  .header-inner{
+    height:70px!important;
+  }
+  .brand{
+    width:min(194px,64vw)!important;
+    height:60px!important;
+  }
+  .main-nav{
+    top:66px!important;
+  }
+  .hero-copy{
+    padding-top:32px!important;
+  }
+  .hero-title-clean{
+    font-size:clamp(36px,10.8vw,46px)!important;
+  }
+  .hero-art{
+    width:calc(100% + 20px)!important;
+    margin-left:-10px!important;
+    height:275px!important;
+  }
+  .section-head h2{
+    font-size:clamp(30px,8.8vw,37px)!important;
+  }
+  .ui-btn{
+    min-height:46px!important;
+  }
+  .price-catalog-content{
+    padding-left:9px!important;
+    padding-right:9px!important;
+  }
+}
+
+@media(max-width:360px){
+  .brand{
+    width:min(174px,61vw)!important;
+  }
+  .hero-title-clean{
+    font-size:35px!important;
+    letter-spacing:-.025em!important;
+  }
+  .hero-title-line--accent{
+    font-size:.62em!important;
+  }
+  .hero-service-line{
+    font-size:12px!important;
+  }
+  .hero-art{
+    height:245px!important;
+  }
+  .section-head h2{
+    font-size:29px!important;
+  }
+  .socials--premium{
+    grid-template-columns:1fr 1fr!important;
+  }
+  .footer-nav{
+    gap:8px 14px!important;
+  }
+}
+</style>
+
 </head>
 <body data-build="header-motion-v10">
 <header class="site-header" id="top">
