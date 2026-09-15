@@ -2246,9 +2246,21 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
       });
       let result = {};
       try { result = await response.json(); } catch(_){}
+
+      if(response.status === 429){
+        toast('Слишком много заявок за короткое время. Попробуйте позже или позвоните нам по +7-921-636-04-02.');
+        return false;
+      }
+
+      if(response.status === 403){
+        toast('Форма недоступна с этой страницы. Откройте официальный сайт КАД Бокс778 и попробуйте ещё раз.');
+        return false;
+      }
+
       if(!response.ok || !result.ok){
         throw new Error(result.error || `HTTP ${response.status}`);
       }
+
       form.reset();
       toast('Заявка отправлена. Мы скоро свяжемся с Вами.');
       return true;
