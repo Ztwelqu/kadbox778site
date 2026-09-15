@@ -1870,6 +1870,47 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <link rel="preload" as="image" href="assets/perf/hero.webp" type="image/webp" fetchpriority="high"/>
 
 
+
+<style id="kadbox778-privacy-links-v33">
+.privacy-link{
+  color:#ff8a1f;
+  text-decoration:underline;
+  text-decoration-color:rgba(255,138,31,.48);
+  text-underline-offset:3px;
+  transition:color .2s ease,text-decoration-color .2s ease;
+}
+.privacy-link:hover{
+  color:#ffb05c;
+  text-decoration-color:#ffb05c;
+}
+.consent-row--premium span,
+.modal-form label span{
+  line-height:1.45;
+}
+.footer-legal{
+  position:relative;
+  z-index:7;
+  width:100%;
+  text-align:center;
+  padding:2px 18px 8px;
+  font-size:11px;
+  line-height:1.4;
+}
+.footer-legal a{
+  color:#8f969e;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,138,31,.22);
+  transition:color .2s ease,border-color .2s ease;
+}
+.footer-legal a:hover{
+  color:#ff963b;
+  border-color:rgba(255,138,31,.7);
+}
+@media(max-width:760px){
+  .footer-legal{font-size:10px;padding-bottom:6px}
+}
+</style>
+
 </head>
 <body data-build="header-motion-v10">
 <header class="site-header" id="top">
@@ -2107,7 +2148,7 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <input name="phone" placeholder="Номер телефона" required=""/>
 <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
 <button class="ui-btn ui-btn--primary ui-btn--wide" id="contactSubmit" type="submit"><span>Отправить заявку</span><span>→</span></button>
-<label class="consent-row consent-row--premium"><input id="contactConsent" required="" type="checkbox"/> <span>Я соглашаюсь с обработкой персональных данных</span></label>
+<label class="consent-row consent-row--premium"><input id="contactConsent" required="" type="checkbox"/> <span>Я соглашаюсь с обработкой персональных данных и ознакомлен(а) с <a class="privacy-link" href="privacy-policy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span></label>
 </form>
 </div>
 </div>
@@ -2122,10 +2163,10 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <nav class="footer-nav"><a href="#services">Услуги</a><a href="#about">О нас</a><a href="#prices">Прайс</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
 <div class="socials footer-socials footer-socials--brand-real"><a aria-label="Позвонить" href="tel:+79216360402" title="Позвонить"><svg aria-hidden="true" class="brand-svg brand-svg--phone" fill="none" viewbox="0 0 24 24"><path d="M6.7 4.6h2.52c.45 0 .84.3.96.73l.68 2.65a1 1 0 0 1-.28.96L9.17 10.4a14.44 14.44 0 0 0 4.43 4.43l1.4-1.4a1 1 0 0 1 .96-.28l2.65.68c.43.12.73.51.73.96v2.5c0 .56-.46 1.01-1.02 1-7.54-.24-13.64-6.34-13.88-13.88a1 1 0 0 1 1-1.01Z" stroke="#FF9A32" stroke-linejoin="round" stroke-width="1.85"></path></svg></a><a aria-label="Яндекс Карты" href="https://yandex.ru/maps/org/kad_boks778/180399555505/?ll=30.304899%2C60.096475&amp;z=17" rel="noopener noreferrer" target="_blank" title="Яндекс Карты"><svg aria-hidden="true" class="brand-svg brand-svg--yandex" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="#FF4433" r="9"></circle><text fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="10.7" font-weight="900" text-anchor="middle" x="12" y="15.3">Я</text></svg></a><a aria-label="ВКонтакте" href="https://vk.ru/kadbox778" rel="noopener noreferrer" target="_blank" title="ВКонтакте"><svg aria-hidden="true" class="brand-svg brand-svg--vk" viewbox="0 0 24 24"><rect fill="#2787F5" height="15.6" rx="5.2" width="18" x="3" y="4.2"></rect><text fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="7.4" font-weight="900" letter-spacing="-.35" text-anchor="middle" x="12" y="14.8">VK</text></svg></a><a aria-label="Авито" href="https://www.avito.ru/brands/kadbox778/all/predlozheniya_uslug?src=search_seller_info&amp;iid=8235188119&amp;sellerId=71b33dbbedd5942a45ff7dafb0a00499" rel="noopener noreferrer" target="_blank" title="Авито"><svg aria-hidden="true" class="brand-svg brand-svg--avito" viewbox="0 0 32 32"><circle cx="10.1" cy="20.2" fill="#00AAFF" r="5.7"></circle><circle cx="21.3" cy="10.1" fill="#FF6163" r="4.35"></circle><circle cx="22.1" cy="21.3" fill="#97CF26" r="5.45"></circle><circle cx="10.5" cy="10.4" fill="#A169F7" r="3.95"></circle></svg></a></div>
 </div>
-<div class="footer-copyright">© 2024 <strong>КАД БОКС 778</strong>. Все права защищены.</div>
+<div class="footer-legal"><a href="privacy-policy.html" target="_blank" rel="noopener">Политика обработки персональных данных</a></div><div class="footer-copyright">© 2024 <strong>КАД БОКС 778</strong>. Все права защищены.</div>
 </footer>
 <div aria-hidden="true" class="modal" id="serviceModal"><div class="modal-card modal-card--service"><button class="modal-close" data-close="">×</button><div class="service-modal-grid"><div class="service-modal-info"><h3 id="serviceTitle"></h3><p id="serviceText"></p><div class="service-modal-list-wrap"><h4>Работы и направления</h4><ul id="serviceList"></ul></div><button class="ui-btn ui-btn--primary ui-btn--wide" id="bookService"><span>Записаться на услугу</span><span>→</span></button></div><figure class="service-price-panel"><figcaption id="servicePriceCaption">Прайс-лист</figcaption><p class="service-price-hint">Нажмите на прайс-лист — он откроется в оригинальном размере.</p><img alt="Прайс-лист услуги" aria-label="Увеличить прайс-лист" id="servicePriceImage" role="button" tabindex="0"/></figure></div></div></div>
-<div aria-hidden="true" class="modal" id="bookingModal"><div class="modal-card"><button class="modal-close" data-close="">×</button><h3>Онлайн-запись</h3><p>Оставьте контакты — мы свяжемся с Вами, уточним детали и подтвердим запись.</p><form class="modal-form" id="bookingForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" /><input name="name" placeholder="Ваше имя" required=""/><input name="phone" placeholder="Телефон" required=""/><input id="bookingService" name="service" placeholder="Услуга" required=""/><textarea name="comment" placeholder="Комментарий"></textarea><label><input required="" type="checkbox"/> Согласен(на) с обработкой персональных данных</label><button class="ui-btn ui-btn--primary ui-btn--wide" type="submit"><span>Отправить заявку</span><span>→</span></button></form></div></div>
+<div aria-hidden="true" class="modal" id="bookingModal"><div class="modal-card"><button class="modal-close" data-close="">×</button><h3>Онлайн-запись</h3><p>Оставьте контакты — мы свяжемся с Вами, уточним детали и подтвердим запись.</p><form class="modal-form" id="bookingForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" /><input name="name" placeholder="Ваше имя" required=""/><input name="phone" placeholder="Телефон" required=""/><input id="bookingService" name="service" placeholder="Услуга" required=""/><textarea name="comment" placeholder="Комментарий"></textarea><label><input required="" type="checkbox"/> <span>Согласен(на) с обработкой персональных данных и ознакомлен(а) с <a class="privacy-link" href="privacy-policy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span></label><button class="ui-btn ui-btn--primary ui-btn--wide" type="submit"><span>Отправить заявку</span><span>→</span></button></form></div></div>
 <div aria-hidden="true" class="modal price-catalog-modal" id="priceModal">
 <div class="price-catalog-card">
 <button aria-label="Закрыть" class="modal-close price-catalog-close" data-close="">×</button>
