@@ -1869,32 +1869,6 @@ section[id],div[id]{scroll-margin-top:118px!important}
 
 <link rel="preload" as="image" href="assets/perf/hero.webp" type="image/webp" fetchpriority="high"/>
 
-<style id="kadbox778-performance-v31">
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{
-    scroll-behavior:auto!important;
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    transition-duration:.01ms!important;
-  }
-}
-
-/* Isolate expensive paint work while preserving normal layout and anchor navigation. */
-.service-card,
-.benefit-card,
-.review-card,
-.map-card--premium{
-  contain:paint;
-}
-
-/* Browser can decode/composite large imagery more efficiently. */
-.hero-art img,
-.benefit-bg-image,
-.map-card-image,
-.gallery-stage img{
-  backface-visibility:hidden;
-}
-</style>
 
 </head>
 <body data-build="header-motion-v10">
