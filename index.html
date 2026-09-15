@@ -1681,7 +1681,7 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <div class="section-head section-head--compact section-head--contacts-premium"><div><h2>Оставить заявку</h2><p>Мы свяжемся с вами в ближайшее время</p></div></div>
 <div class="asset-panel asset-form contact-form-panel contact-form-panel--premium">
 <div aria-hidden="true" class="form-glow"></div>
-<form id="contactForm">
+<form id="contactForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" />
 <input name="name" placeholder="Ваше имя" required=""/>
 <input name="phone" placeholder="Номер телефона" required=""/>
 <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
@@ -1704,7 +1704,7 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <div class="footer-copyright">© 2024 <strong>КАД БОКС 778</strong>. Все права защищены.</div>
 </footer>
 <div aria-hidden="true" class="modal" id="serviceModal"><div class="modal-card modal-card--service"><button class="modal-close" data-close="">×</button><div class="service-modal-grid"><div class="service-modal-info"><h3 id="serviceTitle"></h3><p id="serviceText"></p><div class="service-modal-list-wrap"><h4>Работы и направления</h4><ul id="serviceList"></ul></div><button class="ui-btn ui-btn--primary ui-btn--wide" id="bookService"><span>Записаться на услугу</span><span>→</span></button></div><figure class="service-price-panel"><figcaption id="servicePriceCaption">Прайс-лист</figcaption><p class="service-price-hint">Нажмите на прайс-лист — он откроется в оригинальном размере.</p><img alt="Прайс-лист услуги" aria-label="Увеличить прайс-лист" id="servicePriceImage" role="button" tabindex="0"/></figure></div></div></div>
-<div aria-hidden="true" class="modal" id="bookingModal"><div class="modal-card"><button class="modal-close" data-close="">×</button><h3>Онлайн-запись</h3><p>Оставьте контакты — мы свяжемся с Вами, уточним детали и подтвердим запись.</p><form class="modal-form" id="bookingForm"><input name="name" placeholder="Ваше имя" required=""/><input name="phone" placeholder="Телефон" required=""/><input id="bookingService" name="service" placeholder="Услуга" required=""/><textarea name="comment" placeholder="Комментарий"></textarea><label><input required="" type="checkbox"/> Согласен(на) с обработкой персональных данных</label><button class="ui-btn ui-btn--primary ui-btn--wide" type="submit"><span>Отправить заявку</span><span>→</span></button></form></div></div>
+<div aria-hidden="true" class="modal" id="bookingModal"><div class="modal-card"><button class="modal-close" data-close="">×</button><h3>Онлайн-запись</h3><p>Оставьте контакты — мы свяжемся с Вами, уточним детали и подтвердим запись.</p><form class="modal-form" id="bookingForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" /><input name="name" placeholder="Ваше имя" required=""/><input name="phone" placeholder="Телефон" required=""/><input id="bookingService" name="service" placeholder="Услуга" required=""/><textarea name="comment" placeholder="Комментарий"></textarea><label><input required="" type="checkbox"/> Согласен(на) с обработкой персональных данных</label><button class="ui-btn ui-btn--primary ui-btn--wide" type="submit"><span>Отправить заявку</span><span>→</span></button></form></div></div>
 <div aria-hidden="true" class="modal price-catalog-modal" id="priceModal">
 <div class="price-catalog-card">
 <button aria-label="Закрыть" class="modal-close price-catalog-close" data-close="">×</button>
@@ -2178,5 +2178,120 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
   window.setInterval(glintLogo,7600);
   window.setInterval(winkLights,5900);
 })();
-</script></body>
+</script>
+<script src="assets/site-config.js"></script>
+<script id="kadbox778-production-leads">
+(function(){
+  const config = window.KADBOX_CONFIG || {};
+  const endpoint = String(config.leadEndpoint || '').trim();
+
+  function toast(message){
+    if (typeof window.showToast === 'function') window.showToast(message);
+    else console.log(message);
+  }
+
+  function getConsent(form){
+    return form.querySelector('input[type="checkbox"]');
+  }
+
+  function setSubmitting(form, active){
+    const btn = form.querySelector('button[type="submit"]');
+    if(!btn) return;
+    if(active){
+      if(!btn.dataset.originalHtml) btn.dataset.originalHtml = btn.innerHTML;
+      btn.disabled = true;
+      btn.setAttribute('aria-busy','true');
+      btn.innerHTML = '<span>Отправляем…</span><span>→</span>';
+    } else {
+      btn.removeAttribute('aria-busy');
+      const consent = getConsent(form);
+      btn.disabled = !!consent && !consent.checked;
+      if(btn.dataset.originalHtml) btn.innerHTML = btn.dataset.originalHtml;
+    }
+  }
+
+  async function submitLead(form, type){
+    const consent = getConsent(form);
+    if(consent && !consent.checked){
+      toast('Подтвердите согласие на обработку персональных данных.');
+      consent.focus();
+      return false;
+    }
+
+    if(!endpoint || endpoint.includes('YOUR_PROJECT_REF')){
+      toast('Форма ещё не подключена к серверу. Укажите адрес Supabase Edge Function.');
+      console.error('KADBOX_CONFIG.leadEndpoint is not configured');
+      return false;
+    }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    const payload = {
+      type,
+      name: String(data.name || '').trim(),
+      phone: String(data.phone || '').trim(),
+      service: String(data.service || '').trim(),
+      comment: String(data.comment || '').trim(),
+      website: String(data.website || '').trim(),
+      consent: !!consent?.checked,
+      page_url: location.href,
+      source: 'kadbox778-site'
+    };
+
+    setSubmitting(form, true);
+    try{
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      });
+      let result = {};
+      try { result = await response.json(); } catch(_){}
+      if(!response.ok || !result.ok){
+        throw new Error(result.error || `HTTP ${response.status}`);
+      }
+      form.reset();
+      toast('Заявка отправлена. Мы скоро свяжемся с Вами.');
+      return true;
+    }catch(error){
+      console.error('Lead submit failed:', error);
+      toast('Не удалось отправить заявку. Позвоните нам по +7-921-636-04-02 или попробуйте ещё раз.');
+      return false;
+    }finally{
+      setSubmitting(form, false);
+    }
+  }
+
+  function wire(){
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm){
+      contactForm.onsubmit = async (event) => {
+        event.preventDefault();
+        await submitLead(contactForm, 'contact');
+      };
+    }
+
+    const bookingForm = document.getElementById('bookingForm');
+    if(bookingForm){
+      bookingForm.onsubmit = async (event) => {
+        event.preventDefault();
+        const ok = await submitLead(bookingForm, 'booking');
+        if(ok){
+          const modal = document.getElementById('bookingModal');
+          if(typeof window.closeModal === 'function' && modal) window.closeModal(modal);
+          else if(modal) {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden','true');
+            document.body.style.overflow='';
+          }
+        }
+      };
+    }
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wire, {once:true});
+  else wire();
+})();
+</script>
+
+</body>
 </html>
