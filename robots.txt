@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ztwelqu.github.io/kadbox778site/sitemap.xml
