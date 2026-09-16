@@ -10,6 +10,33 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<!-- Yandex.Metrika counter -->
+<script id="kadbox778-yandex-metrika">
+(function(m,e,t,r,i,k,a){
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+
+ym(112707497,"init",{
+  clickmap:true,
+  trackLinks:true,
+  accurateTrackBounce:true,
+  webvisor:true
+});
+
+window.kadboxTrackGoal=function(goal,params){
+  try{
+    if(typeof window.ym==="function"){
+      window.ym(112707497,"reachGoal",goal,params||{});
+    }
+  }catch(error){
+    console.warn("Yandex Metrika goal error:",goal,error);
+  }
+};
+</script>
+<!-- /Yandex.Metrika counter -->
 
 <meta name="description" content="КАД Бокс778 — мультибрендовый автосервис в Санкт-Петербурге. Диагностика и ремонт, автомойка, детейлинг, шиномонтаж. Ежедневно 09:00–21:00."/>
 <!-- SEO / social preview -->
@@ -1942,6 +1969,9 @@ section[id],div[id]{scroll-margin-top:118px!important}
 
 </head>
 <body data-build="header-motion-v10">
+<!-- Yandex.Metrika noscript -->
+<noscript><div><img src="https://mc.yandex.ru/watch/112707497" style="position:absolute;left:-9999px" alt=""/></div></noscript>
+<!-- /Yandex.Metrika noscript -->
 <header class="site-header" id="top">
 <div class="header-inner container">
 <a aria-label="КАД БОКС 778" class="brand" href="#top"><img alt="КАД БОКС 778" src="assets/perf/logo.webp" width="1100" height="367" decoding="async" fetchpriority="high"/></a>
@@ -2755,6 +2785,19 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
         throw new Error(result.error || `HTTP ${response.status}`);
       }
 
+      if(typeof window.kadboxTrackGoal === 'function'){
+        const safeParams = {
+          lead_type: type,
+          service: payload.service || 'без услуги'
+        };
+        window.kadboxTrackGoal('lead_success', safeParams);
+        if(type === 'booking'){
+          window.kadboxTrackGoal('booking_success', {
+            service: payload.service || 'без услуги'
+          });
+        }
+      }
+
       form.reset();
       toast('Заявка отправлена. Мы скоро свяжемся с Вами.');
       return true;
@@ -2799,5 +2842,55 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
 })();
 </script>
 
+<script id="kadbox778-metrika-goals">
+(function(){
+  function goal(name, params){
+    if(typeof window.kadboxTrackGoal === 'function'){
+      window.kadboxTrackGoal(name, params || {});
+    }
+  }
+
+  document.addEventListener('click', function(event){
+    const target = event.target instanceof Element ? event.target : null;
+    if(!target) return;
+
+    const serviceCard = target.closest('.service-card[data-service]');
+    if(serviceCard){
+      goal('service_open', {
+        service: serviceCard.getAttribute('data-service') || 'неизвестно'
+      });
+    }
+
+    if(target.closest('#openPrice')){
+      goal('full_price_open');
+    }
+
+    const link = target.closest('a[href]');
+    if(!link) return;
+
+    const rawHref = String(link.getAttribute('href') || '');
+    const absoluteHref = link.href || rawHref;
+
+    if(rawHref.toLowerCase().startsWith('tel:')){
+      goal('phone_click', {placement: link.closest('footer') ? 'footer' : 'site'});
+      return;
+    }
+
+    if(/^https:\/\/(?:www\.)?yandex\.ru\/maps(?:\/|$)/i.test(absoluteHref)){
+      goal('yandex_click');
+      return;
+    }
+
+    if(/^https:\/\/(?:www\.)?vk\.ru\/kadbox778(?:\/|$|\?)/i.test(absoluteHref)){
+      goal('vk_click');
+      return;
+    }
+
+    if(/^https:\/\/(?:www\.)?avito\.ru\/brands\/kadbox778(?:\/|$|\?)/i.test(absoluteHref)){
+      goal('avito_click');
+    }
+  }, {passive:true});
+})();
+</script>
 </body>
 </html>
