@@ -6,7 +6,6 @@
 <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon/favicon-64.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<meta content="0" http-equiv="Expires"/><meta content="no-cache" http-equiv="Pragma"/><meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
 
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
@@ -2203,8 +2202,8 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <div class="asset-panel asset-form contact-form-panel contact-form-panel--premium">
 <div aria-hidden="true" class="form-glow"></div>
 <form id="contactForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" />
-<input name="name" placeholder="Ваше имя" required=""/>
-<input name="phone" placeholder="Номер телефона" required=""/>
+<input autocomplete="name" name="name" placeholder="Ваше имя" required=""/>
+<input autocomplete="tel" inputmode="tel" name="phone" placeholder="Номер телефона" required="" type="tel"/>
 <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
 <button class="ui-btn ui-btn--primary ui-btn--wide" id="contactSubmit" type="submit"><span>Отправить заявку</span><span>→</span></button>
 <label class="consent-row consent-row--premium"><input id="contactConsent" required="" type="checkbox"/> <span>Я соглашаюсь с обработкой персональных данных и ознакомлен(а) с <a class="privacy-link" href="privacy-policy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span></label>
@@ -2227,8 +2226,8 @@ section[id],div[id]{scroll-margin-top:118px!important}
   <span class="footer-legal-entity">ООО «ТК РУСЬ» · ИНН 7751280241</span>
 </div><div class="footer-copyright">© 2024 <strong>КАД БОКС 778</strong>. Все права защищены.</div>
 </footer>
-<div aria-hidden="true" class="modal" id="serviceModal"><div class="modal-card modal-card--service"><button class="modal-close" data-close="">×</button><div class="service-modal-grid"><div class="service-modal-info"><h3 id="serviceTitle"></h3><p id="serviceText"></p><div class="service-modal-list-wrap"><h4>Работы и направления</h4><ul id="serviceList"></ul></div><button class="ui-btn ui-btn--primary ui-btn--wide" id="bookService"><span>Записаться на услугу</span><span>→</span></button></div><figure class="service-price-panel"><figcaption id="servicePriceCaption">Прайс-лист</figcaption><p class="service-price-hint">Нажмите на прайс-лист — он откроется в оригинальном размере.</p><img alt="Прайс-лист услуги" aria-label="Увеличить прайс-лист" id="servicePriceImage" role="button" tabindex="0"/></figure></div></div></div>
-<div aria-hidden="true" class="modal" id="bookingModal"><div class="modal-card"><button class="modal-close" data-close="">×</button><h3>Онлайн-запись</h3><p>Оставьте контакты — мы свяжемся с Вами, уточним детали и подтвердим запись.</p><form class="modal-form" id="bookingForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" /><input name="name" placeholder="Ваше имя" required=""/><input name="phone" placeholder="Телефон" required=""/><input id="bookingService" name="service" placeholder="Услуга" required=""/><textarea name="comment" placeholder="Комментарий"></textarea><label><input required="" type="checkbox"/> <span>Согласен(на) с обработкой персональных данных и ознакомлен(а) с <a class="privacy-link" href="privacy-policy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span></label><button class="ui-btn ui-btn--primary ui-btn--wide" type="submit"><span>Отправить заявку</span><span>→</span></button></form></div></div>
+<div aria-hidden="true" class="modal" id="serviceModal"><div class="modal-card modal-card--service"><button aria-label="Закрыть" class="modal-close" data-close="" type="button">×</button><div class="service-modal-grid"><div class="service-modal-info"><h3 id="serviceTitle"></h3><p id="serviceText"></p><div class="service-modal-list-wrap"><h4>Работы и направления</h4><ul id="serviceList"></ul></div><button class="ui-btn ui-btn--primary ui-btn--wide" id="bookService" type="button"><span>Записаться на услугу</span><span>→</span></button></div><figure class="service-price-panel"><figcaption id="servicePriceCaption">Прайс-лист</figcaption><p class="service-price-hint">Нажмите на прайс-лист — он откроется в оригинальном размере.</p><img alt="Прайс-лист услуги" aria-label="Увеличить прайс-лист" id="servicePriceImage" role="button" tabindex="0"/></figure></div></div></div>
+<div aria-hidden="true" class="modal" id="bookingModal"><div class="modal-card"><button aria-label="Закрыть" class="modal-close" data-close="" type="button">×</button><h3>Онлайн-запись</h3><p>Оставьте контакты — мы свяжемся с Вами, уточним детали и подтвердим запись.</p><form class="modal-form" id="bookingForm"><input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" /><input autocomplete="name" name="name" placeholder="Ваше имя" required=""/><input autocomplete="tel" inputmode="tel" name="phone" placeholder="Телефон" required="" type="tel"/><input autocomplete="off" id="bookingService" name="service" placeholder="Услуга" required=""/><textarea name="comment" placeholder="Комментарий"></textarea><label><input required="" type="checkbox"/> <span>Согласен(на) с обработкой персональных данных и ознакомлен(а) с <a class="privacy-link" href="privacy-policy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span></label><button class="ui-btn ui-btn--primary ui-btn--wide" type="submit"><span>Отправить заявку</span><span>→</span></button></form></div></div>
 <div aria-hidden="true" class="modal price-catalog-modal" id="priceModal">
 <div class="price-catalog-card">
 <button aria-label="Закрыть" class="modal-close price-catalog-close" data-close="">×</button>
@@ -2295,7 +2294,7 @@ section[id],div[id]{scroll-margin-top:118px!important}
 </div>
 </div>
 </div>
-<div class="toast" id="toast"></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 <script>const SERVICES={"ТО — Техническое обслуживание":{"text":"Плановое обслуживание, сезонное ТО и компьютерная диагностика.","items":["Плановое ТО","ТО после зимы","ТО после покупки автомобиля","Замена охлаждающей жидкости","Компьютерная диагностика"],"price":"assets/embedded/embedded_037_ade7a8c82ce369a2.webp"},"Двигатель и навесное оборудование":{"text":"Диагностика, ремонт двигателя и замена навесных элементов.","items":["Диагностика и обслуживание","Ремонт двигателя","Ремонт и замена элементов","Дополнительные услуги"],"price":"assets/embedded/embedded_038_226cc98993c9bc14.webp"},"Трансмиссия":{"text":"КПП, сцепление, полный привод и сопутствующий ремонт.","items":["Общие работы по трансмиссии","МКПП обслуживание и ремонт","АКПП обслуживание и ремонт","CVT обслуживание и ремонт","РКПП обслуживание и ремонт","Раздатка/Полный привод обслуживание и ремонт","Редуктор/дифференциал обслуживание и ремонт","Привод/ШРУС обслуживание и ремонт","Карданный вал обслуживание и ремонт"],"price":"assets/embedded/embedded_039_7714924a480250b5.webp"},"Ходовая часть и подвеска":{"text":"Подвеска, рулевые элементы и развал-схождение.","items":["Диагностика и ремонт ходовой части","Амортизаторы и стойки","Рычаги","Сайлентблоки","Стабилизатор","Шаровые опоры","Ступица и подшипники","Подрамники и балки","Пневмоподвеска","Адаптивная подвеска","Рулевые элементы","Привода и ШРУСы","Развал-схождение"],"price":"assets/embedded/embedded_040_bd1aaf159a476e3f.webp"},"Тормозная система":{"text":"Колодки, диски, суппорты, ABS и полное обслуживание.","items":["Диагностика тормозной системы","Тормозные колодки","Тормозные диски","Тормозные суппорты","Тормозная жидкость","Тормозные шланги и трубки","Ручной стояночный тормоз","ABS/ESP","Главный тормозной цилиндр","Тормозные механизмы","Спортивные усиленные тормоза"],"price":"assets/embedded/embedded_041_262ef3d472397b8f.webp"},"Рулевые рейки":{"text":"Диагностика и ремонт рулевого управления всех типов.","items":["Диагностика рулевых реек","Ремонт рулевых реек","Гидравлические рейки","Электрические рейки","Электрогидравлические рейки","Механические рейки"],"price":"assets/embedded/embedded_042_a7d615a2b6a7da9e.webp"},"Турбины":{"text":"Диагностика, ремонт и обслуживание системы наддува.","items":["Диагностика","Снятие и установка","Ремонт и замена деталей","Клапаны и управление наддувом","Балансировка и чистка","Маслопроводы и трубки","Система наддува","Прочие работы","Комплексный ремонт турбины","Дополнительные работы"],"price":"assets/embedded/embedded_043_b6b1aac89eb4ccdf.webp"},"Шиномонтаж":{"text":"Переобувка, обслуживание колёс и сезонная замена шин.","items":["Шиномонтаж 1 колеса R12 до R22","Замена комплекта колес от R12 до R22","Замена комплекта шин от R12 до R22"],"price":"assets/embedded/embedded_044_e507106af9c4fb82.webp"},"Автоэлектрика":{"text":"Электрика, блоки управления, проводка и диагностика.","items":["Диагностика электрических систем","Аккумулятор и система зарядки","Стартер и система запуска","Электропроводка и соединения","Освещение и светотехника","Сигнализация и дополнительное оборудование","Электрика салона и комфорт","Электронные блоки и программирование","Иммобилайзер, ключи, центральный замок"],"price":"assets/embedded/embedded_045_bcfcbd4505c5ac6e.webp"},"Автомойка":{"text":"Кузов, салон, двигатель, радиаторы и дополнительные услуги.","items":["Комплексные мойки","Мойка кузова","Мойка салона","Мойка двигателя","Мойка радиаторов","Дополнительные услуги"],"price":"assets/embedded/embedded_046_049eab6226451086.webp"},"Система охлаждения":{"text":"Радиаторы, патрубки, помпа, термостат и обслуживание.","items":["Диагностика системы охлаждения","Радиатор и патрубки","Термостат и помпа","Вентилятор и электрооборудование","Антифриз и обслуживание","Радиатор печки"],"price":"assets/embedded/embedded_047_ef4199c8efe5238d.webp"},"Кондиционер и климат-контроль":{"text":"Заправка, компрессор, конденсер и климатические системы.","items":["Диагностика","Заправка и обслуживание кондиционера","Компрессор кондиционера","Радиатор и конденсер","Испаритель и система вентиляции","Вентилятор и климат-контроль"],"price":"assets/embedded/embedded_048_5f0bcb7f2da3ee4b.webp"},"Топливная система":{"text":"Форсунки, насос, фильтры, впуск и система управления.","items":["Диагностика топливной системы","Топливный насос","Топливные форсунки","Топливные фильтры","Топливопроводы и соединения","Регуляторы и датчики","Дроссельная заслонка и впуск","Топливо и система управления","Специальные работы","Комплексные работы"],"price":"assets/embedded/embedded_049_0793ab82c2964898.webp"},"Выхлопная система":{"text":"Глушитель, катализатор, DPF и спортивный выхлоп.","items":["Диагностика и ремонт","Глушитель и резонатор","Катализатор","Сажевый фильтр DPF/FAP","Сварочные работы","Турбина/Выпускной тракт","Лямбда зонды и датчики","Спортивный выхлоп","Комплексные работы"],"price":"assets/embedded/embedded_050_273e16c782f95e40.webp"},"Сварочные работы":{"text":"Кузовные, выхлопные и сложные сварочные работы.","items":["Общие сварочные работы","Кузовные сварочные работы","Выхлопная система","Ходовая часть","Резка и изготовление","Ремонт агрегатов","Сложные работы","Комплексные работы"],"price":"assets/embedded/embedded_051_20003547a0a35210.webp"}};
 const gallery=["assets/perf/gallery/work_01.webp","assets/perf/gallery/work_02.webp","assets/perf/gallery/work_03.webp","assets/perf/gallery/work_04.webp","assets/perf/gallery/work_05.webp","assets/perf/gallery/work_06.webp","assets/perf/gallery/work_07.webp","assets/perf/gallery/work_08.webp","assets/perf/gallery/work_09.webp","assets/perf/gallery/work_10.webp","assets/perf/gallery/work_11.webp","assets/perf/gallery/work_12.webp","assets/perf/gallery/work_13.webp","assets/perf/gallery/work_14.webp","assets/perf/gallery/work_15.webp","assets/perf/gallery/work_16.webp","assets/perf/gallery/work_17.webp","assets/perf/gallery/work_18.webp"];let galleryIndex=0;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -2307,8 +2306,6 @@ function openModal(id){const m=$(id);m.classList.add('open');m.setAttribute('ari
 function openBooking(service=''){const modal=$('#bookingModal');const wasOpen=modal?.classList.contains('open');$('#bookingService').value=service;openModal('#bookingModal');if(!wasOpen&&typeof window.kadboxTrackGoal==='function'){window.kadboxTrackGoal('booking_open',{service:service||'без услуги'});}}$$('[data-book]').forEach(b=>b.onclick=()=>openBooking(b.dataset.book||''));
 $$('[data-service]').forEach(c=>c.onclick=()=>{const k=c.dataset.service,d=SERVICES[k];$('#serviceTitle').textContent=k;$('#serviceText').textContent=d.text;$('#serviceList').innerHTML=d.items.map(i=>`<li>${i}</li>`).join('');const img=$('#servicePriceImage');if(img){img.src=d.price||'';img.alt=`Прайс-лист — ${k}`;}$('#servicePriceCaption').textContent=`Прайс-лист: ${k}`;$('#bookService').dataset.service=k;openModal('#serviceModal')});$('#bookService').onclick=()=>{const s=$('#bookService').dataset.service||'';closeModal($('#serviceModal'));openBooking(s)};
 $('#openPrice').onclick=()=>openModal('#priceModal');
-function saveLead(data){const key='kadbox778_demo_leads';const arr=JSON.parse(localStorage.getItem(key)||'[]');arr.unshift({...data,createdAt:new Date().toISOString()});localStorage.setItem(key,JSON.stringify(arr.slice(0,30)))}
-$('#contactForm').onsubmit=e=>{e.preventDefault();saveLead({type:'contact',...Object.fromEntries(new FormData(e.currentTarget).entries())});e.currentTarget.reset();showToast('Заявка сохранена — форма работает в демо-режиме.')};$('#bookingForm').onsubmit=e=>{e.preventDefault();saveLead({type:'booking',...Object.fromEntries(new FormData(e.currentTarget).entries())});e.currentTarget.reset();closeModal($('#bookingModal'));showToast('Онлайн-запись сохранена в браузере.')};
 const priceZoomModal=$('#priceZoomModal'),priceZoomImage=$('#priceZoomImage'),priceZoomTitle=$('#priceZoomTitle'),priceZoomScroll=$('#priceZoomScroll');let activePriceService='';
 function openPriceZoom(){const src=$('#servicePriceImage')?.currentSrc||$('#servicePriceImage')?.src;if(!src)return;activePriceService=$('#bookService')?.dataset.service||$('#serviceTitle')?.textContent||'';priceZoomImage.src=src;priceZoomImage.alt=`Прайс-лист — ${activePriceService||'услуга'}`;priceZoomTitle.textContent=activePriceService||'Прайс-лист';openModal('#priceZoomModal');requestAnimationFrame(()=>{priceZoomScroll.scrollTo({left:0,top:0,behavior:'instant'})})}
 const servicePriceImage=$('#servicePriceImage');if(servicePriceImage){servicePriceImage.addEventListener('click',openPriceZoom);servicePriceImage.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPriceZoom()}})}
@@ -2559,7 +2556,7 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
   loadWidget();
 })();
 </script>
-<script>
+<script id="kadbox778-consent-state">
 (function(){
   const $ = (s,r=document)=>r.querySelector(s);
   function bindConsent(formSelector){
@@ -2571,79 +2568,10 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
     const sync = ()=>{ btn.disabled = !box.checked; btn.setAttribute('aria-disabled', String(!box.checked)); };
     sync();
     box.addEventListener('change', sync);
-    form.addEventListener('reset', ()=>setTimeout(sync));
+    form.addEventListener('reset', ()=>setTimeout(sync,0));
   }
   bindConsent('#contactForm');
   bindConsent('#bookingForm');
-
-  const contactForm = $('#contactForm');
-  if(contactForm){
-    contactForm.onsubmit = e => {
-      e.preventDefault();
-      const checkbox = $('input[type="checkbox"]', contactForm);
-      if(checkbox && !checkbox.checked){
-        if(window.showToast) showToast('Подтвердите согласие на обработку персональных данных.');
-        checkbox.focus();
-        return;
-      }
-      if(window.saveLead){
-        saveLead({type:'contact', ...Object.fromEntries(new FormData(contactForm).entries())});
-      }
-      contactForm.reset();
-      if(window.showToast) showToast('Заявка сохранена — форма работает в демо-режиме.');
-    };
-  }
-  const bookingForm = $('#bookingForm');
-  if(bookingForm){
-    bookingForm.onsubmit = e => {
-      e.preventDefault();
-      const checkbox = $('input[type="checkbox"]', bookingForm);
-      if(checkbox && !checkbox.checked){
-        if(window.showToast) showToast('Подтвердите согласие на обработку персональных данных.');
-        checkbox.focus();
-        return;
-      }
-      if(window.saveLead){
-        saveLead({type:'booking', ...Object.fromEntries(new FormData(bookingForm).entries())});
-      }
-      bookingForm.reset();
-      const modal = $('#bookingModal');
-      if(window.closeModal && modal) closeModal(modal);
-      if(window.showToast) showToast('Онлайн-запись сохранена в браузере.');
-    };
-  }
-})();
-</script>
-<script>
-(function(){
-  function initContactConsent(){
-    const form = document.getElementById('contactForm');
-    if(!form) return;
-    const consent = document.getElementById('contactConsent') || form.querySelector('input[type="checkbox"]');
-    const submitBtn = form.querySelector('button[type="submit"]');
-    if(!consent || !submitBtn) return;
-    const syncState = () => { submitBtn.disabled = !consent.checked; };
-    syncState();
-    consent.addEventListener('change', syncState);
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initContactConsent, {once:true});
-  } else {
-    initContactConsent();
-  }
-})();
-</script>
-<script id="contacts-final-script">
-(function(){
-  const form = document.getElementById('contactForm');
-  const consent = document.getElementById('contactConsent');
-  const submitBtn = document.getElementById('contactSubmit') || form?.querySelector('button[type="submit"]');
-  if(form && consent && submitBtn){
-    const syncState = () => { submitBtn.disabled = !consent.checked; };
-    syncState();
-    consent.addEventListener('change', syncState);
-    form.addEventListener('reset', () => setTimeout(syncState, 0));
-  }
 })();
 </script>
 <script id="kadbox778-anchor-navigation-final">
@@ -2837,8 +2765,7 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
     }
   }
 
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wire, {once:true});
-  else wire();
+  wire();
 })();
 </script>
 
