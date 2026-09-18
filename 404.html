@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Страница не найдена — КАД Бокс778</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#050607">
+<style>
+:root{--bg:#050607;--card:#0e1012;--text:#f6f6f6;--muted:#aeb3b8;--orange:#ff7a12;--orange2:#ff9a32}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;display:grid;place-items:center;background:
+radial-gradient(circle at 50% -10%,rgba(255,106,0,.22),transparent 36%),
+linear-gradient(180deg,#070809,#030405);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.wrap{width:min(760px,calc(100% - 30px));padding:34px 0}
+.card{position:relative;overflow:hidden;text-align:center;padding:clamp(34px,7vw,72px) clamp(22px,6vw,58px);border:1px solid rgba(255,255,255,.09);border-radius:28px;background:linear-gradient(180deg,rgba(17,19,22,.97),rgba(8,9,10,.98));box-shadow:0 30px 90px rgba(0,0,0,.48)}
+.card:before{content:"";position:absolute;inset:-1px;pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(255,122,18,.14),transparent 42%)}
+.brand{position:relative;font-size:17px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.brand span{color:var(--orange2)}
+.code{position:relative;margin:18px 0 4px;font-size:clamp(84px,20vw,150px);line-height:.9;font-weight:900;letter-spacing:-.06em;color:transparent;background:linear-gradient(180deg,#fff 5%,#ffb06b 45%,#ff6a00 95%);-webkit-background-clip:text;background-clip:text;text-shadow:0 18px 60px rgba(255,106,0,.12)}
+h1{position:relative;margin:18px 0 10px;font-size:clamp(27px,5vw,42px);line-height:1.05}
+p{position:relative;margin:0 auto;color:var(--muted);font-size:16px;line-height:1.6;max-width:560px}
+.actions{position:relative;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{min-height:52px;padding:0 22px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;text-decoration:none;border:1px solid rgba(255,255,255,.12);color:#fff;background:#111417}
+.btn-primary{color:#111;border-color:#ffa04c;background:linear-gradient(180deg,#ff932c,#ff6a00);box-shadow:0 12px 34px rgba(255,106,0,.19)}
+.phone{position:relative;margin-top:24px;font-size:14px;color:#8f959b}.phone a{color:#fff;font-weight:900;text-decoration:none}
+@media(max-width:480px){.wrap{width:min(100% - 20px,760px)}.card{border-radius:20px}.actions{flex-direction:column}.btn{width:100%}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="card" aria-labelledby="nf-title">
+<div class="brand">КАД <span>БОКС 778</span></div>
+<div class="code" aria-hidden="true">404</div>
+<h1 id="nf-title">Страница не найдена</h1>
+<p>Такого адреса на сайте нет или страница была перемещена. Вернитесь на главную или позвоните нам — поможем с записью и ремонтом.</p>
+<div class="actions">
+<a class="btn btn-primary" id="homeLink" href="/kadbox778site/">На главную →</a>
+<a class="btn" href="tel:+79216360402">Позвонить</a>
+</div>
+<div class="phone">КАД Бокс778 · ежедневно 09:00–21:00 · <a href="tel:+79216360402">+7-921-636-04-02</a></div>
+</section>
+</main>
+<script>
+(function(){
+  var root = location.hostname.endsWith('github.io') ? '/kadbox778site/' : '/';
+  var home = document.getElementById('homeLink');
+  if(home) home.href = root;
+})();
+</script>
+</body>
+</html>
