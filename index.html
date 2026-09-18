@@ -2114,7 +2114,7 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <div class="yandex-widget-browserbar__title">Отзывы КАД БОКС 778 • Яндекс Карты</div>
 </div>
 <div class="yandex-widget-screen">
-<iframe allow="fullscreen" data-src="https://yandex.ru/maps-reviews-widget/180399555505?comments" id="yandexReviewsFrame" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="about:blank" title="Отзывы о КАД БОКС 778 на Яндекс Картах"></iframe>
+<iframe allow="fullscreen" data-src="https://yandex.ru/maps-reviews-widget/180399555505?comments" id="yandexReviewsFrame" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="about:blank" title="Отзывы о КАД БОКС 778 на Яндекс Картах"></iframe>
 <div class="yandex-reviews-fallback" hidden="" id="yandexReviewsFallback">
 <div class="yandex-reviews-fallback__badge">Я</div>
 <div class="yandex-reviews-fallback__content">
@@ -2508,6 +2508,7 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
 <script>
 (function () {
   const frame = document.getElementById('yandexReviewsFrame');
+  const wrap = document.getElementById('yandexReviewsWrap');
   const fallback = document.getElementById('yandexReviewsFallback');
   const fallbackText = document.getElementById('yandexReviewsFallbackText');
   const retry = document.getElementById('retryYandexReviews');
@@ -2516,6 +2517,8 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
   const widgetUrl = frame.dataset.src;
   let timeoutId = null;
   let loaded = false;
+  let started = false;
+  let observer = null;
 
   function showFallback(message) {
     if (message && fallbackText) fallbackText.textContent = message;
@@ -2527,6 +2530,12 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
   }
 
   function loadWidget() {
+    started = true;
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
+
     loaded = false;
     hideFallback();
     clearTimeout(timeoutId);
@@ -2567,7 +2576,25 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
 
   if (retry) retry.addEventListener('click', loadWidget);
 
-  loadWidget();
+  // Do not create the third-party Yandex iframe on initial page load.
+  // Start loading shortly before the reviews section reaches the viewport.
+  if (wrap && 'IntersectionObserver' in window) {
+    observer = new IntersectionObserver(function (entries) {
+      if (started) return;
+      if (entries.some(function (entry) { return entry.isIntersecting; })) {
+        loadWidget();
+      }
+    }, {
+      rootMargin: '700px 0px',
+      threshold: 0.01
+    });
+    observer.observe(wrap);
+  } else {
+    // Safe fallback for older browsers: defer until after the critical first paint.
+    window.setTimeout(function () {
+      if (!started) loadWidget();
+    }, 2500);
+  }
 })();
 </script>
 <script id="kadbox778-consent-state">
