@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ztwelqu.github.io/kadbox778site/sitemap.xml
+Sitemap: https://kad-box778.ru/sitemap.xml
