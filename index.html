@@ -171,7 +171,7 @@ window.kadboxTrackGoal=function(goal,params){
 .yandex-widget-dots span:nth-child(1){background:#ff7a1c}.yandex-widget-dots span:nth-child(2){background:#ffb347}.yandex-widget-dots span:nth-child(3){background:#ffe1bf}
 .yandex-widget-browserbar__title{font-size:12px;font-weight:700;color:#d4d8de;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .yandex-widget-screen{position:relative;min-height:534px;border-radius:18px;overflow:hidden;background:#f4f4f4;box-shadow:0 12px 30px rgba(0,0,0,.25)}
-.yandex-reviews-wrap iframe{position:relative;z-index:1;width:100%;height:534px;border:0;display:block;background:#fff}
+.yandex-reviews-frame-slot{position:relative;z-index:1;width:100%;height:534px;display:block;background:linear-gradient(110deg,#f1f1f1 8%,#fafafa 18%,#f1f1f1 33%);background-size:220% 100%;animation:yandexWidgetLoading 1.35s linear infinite}.yandex-reviews-frame-slot:not(.is-loading){animation:none;background:#fff}.yandex-reviews-frame-slot iframe{width:100%;height:100%;border:0;display:block;background:#fff}.yandex-reviews-frame-slot.is-loading::after{content:"Загружаем отзывы Яндекс Карт…";position:absolute;inset:0;display:grid;place-items:center;color:#777;font:700 13px/1.4 Arial,sans-serif;letter-spacing:.01em;pointer-events:none}@keyframes yandexWidgetLoading{0%{background-position:100% 0}100%{background-position:-100% 0}}
 .yandex-reviews-fallback{position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;gap:18px;padding:34px;background:radial-gradient(circle at 78% 20%,rgba(255,106,0,.16),transparent 32%),linear-gradient(145deg,#0c0e12,#090a0d 65%,#160c06);color:#fff;text-align:left}
 .yandex-reviews-fallback[hidden]{display:none}
 .yandex-reviews-fallback__badge{width:58px;height:58px;flex:0 0 58px;border-radius:18px;display:grid;place-items:center;background:#fc3f1d;color:#fff;font-size:30px;font-weight:950;box-shadow:0 0 28px rgba(252,63,29,.24)}
@@ -181,7 +181,7 @@ window.kadboxTrackGoal=function(goal,params){
 .yandex-reviews-fallback__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .yandex-reviews-fallback .ui-btn{min-height:44px}
 @media(max-width:620px){.yandex-reviews-fallback{align-items:flex-start;flex-direction:column;padding:24px}.yandex-reviews-fallback__badge{width:48px;height:48px;flex-basis:48px;border-radius:14px;font-size:25px}}
-.yandex-reviews-credit{position:absolute;z-index:3;left:12px;right:12px;bottom:8px;padding:4px 10px;text-align:center;font-size:10px;line-height:1.25;color:#858b93;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:linear-gradient(90deg,rgba(7,9,12,0),rgba(7,9,12,.82) 18%,rgba(7,9,12,.82) 82%,rgba(7,9,12,0));border-radius:8px}.yandex-reviews-credit:hover{color:var(--orange2)}.yandex-live-note{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:11px;color:#b9bec6}.yandex-live-dot{width:7px;height:7px;border-radius:50%;background:var(--orange2);box-shadow:0 0 12px rgba(255,106,0,.75);flex:0 0 auto}@media(max-width:1050px){.yandex-reviews-wrap{max-width:760px}}@media(max-width:760px){.yandex-reviews-wrap{min-height:auto;padding:14px;border-radius:18px}.yandex-widget-meta{flex-direction:column;align-items:flex-start}.yandex-widget-caption{text-align:left;max-width:none}.yandex-widget-stage{padding:10px;border-radius:18px}.yandex-widget-browserbar{height:38px;padding:0 12px;border-radius:14px}.yandex-widget-screen{min-height:500px;border-radius:16px}.yandex-reviews-wrap iframe{height:500px}.yandex-reviews-credit{font-size:9px;left:6px;right:6px}}
+.yandex-reviews-credit{position:absolute;z-index:3;left:12px;right:12px;bottom:8px;padding:4px 10px;text-align:center;font-size:10px;line-height:1.25;color:#858b93;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:linear-gradient(90deg,rgba(7,9,12,0),rgba(7,9,12,.82) 18%,rgba(7,9,12,.82) 82%,rgba(7,9,12,0));border-radius:8px}.yandex-reviews-credit:hover{color:var(--orange2)}.yandex-live-note{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:11px;color:#b9bec6}.yandex-live-dot{width:7px;height:7px;border-radius:50%;background:var(--orange2);box-shadow:0 0 12px rgba(255,106,0,.75);flex:0 0 auto}@media(max-width:1050px){.yandex-reviews-wrap{max-width:760px}}@media(max-width:760px){.yandex-reviews-wrap{min-height:auto;padding:14px;border-radius:18px}.yandex-widget-meta{flex-direction:column;align-items:flex-start}.yandex-widget-caption{text-align:left;max-width:none}.yandex-widget-stage{padding:10px;border-radius:18px}.yandex-widget-browserbar{height:38px;padding:0 12px;border-radius:14px}.yandex-widget-screen{min-height:500px;border-radius:16px}.yandex-reviews-frame-slot{height:500px}.yandex-reviews-credit{font-size:9px;left:6px;right:6px}}
 
   .yandex-works-head{padding:2px 42px 10px 2px}
   .yandex-works-head h3{font-size:20px}
@@ -2115,7 +2115,7 @@ section[id],div[id]{scroll-margin-top:118px!important}
 <div class="yandex-widget-browserbar__title">Отзывы КАД БОКС 778 • Яндекс Карты</div>
 </div>
 <div class="yandex-widget-screen">
-<iframe allow="fullscreen" data-src="https://yandex.ru/maps-reviews-widget/180399555505?comments" id="yandexReviewsFrame" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="about:blank" title="Отзывы о КАД БОКС 778 на Яндекс Картах"></iframe>
+<div class="yandex-reviews-frame-slot is-loading" data-src="https://yandex.ru/maps-reviews-widget/180399555505?comments" id="yandexReviewsFrameSlot" aria-label="Отзывы о КАД БОКС 778 на Яндекс Картах"></div>
 <div class="yandex-reviews-fallback" hidden="" id="yandexReviewsFallback">
 <div class="yandex-reviews-fallback__badge">Я</div>
 <div class="yandex-reviews-fallback__content">
@@ -2508,20 +2508,23 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
 </script>
 <script>
 (function () {
-  const frame = document.getElementById('yandexReviewsFrame');
+  const slot = document.getElementById('yandexReviewsFrameSlot');
   const wrap = document.getElementById('yandexReviewsWrap');
   const fallback = document.getElementById('yandexReviewsFallback');
   const fallbackText = document.getElementById('yandexReviewsFallbackText');
   const retry = document.getElementById('retryYandexReviews');
-  if (!frame || !fallback) return;
+  if (!slot || !fallback) return;
 
-  const widgetUrl = frame.dataset.src;
+  const widgetUrl = slot.dataset.src;
   let timeoutId = null;
-  let loaded = false;
+  let frame = null;
   let started = false;
   let observer = null;
+  let loadToken = 0;
 
   function showFallback(message) {
+    clearTimeout(timeoutId);
+    slot.classList.remove('is-loading');
     if (message && fallbackText) fallbackText.textContent = message;
     fallback.hidden = false;
   }
@@ -2530,21 +2533,66 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
     fallback.hidden = true;
   }
 
-  function loadWidget() {
+  function destroyFrame() {
+    clearTimeout(timeoutId);
+    if (frame) {
+      frame.remove();
+      frame = null;
+    }
+    slot.replaceChildren();
+  }
+
+  function createFrame() {
+    const token = ++loadToken;
+    const iframe = document.createElement('iframe');
+    iframe.allow = 'fullscreen';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.title = 'Отзывы о КАД БОКС 778 на Яндекс Картах';
+    iframe.setAttribute('aria-label', iframe.title);
+
+    iframe.addEventListener('load', function () {
+      if (token !== loadToken) return;
+      clearTimeout(timeoutId);
+      // Give the cross-origin Yandex app a short moment to paint after its document load.
+      window.setTimeout(function () {
+        if (token !== loadToken || iframe !== frame) return;
+        slot.classList.remove('is-loading');
+        hideFallback();
+      }, 450);
+    });
+
+    iframe.addEventListener('error', function () {
+      if (token !== loadToken) return;
+      showFallback('Не удалось загрузить виджет Яндекс Карт. Отзывы можно открыть напрямую на Яндексе.');
+    });
+
+    slot.replaceChildren(iframe);
+    frame = iframe;
+
+    // Assign src only after the real iframe is in the DOM and its handlers are attached.
+    // This avoids the old about:blank -> widget navigation race seen in desktop Chrome.
+    iframe.src = widgetUrl;
+
+    timeoutId = window.setTimeout(function () {
+      if (token !== loadToken) return;
+      showFallback(
+        'Яндекс не ответил вовремя. Проверьте блокировщики рекламы/защиту от отслеживания или откройте отзывы напрямую.'
+      );
+    }, 15000);
+  }
+
+  function loadWidget(force) {
+    if (started && !force) return;
     started = true;
+
     if (observer) {
       observer.disconnect();
       observer = null;
     }
 
-    loaded = false;
     hideFallback();
-    clearTimeout(timeoutId);
-    frame.src = 'about:blank';
+    slot.classList.add('is-loading');
 
-    // The official Yandex reviews widget is intended for normal web pages.
-    // Local file:// pages can be treated as an opaque origin by browsers,
-    // which may leave third-party frames blank.
     if (location.protocol === 'file:') {
       showFallback(
         'Сайт сейчас открыт как локальный HTML-файл (file://). В таком режиме браузеры могут блокировать загрузку внешнего виджета Яндекса. Для проверки живых отзывов запустите сайт через локальный HTTP-сервер или разместите его на хостинге.'
@@ -2552,38 +2600,24 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
       return;
     }
 
-    frame.src = widgetUrl;
-
-    timeoutId = setTimeout(function () {
-      if (!loaded) {
-        showFallback(
-          'Яндекс не ответил вовремя. Проверьте блокировщики рекламы/защиту от отслеживания или откройте отзывы напрямую.'
-        );
-      }
-    }, 12000);
+    destroyFrame();
+    slot.classList.add('is-loading');
+    createFrame();
   }
 
-  frame.addEventListener('load', function () {
-    if (frame.src === 'about:blank') return;
-    loaded = true;
-    clearTimeout(timeoutId);
-    hideFallback();
-  });
+  if (retry) {
+    retry.addEventListener('click', function () {
+      loadWidget(true);
+    });
+  }
 
-  frame.addEventListener('error', function () {
-    clearTimeout(timeoutId);
-    showFallback('Не удалось загрузить виджет Яндекс Карт. Отзывы можно открыть напрямую на Яндексе.');
-  });
-
-  if (retry) retry.addEventListener('click', loadWidget);
-
-  // Do not create the third-party Yandex iframe on initial page load.
-  // Start loading shortly before the reviews section reaches the viewport.
+  // The only lazy-loading mechanism is our observer.
+  // The iframe itself is created shortly before this section reaches the viewport.
   if (wrap && 'IntersectionObserver' in window) {
     observer = new IntersectionObserver(function (entries) {
       if (started) return;
       if (entries.some(function (entry) { return entry.isIntersecting; })) {
-        loadWidget();
+        loadWidget(false);
       }
     }, {
       rootMargin: '700px 0px',
@@ -2591,9 +2625,8 @@ const FULL_PRICE_CATEGORY_ORDER=["ТО - Техническое обслужив
     });
     observer.observe(wrap);
   } else {
-    // Safe fallback for older browsers: defer until after the critical first paint.
     window.setTimeout(function () {
-      if (!started) loadWidget();
+      if (!started) loadWidget(false);
     }, 2500);
   }
 })();
