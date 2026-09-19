@@ -2326,7 +2326,8 @@ try{
     const directService=bookingParams.get('service')||'';
     window.setTimeout(()=>openBooking(directService),180);
   }
-}catch(_e){}$$('[data-book]').forEach(b=>b.onclick=()=>openBooking(b.dataset.book||''));
+}catch(_e){}
+$('[data-book]').forEach(b=>b.onclick=()=>openBooking(b.dataset.book||''));
 $('[data-service]').forEach(c=>c.onclick=()=>{const k=c.dataset.service,d=SERVICES[k];$('#serviceTitle').textContent=k;$('#serviceText').textContent=d.text;$('#serviceList').innerHTML=d.items.map(i=>`<li>${i}</li>`).join('');const img=$('#servicePriceImage');if(img){img.src=d.price||'';img.alt=`Прайс-лист — ${k}`;}$('#servicePriceCaption').textContent=`Прайс-лист: ${k}`;$('#bookService').dataset.service=k;const details=$('#serviceDetailsLink');if(details){if(d.url){details.href=d.url;details.style.display='inline-flex';details.setAttribute('aria-label',`Подробнее: ${k}`);}else{details.removeAttribute('href');details.style.display='none';}}openModal('#serviceModal')});$('#bookService').onclick=()=>{const s=$('#bookService').dataset.service||'';closeModal($('#serviceModal'));openBooking(s)};
 $('#openPrice').onclick=()=>openModal('#priceModal');
 const priceZoomModal=$('#priceZoomModal'),priceZoomImage=$('#priceZoomImage'),priceZoomTitle=$('#priceZoomTitle'),priceZoomScroll=$('#priceZoomScroll');let activePriceService='';
