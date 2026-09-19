@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1055 1491" role="img" aria-label="Прайс-лист Чип-тюнинг КАД Бокс778">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050607"/><stop offset=".55" stop-color="#0a0b0d"/><stop offset="1" stop-color="#030304"/></linearGradient>
+  <radialGradient id="o" cx="82%" cy="8%" r="45%"><stop stop-color="#ff6a00" stop-opacity=".22"/><stop offset="1" stop-color="#ff6a00" stop-opacity="0"/></radialGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="8"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .055 0"/></filter>
+  <style>
+    .h{font-family:Impact,Arial Black,sans-serif;font-weight:900;letter-spacing:1px}
+    .b{font-family:Arial,Helvetica,sans-serif}
+    .sec{fill:#f4f4f4;font-size:22px;font-weight:800}
+    .sub{fill:#92979d;font-size:12px;letter-spacing:1.5px;font-weight:700}
+    .item{fill:#eceff1;font-size:15px}
+    .p{fill:#ff7a18;font-size:17px;font-weight:800}
+    .line{stroke:#64686c;stroke-opacity:.7;stroke-width:1;stroke-dasharray:2 5}
+    .box{fill:#070809;stroke:#ff5a00;stroke-width:2}
+    .ic{fill:none;stroke:#ff6a00;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+</defs>
+<rect width="1055" height="1491" fill="url(#bg)"/><rect width="1055" height="1491" fill="url(#o)"/><rect width="1055" height="1491" filter="url(#grain)" opacity=".5"/>
+<!-- header -->
+<g transform="translate(26 20)">
+  <rect x="0" y="0" width="110" height="76" rx="6" fill="#151719" stroke="#ff5a00" stroke-width="3"/>
+  <path d="M18 51h74l-8-20H30z" fill="#ff5a00"/><circle cx="37" cy="58" r="7" fill="#fff"/><circle cx="77" cy="58" r="7" fill="#fff"/>
+  <text x="130" y="42" class="h" font-size="38" fill="#f0f0f0">КАД</text><text x="220" y="42" class="h" font-size="38" fill="#ff5a00">Бокс778</text>
+  <text x="130" y="68" class="b" font-size="11" letter-spacing="6" fill="#b9bec3">БОЛЬШЕ ВОЗМОЖНОСТЕЙ НА ДОРОГЕ</text>
+</g>
+<text x="30" y="184" class="h" font-size="76" fill="#e7e8e9">ЧИП-ТЮНИНГ</text>
+<text x="32" y="220" class="h" font-size="18" letter-spacing="4" fill="#ff6a00">НАСТРОЙКА / ПРОШИВКА / ДИАГНОСТИКА</text>
+<g transform="translate(765 24)" opacity=".98">
+  <path d="M10 96h210l26 30v92l-28 28H10l-28-28v-92z" fill="#111316" stroke="#ff6a00" stroke-width="5"/>
+  <rect x="22" y="124" width="180" height="55" rx="6" fill="#050607" stroke="#777" stroke-width="2"/>
+  <g stroke="#777" stroke-width="2"><path d="M35 137h154M35 149h154M35 161h154"/></g>
+  <rect x="35" y="190" width="158" height="35" rx="7" fill="#050607" stroke="#ff6a00" stroke-width="3"/>
+  <g fill="#ff6a00"><rect x="45" y="199" width="12" height="17"/><rect x="63" y="199" width="12" height="17"/><rect x="81" y="199" width="12" height="17"/><rect x="111" y="199" width="12" height="17"/><rect x="129" y="199" width="12" height="17"/><rect x="147" y="199" width="12" height="17"/></g>
+  <path d="M0 77a92 92 0 0 1 184-5" fill="none" stroke="#ff6a00" stroke-width="6"/><path d="M90 82l54-45" stroke="#fff" stroke-width="6"/>
+  <g fill="#ff6a00"><rect x="194" y="52" width="13" height="30"/><rect x="213" y="39" width="13" height="43"/><rect x="232" y="22" width="13" height="60"/></g>
+</g>
+<!-- section 1 -->
+<rect class="box" x="20" y="252" width="1015" height="140" rx="10"/>
+<g transform="translate(40 272)"><rect x="0" y="0" width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><rect x="19" y="17" width="44" height="35" rx="4" class="ic"/><path d="M31 64h20M41 52v12M31 34h20" class="ic"/></g>
+<text x="140" y="292" class="h sec">ДИАГНОСТИКА И ПОДГОТОВКА</text><text x="140" y="315" class="h sub">ПРОВЕРЯЕМ • АНАЛИЗИРУЕМ • ГОТОВИМ</text>
+<g class="b item"><text x="360" y="286">Компьютерная диагностика перед чип-тюнингом</text><text x="360" y="314">Проверка параметров двигателя / логирование</text><text x="360" y="342">Считывание и сохранение заводской прошивки</text><text x="360" y="370">Восстановление заводской прошивки</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="286">от 2 000 ₽</text><text x="1008" y="314">от 2 500 ₽</text><text x="1008" y="342">от 3 000 ₽</text><text x="1008" y="370">от 5 000 ₽</text></g>
+<g class="line"><path d="M680 281h190"/><path d="M665 309h205"/><path d="M690 337h180"/><path d="M650 365h220"/></g>
+<!-- section 2 -->
+<rect class="box" x="20" y="404" width="1015" height="140" rx="10"/>
+<g transform="translate(40 424)"><rect width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><path d="M18 56h46v-24H53l-7-10H29l-7 10h-4zM27 56v8M55 56v8" class="ic"/></g>
+<text x="140" y="444" class="h sec">ЧИП-ТЮНИНГ ДВИГАТЕЛЯ</text><text x="140" y="467" class="h sub">МОЩНОСТЬ • ДИНАМИКА • ОПТИМАЛЬНАЯ РАБОТА</text>
+<g class="b item"><text x="360" y="438">Бензиновый атмосферный двигатель</text><text x="360" y="466">Бензиновый турбированный двигатель</text><text x="360" y="494">Дизельный двигатель</text><text x="360" y="522">Коммерческий транспорт / микроавтобусы</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="438">от 10 000 ₽</text><text x="1008" y="466">от 15 000 ₽</text><text x="1008" y="494">от 15 000 ₽</text><text x="1008" y="522">от 18 000 ₽</text></g>
+<!-- section 3 -->
+<rect class="box" x="20" y="556" width="1015" height="112" rx="10"/>
+<g transform="translate(40 571)"><rect width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><g fill="#ff6a00"><rect x="18" y="51" width="11" height="19"/><rect x="35" y="38" width="11" height="32"/><rect x="52" y="24" width="11" height="46"/></g></g>
+<text x="140" y="594" class="h sec">STAGE 1</text><text x="140" y="617" class="h sub">БЕЗОПАСНЫЙ РОСТ • СОХРАНЯЕМ НАДЁЖНОСТЬ</text>
+<g class="b item"><text x="360" y="588">Бензиновый атмосферный двигатель</text><text x="360" y="616">Бензиновый турбированный двигатель</text><text x="360" y="644">Дизельный двигатель</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="588">от 12 000 ₽</text><text x="1008" y="616">от 18 000 ₽</text><text x="1008" y="644">от 18 000 ₽</text></g>
+<!-- section 4 -->
+<rect class="box" x="20" y="680" width="1015" height="112" rx="10"/>
+<g transform="translate(40 695)"><rect width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><circle cx="41" cy="41" r="20" class="ic"/><path d="M41 12v10M41 60v10M12 41h10M60 41h10M21 21l7 7M54 54l7 7M61 21l-7 7M28 54l-7 7" class="ic"/></g>
+<text x="140" y="718" class="h sec">ИНДИВИДУАЛЬНАЯ НАСТРОЙКА</text><text x="140" y="741" class="h sub">ПОД КОНФИГУРАЦИЮ И ЗАДАЧИ АВТОМОБИЛЯ</text>
+<g class="b item"><text x="360" y="712">Бензиновый атмосферный двигатель</text><text x="360" y="740">Бензиновый турбированный двигатель</text><text x="360" y="768">Дизельный двигатель</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="712">от 18 000 ₽</text><text x="1008" y="740">от 25 000 ₽</text><text x="1008" y="768">от 25 000 ₽</text></g>
+<!-- section 5 -->
+<rect class="box" x="20" y="804" width="1015" height="184" rx="10"/>
+<g transform="translate(40 825)"><rect width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><path d="M18 25h46M18 41h46M18 57h46M31 19v12M51 35v12M38 51v12" class="ic"/></g>
+<text x="140" y="848" class="h sec">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</text><text x="140" y="871" class="h sub">ДОНАСТРОЙКА • ДОРАБОТКИ • СПЕЦИАЛЬНЫЕ РЕЖИМЫ</text>
+<g class="b item"><text x="360" y="832">Настройка отклика педали газа</text><text x="360" y="860">Корректировка прошивки под доработки автомобиля</text><text x="360" y="888">Повторная корректировка / донастройка</text><text x="360" y="916">Работа с блоком управления на столе / boot / bench</text><text x="360" y="944">Удаление ограничителя скорости*</text><text x="360" y="972">Настройка спортивных режимов*</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="832">от 5 000 ₽</text><text x="1008" y="860">от 7 000 ₽</text><text x="1008" y="888">от 5 000 ₽</text><text x="1008" y="916">от 5 000 ₽</text><text x="1008" y="944">от 5 000 ₽</text><text x="1008" y="972">от 5 000 ₽</text></g>
+<!-- section 6 -->
+<rect class="box" x="20" y="1000" width="1015" height="100" rx="10"/>
+<g transform="translate(40 1009)"><rect width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><path d="M41 17v38M31 27l10-10 10 10M27 55h28v15H27z" class="ic"/></g>
+<text x="140" y="1038" class="h sec">ПРОШИВКА КОРОБКИ ПЕРЕДАЧ</text><text x="140" y="1061" class="h sub">АКПП • DSG • S-TRONIC • POWERSHIFT • CVT</text>
+<g class="b item"><text x="520" y="1036">АКПП / DSG / S-Tronic / Powershift / CVT</text><text x="520" y="1072">Индивидуальная настройка коробки передач</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="1036">от 12 000 ₽</text><text x="1008" y="1072">от 18 000 ₽</text></g>
+<!-- section 7 -->
+<rect class="box" x="20" y="1112" width="1015" height="112" rx="10"/>
+<g transform="translate(40 1127)"><rect width="82" height="82" rx="14" fill="#101214" stroke="#53585c"/><path d="M41 16l28 51H13zM41 34v17M41 60v1" class="ic"/></g>
+<text x="140" y="1150" class="h sec">СЛОЖНЫЕ СЛУЧАИ</text><text x="140" y="1173" class="h sub">ВОССТАНОВЛЕНИЕ • ОТКАТ • РАБОТА С ИЗМЕНЁННЫМ ПО</text>
+<g class="b item"><text x="420" y="1144">Работа с ранее изменённой прошивкой</text><text x="420" y="1172">Восстановление ЭБУ после неудачной прошивки</text><text x="420" y="1200">Откат к стоковой конфигурации с диагностикой</text></g>
+<g class="b p" text-anchor="end"><text x="1008" y="1144">от 5 000 ₽</text><text x="1008" y="1172">от 8 000 ₽</text><text x="1008" y="1200">от 6 000 ₽</text></g>
+<!-- notes -->
+<rect class="box" x="20" y="1236" width="1015" height="128" rx="10"/>
+<circle cx="59" cy="1270" r="23" fill="#ff6a00"/><text x="59" y="1278" text-anchor="middle" class="h" font-size="28" fill="#08090a">!</text>
+<text x="96" y="1262" class="h" font-size="20" fill="#f0f0f0">ПРИМЕЧАНИЕ:</text>
+<g class="b" font-size="12.5" fill="#d7dadd">
+<text x="96" y="1287">• Стоимость указана ориентировочно и зависит от марки и модели автомобиля, типа ЭБУ, способа чтения/записи блока</text>
+<text x="108" y="1306">управления и технического состояния автомобиля.</text>
+<text x="96" y="1328">• Перед чип-тюнингом рекомендуется диагностика двигателя и электронных систем.</text>
+<text x="96" y="1350">• Некоторые виды работ выполняются только после предварительной проверки автомобиля.</text>
+</g>
+<!-- footer -->
+<path d="M0 1380H1055" stroke="#ff5a00" stroke-width="3"/>
+<g transform="translate(28 1398)"><path d="M0 28l18-22 18 22-18 31z" fill="#ff6a00"/><circle cx="18" cy="27" r="7" fill="#070809"/></g>
+<text x="82" y="1418" class="b" font-size="15" fill="#f2f2f2">Мультибрендовый автосервис</text><text x="82" y="1439" class="b" font-size="15" fill="#f2f2f2">Санкт-Петербург и Ленинградская область</text>
+<path d="M365 1406c7-10 18-5 17 4-1 9 11 22 20 22 8 0 15 11 4 18-13 8-52-31-41-44z" fill="#ff6a00"/>
+<text x="425" y="1433" class="h" font-size="30" fill="#fff">+7 (921) 636-04-02</text>
+<text x="780" y="1418" class="h" font-size="30" fill="#e9eaeb">КАД Бокс</text><text x="941" y="1418" class="h" font-size="30" fill="#ff5a00">778</text>
+<text x="780" y="1444" class="b" font-size="11" letter-spacing="4" fill="#aeb3b7">АВТОМОБИЛИ СТАНОВЯТСЯ ЛУЧШЕ С НАМИ</text>
+</svg>
