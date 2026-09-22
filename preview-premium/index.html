@@ -123,6 +123,7 @@
     }
     .menu-toggle {
       display: none;
+      position: relative;
       width: 44px;
       height: 44px;
       padding: 0;
@@ -136,16 +137,20 @@
     .menu-toggle::before,
     .menu-toggle::after {
       content: "";
-      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 18px;
       height: 1px;
-      margin: 5px auto;
       background: currentColor;
       transition: transform .2s ease, opacity .2s ease;
     }
+    .menu-toggle span { transform: translate(-50%, -50%); }
+    .menu-toggle::before { transform: translate(-50%, -7px); }
+    .menu-toggle::after { transform: translate(-50%, 6px); }
     .menu-toggle.active span { opacity: 0; }
-    .menu-toggle.active::before { transform: translateY(6px) rotate(45deg); }
-    .menu-toggle.active::after { transform: translateY(-6px) rotate(-45deg); }
+    .menu-toggle.active::before { transform: translate(-50%, -50%) rotate(45deg); }
+    .menu-toggle.active::after { transform: translate(-50%, -50%) rotate(-45deg); }
 
     .btn {
       min-height: 50px;
@@ -503,20 +508,23 @@
       .header-actions .btn { display: none; }
       .menu-toggle { display: block; }
       .nav {
-        position: fixed;
-        inset: 74px 0 auto;
+        position: absolute;
+        top: 74px;
+        right: 0;
+        left: 0;
         display: grid;
         justify-content: stretch;
         gap: 0;
         padding: 12px 14px 20px;
         border-top: 1px solid var(--line);
         background: rgba(8, 10, 12, .98);
-        transform: translateY(-120%);
+        transform: translateY(-14px);
         opacity: 0;
+        visibility: hidden;
         pointer-events: none;
-        transition: transform .25s ease, opacity .2s ease;
+        transition: transform .22s ease, opacity .18s ease, visibility .18s ease;
       }
-      .nav.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .nav.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
       .nav a { padding: 15px 8px; border-bottom: 1px solid var(--line); }
       .nav a::after { display: none; }
       .hero { min-height: 940px; }
@@ -550,7 +558,7 @@
       .footer-nav { max-width: 420px; }
       .footer-contact { text-align: center; }
       .footer-bottom { text-align: center; }
-      .preview-note { right: 12px; bottom: 12px; font-size: 9px; }
+      .preview-note { display: none; }
     }
 
     @media (max-width: 480px) {
@@ -563,7 +571,6 @@
       .process-photo { min-height: 360px; }
       .cta-actions { grid-template-columns: 1fr; }
       .modal-card { padding: 30px 22px; }
-      .preview-note { max-width: calc(100% - 24px); }
     }
 
     @media (prefers-reduced-motion: reduce) {
