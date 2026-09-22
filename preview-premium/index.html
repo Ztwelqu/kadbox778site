@@ -84,7 +84,7 @@
       align-items: center;
       gap: 30px;
     }
-    .brand { width: 205px; }
+    .brand { width: 225px; }
     .brand img { width: 100%; height: auto; }
     .nav {
       display: flex;
@@ -480,8 +480,20 @@
       background: #0b0e11;
       color: #fff;
       font-size: 19px;
+      line-height: 1;
       cursor: pointer;
+      transition: color .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
     }
+    .modal-close:hover,
+    .modal-close:focus-visible {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: #0b0e11;
+      box-shadow: 0 0 0 4px rgba(242, 112, 24, .15);
+      transform: scale(1.06);
+      outline: none;
+    }
+    .modal-close:active { transform: scale(.96); }
     .modal h2 { padding-right: 28px; font-size: 40px; }
     .modal p { margin: 14px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.65; }
     .modal-options { display: grid; gap: 10px; }
@@ -490,7 +502,7 @@
 
     @media (max-width: 1080px) {
       .header-row { grid-template-columns: 190px 1fr auto; gap: 18px; }
-      .brand { width: 175px; }
+      .brand { width: 190px; }
       .nav { gap: 18px; }
       .phone { display: none; }
       .hero::before { background: linear-gradient(90deg, rgba(7, 9, 11, .98), rgba(7, 9, 11, .80) 45%, rgba(7, 9, 11, .18) 78%), linear-gradient(180deg, transparent 48%, #080a0c 100%); }
@@ -504,7 +516,7 @@
     @media (max-width: 780px) {
       .container { width: min(100% - 28px, var(--container)); }
       .header-row { min-height: 74px; grid-template-columns: 1fr auto; }
-      .brand { width: 160px; }
+      .brand { width: 178px; }
       .header-actions .btn { display: none; }
       .menu-toggle { display: block; }
       .nav {
@@ -585,7 +597,7 @@
   <header class="header">
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="КАД БОКС 778">
-        <img src="../assets/perf/optimized/logo-small.webp" alt="КАД БОКС 778" width="600" height="200">
+        <img src="assets/logo-premium.svg" alt="КАД БОКС 778 — автосервис" width="390" height="88">
       </a>
       <nav class="nav" id="mainNav" aria-label="Основная навигация">
         <a href="#services">Услуги</a>
@@ -737,7 +749,7 @@
 
   <footer class="footer">
     <div class="container footer-main">
-      <a class="footer-logo" href="#top"><img src="../assets/perf/optimized/logo-small.webp" alt="КАД БОКС 778" width="600" height="200" loading="lazy"></a>
+      <a class="footer-logo" href="#top"><img src="assets/logo-premium.svg" alt="КАД БОКС 778 — автосервис" width="390" height="88" loading="lazy"></a>
       <nav class="footer-nav" aria-label="Навигация в подвале"><a href="#services">Услуги</a><a href="#process">Как работаем</a><a href="#works">Наши работы</a><a href="https://kad-box778.ru/privacy-policy.html">Политика конфиденциальности</a></nav>
       <div class="footer-contact"><a href="tel:+79216360402">+7 921 636-04-02</a><span>Ежедневно 09:00–21:00</span></div>
     </div>
