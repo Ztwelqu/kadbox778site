@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 88" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 88" role="img" aria-labelledby="title description">
   <title id="title">КАД БОКС 778</title>
   <desc id="description">Фирменный знак автосервиса: седьмой бокс и силуэт автомобиля</desc>
   <g fill="none" fill-rule="evenodd">
@@ -17,6 +17,4 @@
     <text x="99" y="72" fill="#F3F1EC" font-size="35" letter-spacing=".2">БОКС</text>
     <text x="205" y="72" fill="#F27018" font-size="35" letter-spacing=".4">778</text>
   </g>
-  <path d="M290 61h86" stroke="#343A40"/>
-  <text x="291" y="77" fill="#838B92" font-family="Manrope, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2.1">АВТОСЕРВИС</text>
 </svg>
