@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 88" role="img" aria-labelledby="title description">
+  <title id="title">КАД БОКС 778</title>
+  <desc id="description">Фирменный знак автосервиса: седьмой бокс и силуэт автомобиля</desc>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M8 15h64v58H8z" stroke="#343A40"/>
+    <path d="M8 24V8h64v16" stroke="#F27018" stroke-width="3"/>
+    <path d="M17 24v40M63 24v40" stroke="#838B92" stroke-width="2"/>
+    <path d="M17 31h46M17 39h46" stroke="#343A40"/>
+    <path d="M23 57.5h34l-3.8-8.3a5 5 0 0 0-4.5-2.9H31.4a5 5 0 0 0-4.6 3L23 57.5Z" stroke="#F3F1EC" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M28 57.5v5m24-5v5M32 62.5h16" stroke="#F3F1EC" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="29" cy="57" r="2" fill="#F27018"/>
+    <circle cx="51" cy="57" r="2" fill="#F27018"/>
+    <path d="M82 13v62" stroke="#343A40"/>
+  </g>
+  <g font-family="Roboto Condensed, Arial Narrow, Arial, sans-serif" font-weight="800">
+    <text x="99" y="39" fill="#F3F1EC" font-size="35" letter-spacing="1.2">КАД</text>
+    <text x="99" y="72" fill="#F3F1EC" font-size="35" letter-spacing=".2">БОКС</text>
+    <text x="205" y="72" fill="#F27018" font-size="35" letter-spacing=".4">778</text>
+  </g>
+  <path d="M290 61h86" stroke="#343A40"/>
+  <text x="291" y="77" fill="#838B92" font-family="Manrope, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2.1">АВТОСЕРВИС</text>
+</svg>
