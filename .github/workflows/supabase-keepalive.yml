@@ -1,6 +1,5 @@
 name: Supabase Keepalive
 # Keeps the Supabase Free project active with real database reads.
-# Schema cache refreshed after creating the keepalive table.
 
 on:
   schedule:
