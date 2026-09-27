@@ -1,4 +1,5 @@
 name: Supabase Keepalive
+# Keeps the Supabase Free project active with real database reads.
 
 on:
   schedule:
