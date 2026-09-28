@@ -812,7 +812,7 @@ h1{margin:0;max-width:650px;font-size:clamp(46px,4.3vw,72px);line-height:.98;let
 /* Service-card hover only. No geometry changes and no image-path changes. */
 .service-card{
   isolation:isolate;
-  cursor:default;
+  cursor:pointer;
   transition:box-shadow .22s ease,filter .22s ease;
 }
 .service-card > img{
@@ -4972,7 +4972,7 @@ textarea:focus-visible{
 </button>
 </div>
 <div aria-label="Услуги — шестнадцать карточек" class="services-grid" id="services-grid">
-<div class="service-card">
+<a class="service-card" href="technical-service/" aria-label="Техническое обслуживание — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/6fc2bd69508f030f.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/ab65e818f3e44afb.webp" width="180"/>
@@ -4982,8 +4982,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="engine-repair/" aria-label="Двигатель и навесное — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/94f8a1978a0c4870.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/2b08ba67c03e5d49.webp" width="180"/>
@@ -4993,7 +4993,7 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div><div class="service-card">
+</a><a class="service-card" href="transmission-repair/" aria-label="Трансмиссия — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/70e078d278da904d.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/cf11f190fde1740e.webp" width="180"/>
@@ -5003,8 +5003,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="suspension-repair/" aria-label="Ходовая и подвеска — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/505d4d7bdeb40ef7.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/0f413f883888aef8.webp" width="180"/>
@@ -5014,8 +5014,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="brake-repair/" aria-label="Тормозная система — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/d16d40a15a49d2e1.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/66bded3ae0aa844b.webp" width="180"/>
@@ -5025,8 +5025,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="steering-rack-repair/" aria-label="Рулевые рейки — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/3547ec0ac6472d9d.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/554bdd0b5854e0fd.webp" width="180"/>
@@ -5036,8 +5036,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="turbo-repair/" aria-label="Турбины — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/558de5a799d61f7a.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/1c9c8817bafaac20.webp" width="180"/>
@@ -5047,8 +5047,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="tire-service/" aria-label="Шиномонтаж — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/2e95e35d36c4e1e0.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/d495a3d75b9876ad.webp" width="180"/>
@@ -5058,8 +5058,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="auto-electrician/" aria-label="Автоэлектрика — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/7893a273d5f48fd9.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/b5d8c38e47f083f4.webp" width="180"/>
@@ -5069,8 +5069,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="chip-tuning/" aria-label="Чип-тюнинг — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/97dea44a17fe8119.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/d7b7c7345ba2491b.webp" width="180"/>
@@ -5080,8 +5080,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="car-wash/" aria-label="Автомойка — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/d6220ef190212d7c.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/82c10a0ea7fec543.webp" width="180"/>
@@ -5091,8 +5091,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="cooling-system/" aria-label="Система охлаждения — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/04a8ea4d7003e826.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/ce9316b3fb80a481.webp" width="180"/>
@@ -5102,8 +5102,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="car-ac-service/" aria-label="Кондиционер и климат-контроль — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/eb3b20399a49f192.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/297d0d57a3e0020d.webp" width="180"/>
@@ -5113,8 +5113,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="fuel-system/" aria-label="Топливная система — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/a58605f16aed4f1c.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/8dd8dde578c17676.webp" width="180"/>
@@ -5124,8 +5124,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="exhaust-system/" aria-label="Выхлопная система — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/b4259106a84f233a.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/4529cb511f1f1bb2.webp" width="180"/>
@@ -5135,8 +5135,8 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card" href="welding-services/" aria-label="Сварочные работы — подробнее">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/0d4d5f7b4d5dab7b.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/dfcb30ef15f6d35d.webp" width="180"/>
@@ -5146,7 +5146,7 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
+</a>
 </div>
 </div>
 </section>
