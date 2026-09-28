@@ -579,22 +579,175 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 </style>
 
+
+<style id="v100-home-header-parity">
+/* Exact visual parity with V100 homepage header. Page-specific nav labels/anchors are preserved. */
+.site-header{position:fixed;z-index:60;top:0;left:0;width:100%;height:94px;isolation:isolate;background:rgba(5,7,10,.32);backdrop-filter:blur(16px) saturate(118%);-webkit-backdrop-filter:blur(16px) saturate(118%);box-shadow:0 8px 28px rgba(0,0,0,.12);transition:background .25s ease,box-shadow .25s ease}
+.site-header:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(2,4,7,.48),rgba(5,7,10,.20) 48%,rgba(26,13,4,.28))}
+.header-inner{height:100%;max-width:1580px;margin:0 auto;padding:0 34px;display:grid;grid-template-columns:210px minmax(570px,1fr) auto;align-items:center;gap:30px;width:auto}
+.brand{display:flex;align-items:center;height:74px;width:auto}
+.brand img{width:174px;height:auto;display:block;object-fit:initial;filter:drop-shadow(0 0 9px rgba(255,119,0,.24))}
+.main-nav{display:flex;justify-content:center;align-items:center;gap:27px;white-space:nowrap;font-size:initial;font-weight:initial}
+.main-nav a{font-size:14px;font-weight:650;color:rgba(255,255,255,.87);letter-spacing:.01em;position:relative;transition:.2s ease}
+.main-nav a:after{content:"";position:absolute;left:50%;right:50%;bottom:-11px;height:1px;background:linear-gradient(90deg,transparent,var(--orange),transparent);transition:.22s ease}
+.main-nav a:hover{color:#fff;text-shadow:0 0 12px rgba(255,132,15,.35)}
+.main-nav a:hover:after{left:0;right:0}
+.header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;white-space:nowrap}
+.contact-card{display:grid;grid-template-columns:34px auto;align-items:center;column-gap:10px;min-width:190px;padding:7px 4px;border-radius:8px;border:0;background:transparent;box-shadow:none;transition:transform .22s ease,filter .22s ease}
+.phone-icon{width:31px;height:31px;object-fit:contain;display:block;transition:transform .22s ease,filter .22s ease;filter:drop-shadow(0 0 5px rgba(255,121,0,.14))}
+.contact-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:3px;line-height:1}
+.phone-number{font-size:14.5px;font-weight:800;letter-spacing:.01em;color:#fff;transition:color .22s ease,text-shadow .22s ease}
+.worktime{font-size:10px;font-weight:560;color:#b8bdc4;letter-spacing:.01em;transition:color .22s ease,text-shadow .22s ease}
+.contact-card:hover{transform:translateY(-1px);filter:drop-shadow(0 0 9px rgba(255,122,0,.10))}
+.contact-card:hover .phone-icon{transform:scale(1.08) rotate(-5deg);filter:drop-shadow(0 0 9px rgba(255,120,0,.58))}
+.contact-card:hover .phone-number{color:#ff9828;text-shadow:0 0 14px rgba(255,126,12,.42)}
+.contact-card:hover .worktime{color:#e2e4e7;text-shadow:0 0 9px rgba(255,126,12,.18)}
+.header-book{width:180px;margin-left:12px}
+.header-book:before{display:none!important}
+.header-web-book{position:relative;width:180px;aspect-ratio:1958/676;margin-left:12px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 11px;color:#fff;border:1px solid rgba(255,167,73,.62);border-radius:4px;background:linear-gradient(135deg,rgba(122,35,0,.18),transparent 34%),linear-gradient(100deg,#d45105 0%,#ee6405 43%,#ff8b12 100%);box-shadow:inset 0 1px 0 rgba(255,226,188,.24),inset 0 -1px 0 rgba(103,28,0,.28),0 4px 12px rgba(0,0,0,.20),0 0 10px rgba(255,112,0,.16);font-family:Inter,Manrope,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:850;letter-spacing:.015em;line-height:1;white-space:nowrap;transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease,filter .18s ease;isolation:isolate}
+.header-web-book::after{content:"";position:absolute;inset:1px;border-radius:3px;background:linear-gradient(118deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.03) 27%,transparent 43%);pointer-events:none;z-index:0}
+.header-web-book>span{position:relative;z-index:1}
+.header-web-calendar{width:25px;height:25px;flex:0 0 25px;display:grid;place-items:center;color:#fff;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.header-web-calendar svg{display:block;width:25px;height:25px}
+.header-web-divider{width:1px;height:30px;flex:0 0 1px;background:linear-gradient(180deg,transparent,rgba(104,34,3,.74) 18%,rgba(91,27,0,.82) 50%,rgba(104,34,3,.74) 82%,transparent);box-shadow:1px 0 0 rgba(255,194,125,.16)}
+.header-web-label{flex:1;text-align:center}
+.header-web-arrow{font-size:18px;font-weight:800;color:#7f3106;text-shadow:0 1px 0 rgba(255,184,94,.18);transform:translateY(-1px);transition:transform .18s ease,color .18s ease,text-shadow .18s ease}
+.header-web-book:hover{transform:translateY(1px) scale(.985);background:linear-gradient(135deg,rgba(82,23,0,.24),transparent 36%),linear-gradient(100deg,#b94103 0%,#d95103 46%,#e96a08 100%);border-color:rgba(255,148,49,.72);box-shadow:inset 0 3px 8px rgba(79,19,0,.34),inset 0 -1px 0 rgba(255,166,73,.16),0 2px 7px rgba(0,0,0,.23),0 0 9px rgba(255,105,0,.15)}
+.header-web-book:hover .header-web-arrow{color:#ffb15b;transform:translate(2px,-1px);text-shadow:0 0 7px rgba(255,161,75,.26)}
+.header-web-book:active{transform:translateY(2px) scale(.972)}
+.header-web-book:focus-visible{outline:2px solid rgba(255,168,72,.95);outline-offset:3px}
+.header-action-separator{display:block;width:1px;height:34px;flex:0 0 1px;margin:0 2px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.20) 28%,rgba(255,142,41,.50) 50%,rgba(255,255,255,.16) 72%,transparent);box-shadow:0 0 8px rgba(255,128,16,.16);opacity:.72;pointer-events:none;transform:none!important;transition:none!important}
+.mobile-menu-toggle,.mobile-menu-panel{display:none}
+.site-header.is-scrolled{background:rgba(4,6,9,.46);box-shadow:0 10px 34px rgba(0,0,0,.24)}
+
+@media(max-width:1240px){
+  .header-inner{grid-template-columns:160px 1fr auto;gap:14px;padding:0 22px}
+  .brand img{width:145px}
+  .main-nav{gap:15px}
+  .main-nav a{font-size:12px}
+  .header-actions{gap:8px}
+  .contact-card{grid-template-columns:30px auto;column-gap:8px;min-width:168px}
+  .phone-icon{width:28px;height:28px}
+  .phone-number{font-size:12.5px}
+  .worktime{font-size:8.8px}
+  .header-web-book{width:154px;font-size:10.5px;gap:6px;padding:0 9px}
+  .header-web-calendar{width:21px;height:21px;flex-basis:21px}
+  .header-web-calendar svg{width:21px;height:21px}
+  .header-web-divider{height:26px}
+  .header-web-arrow{font-size:16px}
+  .header-action-separator{height:30px}
+}
+@media(min-width:861px) and (max-width:1180px){
+  .site-header{height:82px}
+  .header-inner{grid-template-columns:150px minmax(500px,1fr) auto!important;gap:15px!important;padding:0 20px!important}
+  .brand{height:68px}.brand img{width:140px!important}
+  .main-nav{gap:14px!important}.main-nav a{font-size:11.5px!important}
+  .contact-card{min-width:auto!important;grid-template-columns:29px!important;padding:4px!important}
+  .contact-card .contact-copy{display:none!important}
+  .phone-icon{width:29px!important;height:29px!important}
+  .header-action-separator{height:28px!important}
+  .header-web-book{width:142px!important;font-size:9.8px!important}
+}
+@media(max-width:860px){
+  body.mobile-menu-open{overflow:hidden}
+  .site-header{height:72px!important;background:rgba(5,7,10,.72)!important;backdrop-filter:blur(14px) saturate(112%)!important;-webkit-backdrop-filter:blur(14px) saturate(112%)!important}
+  .header-inner{height:72px!important;grid-template-columns:auto 1fr auto!important;gap:10px!important;padding:0 14px!important}
+  .brand{height:64px!important}.brand img{width:126px!important}
+  .main-nav{display:none!important}
+  .header-actions{justify-self:end!important;gap:7px!important}
+  .contact-card{min-width:auto!important;grid-template-columns:31px!important;padding:3px!important}
+  .contact-copy{display:none!important}.phone-icon{width:31px!important;height:31px!important}
+  .header-action-separator{height:26px!important;margin:0 1px!important}
+  .header-web-book{width:124px!important;height:46px!important;font-size:9px!important;gap:5px!important;padding:0 7px!important}
+  .header-web-calendar{width:18px;height:18px;flex-basis:18px}
+  .header-web-calendar svg{width:18px;height:18px}
+  .header-web-divider{height:22px}
+  .header-web-arrow{font-size:14px}
+  .mobile-menu-toggle{width:46px;height:46px;padding:0;border:1px solid rgba(255,143,31,.28);background:rgba(8,10,13,.50);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:#fff;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease}
+  .mobile-menu-toggle span{width:20px;height:1.5px;display:block;background:#fff;transform-origin:center;transition:transform .2s ease,opacity .2s ease,background .2s ease}
+  .mobile-menu-toggle:hover{border-color:rgba(255,143,31,.60);background:rgba(18,12,8,.62);box-shadow:0 0 14px rgba(255,120,0,.09)}
+  .site-header.mobile-menu-active .mobile-menu-toggle span:nth-child(1){transform:translateY(6.5px) rotate(45deg);background:#ff9a35}
+  .site-header.mobile-menu-active .mobile-menu-toggle span:nth-child(2){opacity:0}
+  .site-header.mobile-menu-active .mobile-menu-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);background:#ff9a35}
+  .mobile-menu-panel{position:fixed;z-index:58;top:72px;left:12px;right:12px;display:block;padding:17px 18px 18px;border:1px solid rgba(255,145,34,.18);background:linear-gradient(180deg,rgba(7,9,12,.97),rgba(5,7,10,.985));box-shadow:0 22px 48px rgba(0,0,0,.44),inset 0 1px 0 rgba(255,255,255,.025);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);transition:opacity .2s ease,transform .2s ease,visibility .2s ease}
+  .site-header.mobile-menu-active .mobile-menu-panel{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+  .mobile-menu-kicker{display:flex;align-items:center;gap:9px;margin-bottom:13px;color:#ff962f;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+  .mobile-menu-kicker:before{content:"";width:26px;height:1px;background:#ff7a00;box-shadow:0 0 8px rgba(255,122,0,.30)}
+  .mobile-menu-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px 18px}
+  .mobile-menu-links a{min-height:43px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.055);color:rgba(246,247,248,.90);font-size:13px;font-weight:750}
+  .mobile-menu-links a:hover{color:#ff9828}
+  .mobile-menu-meta{margin-top:14px;padding-top:13px;display:flex;justify-content:space-between;gap:18px;border-top:1px solid rgba(255,255,255,.07);color:rgba(221,225,230,.58);font-size:10.5px;line-height:1.42}
+  .mobile-menu-meta strong{display:block;color:#fff;font-size:11.5px;margin-bottom:2px}
+}
+@media(max-width:560px){
+  .site-header,.header-inner{height:66px!important}
+  .header-inner{padding:0 10px!important;gap:7px!important}
+  .brand{height:58px!important}.brand img{width:112px!important}
+  .contact-card,.header-action-separator{display:none!important}
+  .header-actions{gap:0!important}
+  .header-web-book{width:108px!important;height:42px!important;padding:0 6px!important;font-size:8.1px!important}
+  .header-web-calendar{width:16px!important;height:16px!important;flex-basis:16px!important}
+  .header-web-calendar svg{width:16px!important;height:16px!important}
+  .header-web-divider{height:20px!important}
+  .header-web-arrow{display:none!important}
+  .mobile-menu-toggle{width:42px;height:42px}
+  .mobile-menu-panel{top:66px;left:8px;right:8px;padding:15px 15px 16px}
+  .mobile-menu-links{gap:0 12px}.mobile-menu-links a{min-height:41px;font-size:12.5px}
+  .mobile-menu-meta{flex-direction:column;gap:8px}
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="../" aria-label="КАД Бокс778 — на главную"><img src="../assets/media/96e845fc06623561.webp" alt="КАД Бокс778"></a>
-    <nav class="main-nav" aria-label="Навигация по странице">
-      <a href="#services">Работы</a><a href="#prices">Цены</a><a href="#faq">Вопросы</a><a href="#contacts">Запись</a>
-    </nav>
-    <a class="header-contact-card" href="tel:+79216360402" aria-label="Позвонить в КАД Бокс778: +7 921 636-04-02">
-      <img class="header-phone-icon" src="../assets/media/8ba64eaabc30aeba.webp" alt="" aria-hidden="true" width="107" height="112" decoding="async">
-      <span class="header-contact-copy">
-        <span class="header-phone-number">+7 921 636-04-02</span>
-        <span class="header-worktime">Ежедневно с 9:00 до 21:00</span>
-      </span>
-    </a>
-  </div>
+<header class="site-header" id="top">
+<div class="header-inner">
+<a aria-label="КАД Бокс 778 — на главную" class="brand" href="../">
+<img alt="КАД Бокс 778" decoding="async" fetchpriority="high" height="262" src="../assets/media/96e845fc06623561.webp" width="480"/>
+</a>
+<nav aria-label="Навигация по странице" class="main-nav">
+<a href="#services">Работы</a>
+<a href="#prices">Цены</a>
+<a href="#faq">Вопросы</a>
+<a href="#contacts">Запись</a>
+</nav>
+<div class="header-actions">
+<a aria-label="Позвонить для записи: +7 921 636-04-02" class="contact-card" href="tel:+79216360402">
+<img alt="" aria-hidden="true" class="phone-icon" decoding="async" height="112" loading="lazy" src="../assets/media/8ba64eaabc30aeba.webp" width="107"/>
+<span class="contact-copy">
+<span class="phone-number">+7 921 636-04-02</span>
+<span class="worktime">Ежедневно с 9:00 до 21:00</span>
+</span>
+</a>
+<span aria-hidden="true" class="header-action-separator"></span>
+<a aria-label="Перейти к записи" class="header-book header-web-book" href="#contacts">
+<span aria-hidden="true" class="header-web-calendar">
+<svg focusable="false" role="img" viewBox="0 0 32 32">
+<rect fill="none" height="19" rx="2.2" stroke="currentColor" stroke-width="2.3" width="21" x="5.5" y="7.5"></rect>
+<path d="M10 4.8v5.3M22 4.8v5.3M5.5 12.2h21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.3"></path>
+<path d="m11.4 19.1 3.1 3.1 6.3-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</span>
+<span aria-hidden="true" class="header-web-divider"></span>
+<span class="header-web-label">ЗАПИСАТЬСЯ</span>
+<span aria-hidden="true" class="header-web-arrow">→</span>
+</a>
+</div>
+<button aria-controls="mobileNavPanel" aria-expanded="false" aria-label="Открыть меню" class="mobile-menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div aria-hidden="true" class="mobile-menu-panel" id="mobileNavPanel">
+<div class="mobile-menu-kicker">Навигация</div>
+<nav aria-label="Мобильная навигация" class="mobile-menu-links">
+<a href="#services">Работы</a>
+<a href="#prices">Цены</a>
+<a href="#faq">Вопросы</a>
+<a href="#contacts">Запись</a>
+</nav>
+<div class="mobile-menu-meta">
+<div><strong>+7 921 636-04-02</strong>Ежедневно с 9:00 до 21:00</div>
+<div><strong>Богородская 3Б, Бокс №7</strong>Санкт-Петербург • на КАДе</div>
+</div>
+</div>
 </header>
 
 <main>
@@ -746,6 +899,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   });
   document.querySelectorAll('[data-book-link]').forEach(link=>link.addEventListener('click',()=>{if(typeof window.kadboxTrackGoal==='function')window.kadboxTrackGoal('booking_open',{service:'ТО — Техническое обслуживание'})}));
   document.addEventListener('click',function(e){const a=e.target.closest('a[href^="tel:"]');if(a&&typeof window.kadboxTrackGoal==='function')window.kadboxTrackGoal('phone_click',{placement:'technical-service-page'})},{passive:true});
+})();
+</script>
+
+<script id="v100-service-header-js">
+(()=>{
+  const h=document.querySelector('.site-header');
+  const t=document.querySelector('.mobile-menu-toggle');
+  const p=document.getElementById('mobileNavPanel');
+  if(!h)return;
+  const syncScroll=()=>h.classList.toggle('is-scrolled',window.scrollY>10);
+  syncScroll();
+  window.addEventListener('scroll',syncScroll,{passive:true});
+  if(!t||!p)return;
+  const setOpen=o=>{
+    h.classList.toggle('mobile-menu-active',o);
+    document.body.classList.toggle('mobile-menu-open',o);
+    t.setAttribute('aria-expanded',String(o));
+    t.setAttribute('aria-label',o?'Закрыть меню':'Открыть меню');
+    p.setAttribute('aria-hidden',String(!o));
+  };
+  t.addEventListener('click',()=>setOpen(!h.classList.contains('mobile-menu-active')));
+  p.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+  window.addEventListener('resize',()=>{if(innerWidth>860)setOpen(false)});
 })();
 </script>
 </body>
