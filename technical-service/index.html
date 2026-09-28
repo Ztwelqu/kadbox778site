@@ -179,20 +179,64 @@ body{
 }
 .main-nav a:hover{color:#fff;text-shadow:0 0 12px rgba(255,122,0,.30)}
 .main-nav a:hover::after{left:0;right:0}
-.header-phone{
-  padding:12px 16px;
-  border:1px solid rgba(255,139,31,.20);
-  border-radius:10px;
-  background:linear-gradient(180deg,rgba(255,122,0,.075),rgba(255,122,0,.02));
-  color:#fff;
-  font-weight:850;
-  box-shadow:inset 0 1px rgba(255,255,255,.03);
-  transition:.2s ease;
+.header-contact-card{
+  display:grid;
+  grid-template-columns:34px auto;
+  align-items:center;
+  column-gap:10px;
+  min-width:190px;
+  padding:7px 4px;
+  border:0;
+  border-radius:8px;
+  background:transparent;
+  box-shadow:none;
+  transition:transform .22s ease,filter .22s ease;
 }
-.header-phone:hover{
-  border-color:rgba(255,139,31,.42);
-  color:#ff9d24;
-  box-shadow:0 0 18px rgba(255,122,0,.08);
+.header-phone-icon{
+  width:31px;
+  height:31px;
+  object-fit:contain;
+  display:block;
+  transition:transform .22s ease,filter .22s ease;
+  filter:drop-shadow(0 0 5px rgba(255,121,0,.14));
+}
+.header-contact-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:3px;
+  line-height:1;
+}
+.header-phone-number{
+  font-size:14.5px;
+  font-weight:800;
+  letter-spacing:.01em;
+  color:#fff;
+  transition:color .22s ease,text-shadow .22s ease;
+}
+.header-worktime{
+  font-size:10px;
+  font-weight:560;
+  color:#b8bdc4;
+  letter-spacing:.01em;
+  transition:color .22s ease,text-shadow .22s ease;
+}
+.header-contact-card:hover{
+  transform:translateY(-1px);
+  filter:drop-shadow(0 0 9px rgba(255,122,0,.10));
+}
+.header-contact-card:hover .header-phone-icon{
+  transform:scale(1.08) rotate(-5deg);
+  filter:drop-shadow(0 0 9px rgba(255,120,0,.58));
+}
+.header-contact-card:hover .header-phone-number{
+  color:#ff9828;
+  text-shadow:0 0 14px rgba(255,126,12,.42);
+}
+.header-contact-card:hover .header-worktime{
+  color:#e2e4e7;
+  text-shadow:0 0 9px rgba(255,126,12,.18);
 }
 
 /* Hero */
@@ -517,7 +561,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .header-inner{height:auto;min-height:76px;grid-template-columns:1fr auto;padding:8px 0}
   .brand{width:158px;height:58px}
   .main-nav{display:none}
-  .header-phone{font-size:12px;padding:10px 11px}
+  .header-contact-card{min-width:0;padding:5px 0;grid-template-columns:30px auto;column-gap:8px}
+  .header-phone-icon{width:27px;height:27px}
+  .header-phone-number{font-size:12.5px}
+  .header-worktime{font-size:9px}
   .hero{padding:62px 0 64px}
   .hero-grid{gap:34px}
   .hero h1{font-size:clamp(42px,12vw,60px)}
@@ -539,7 +586,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
     <nav class="main-nav" aria-label="Навигация по странице">
       <a href="#services">Работы</a><a href="#prices">Цены</a><a href="#faq">Вопросы</a><a href="#contacts">Запись</a>
     </nav>
-    <a class="header-phone" href="tel:+79216360402">+7-921-636-04-02</a>
+    <a class="header-contact-card" href="tel:+79216360402" aria-label="Позвонить в КАД Бокс778: +7 921 636-04-02">
+      <img class="header-phone-icon" src="../assets/media/8ba64eaabc30aeba.webp" alt="" aria-hidden="true" width="107" height="112" decoding="async">
+      <span class="header-contact-copy">
+        <span class="header-phone-number">+7 921 636-04-02</span>
+        <span class="header-worktime">Ежедневно с 9:00 до 21:00</span>
+      </span>
+    </a>
   </div>
 </header>
 
