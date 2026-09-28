@@ -997,8 +997,7 @@ h1{margin:0;max-width:650px;font-size:clamp(46px,4.3vw,72px);line-height:.98;let
 </style>
 <style id="v35-hero-benefit-harmony">
 /* V35: only improve HERO benefits positioning/composition.
-   Sizes, separators, text, colors and hover behavior stay the same. */
-.hero-badges .hero-benefit{
+   Sizes, separators, text, colors and hover behavior stay the same. */.hero-badges .hero-benefit{
   display:grid !important;
   grid-template-columns:auto minmax(132px, 166px);
   grid-template-areas:"icon copy";
@@ -1997,8 +1996,7 @@ body.works-modal-open{overflow:hidden}
     grid-column:span 2;
     min-height:440px;
   }
-}
-@media(max-width:650px){
+}@media(max-width:650px){
   .works-section{padding:68px 0 72px}
   .works-inner{width:calc(100% - 32px)}
   .works-head{
@@ -2997,8 +2995,7 @@ a.contact-web-row:hover{
   .services-grid{
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
     gap:14px !important;
-  }
-  .service-card-description br{
+  }  .service-card-description br{
     display:none;
   }
   .service-card-description{
@@ -3997,8 +3994,7 @@ a.contact-web-row:hover{
   border-color:#ff8a18 !important;
   box-shadow:0 0 0 3px rgba(255,122,0,.08) !important;
 }
-.price-cat-btn{
-  transition:background .16s ease,color .16s ease,transform .16s ease !important;
+.price-cat-btn{  transition:background .16s ease,color .16s ease,transform .16s ease !important;
 }
 .price-cat-btn:hover{
   transform:translateX(2px);
@@ -4997,8 +4993,7 @@ textarea:focus-visible{
 </div>
 <div aria-hidden="true" class="service-card-arrow">↗</div>
 </div>
-</div>
-<div class="service-card">
+</div><div class="service-card">
 <img alt="" aria-hidden="true" decoding="async" height="1067" loading="lazy" src="assets/media/70e078d278da904d.webp" width="800"/>
 <div class="service-card-content">
 <img alt="" aria-hidden="true" class="service-card-icon" decoding="async" height="180" loading="lazy" src="assets/media/cf11f190fde1740e.webp" width="180"/>
@@ -5998,7 +5993,6 @@ loadFullPriceData();
   requestModal?.addEventListener('click',event=>{if(event.target===requestModal)closeRequestModal();});
   consentCheckbox?.addEventListener('change',syncConsentState);
   syncConsentState();
-
   requestForm?.addEventListener('submit', async event => {
     event.preventDefault();
 
