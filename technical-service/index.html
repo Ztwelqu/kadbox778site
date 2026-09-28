@@ -696,6 +696,293 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .mobile-menu-meta{flex-direction:column;gap:8px}
 }
 </style>
+
+<style id="v100-technical-hero-refine">
+/* Technical-service HERO refinement: same visual language as the approved V100 homepage. */
+
+/* Header on this page intentionally ends with the phone block. */
+.site-header .header-actions{gap:0}
+
+/* HERO underlay: keep the source image clean — no darkening gradients, masks or fades. */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:132px 0 84px;
+  background:url('../assets/media/759e7d6470c312a7.webp') center/cover no-repeat;
+  border-bottom:0;
+}
+.hero::before{display:none!important}
+.hero::after{display:none!important}
+
+/* Preserve page structure but match homepage copy geometry and typography. */
+.hero-grid{
+  position:relative;
+  z-index:2;
+  min-height:610px;
+  grid-template-columns:minmax(0,1.02fr) minmax(420px,.82fr);
+  gap:70px;
+  align-items:center;
+}
+.hero-copy{
+  width:min(690px,54vw);
+  max-width:690px;
+  transform:translateY(-14px);
+}
+.breadcrumbs{
+  margin:0 0 18px;
+  color:rgba(255,255,255,.58);
+  font-size:12px;
+  letter-spacing:.02em;
+  text-shadow:0 2px 10px rgba(0,0,0,.50);
+}
+.breadcrumbs a{color:#ff8b16}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:6px;
+  color:var(--orange2);
+  font-size:16px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  text-shadow:0 0 16px rgba(255,122,0,.30);
+}
+.eyebrow::before{
+  content:"";
+  width:34px;
+  height:2px;
+  background:var(--orange);
+  box-shadow:0 0 12px rgba(255,122,0,.80);
+}
+.hero-address{
+  margin:0 0 18px 44px;
+  color:rgba(255,255,255,.76);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.035em;
+  line-height:1.25;
+  text-shadow:0 2px 10px rgba(0,0,0,.50);
+}
+.hero h1{
+  margin:0;
+  max-width:650px;
+  color:#fff;
+  font-size:clamp(46px,4.3vw,72px);
+  line-height:.98;
+  letter-spacing:-.045em;
+  text-wrap:balance;
+  text-shadow:0 5px 25px rgba(0,0,0,.64);
+}
+.hero-lead{
+  max-width:620px;
+  margin:23px 0 0;
+  color:#d9dde1;
+  font-size:18px;
+  line-height:1.55;
+  text-shadow:0 2px 14px rgba(0,0,0,.72);
+}
+
+/* Rectangular CTA geometry, as on the homepage. */
+.hero-actions{
+  display:grid;
+  grid-template-columns:repeat(2,248px);
+  gap:18px;
+  align-items:center;
+  justify-content:start;
+  margin-top:28px;
+}
+.hero-actions .btn{
+  width:248px;
+  height:66px;
+  min-height:66px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 20px;
+  border-radius:0!important;
+  font-family:Inter,Manrope,"Segoe UI",Arial,sans-serif;
+  font-size:18px;
+  font-weight:850;
+  letter-spacing:.01em;
+  line-height:1;
+  transition:transform .16s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease,color .18s ease;
+}
+.hero-actions .btn-primary{
+  color:#fff;
+  border:1px solid rgba(255,158,45,.98);
+  background:linear-gradient(118deg,rgba(255,98,0,.98) 0%,rgba(255,119,0,.99) 54%,rgba(255,147,18,1) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 -2px 0 rgba(137,43,0,.42),0 0 0 1px rgba(255,107,0,.18),0 4px 16px rgba(255,94,0,.20);
+}
+.hero-actions .btn-primary:hover{
+  transform:scale(.965);
+  background:linear-gradient(118deg,#d94b00 0%,#ef6500 55%,#ff8310 100%);
+  border-color:#ff9d24;
+  box-shadow:inset 0 4px 12px rgba(78,20,0,.36),inset 0 -1px 0 rgba(255,196,117,.16),0 0 13px rgba(255,116,0,.24);
+}
+.hero-actions .btn-outline{
+  color:#fff;
+  border:2px solid #ff7200;
+  background:rgba(4,7,10,.36);
+  box-shadow:inset 0 0 0 1px rgba(255,121,0,.12),inset 0 0 22px rgba(0,0,0,.16),0 0 10px rgba(255,105,0,.12);
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+}
+.hero-actions .btn-outline:hover{
+  transform:none;
+  color:#ff8a18;
+  border-color:#ff8a18;
+  background:rgba(9,9,9,.46);
+  box-shadow:inset 0 0 24px rgba(255,104,0,.055),0 0 14px rgba(255,107,0,.20);
+}
+
+/* Three compact TO benefits: subtle neon movement, no arcade-like effects. */
+.hero-points{
+  margin-top:38px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.hero-point{
+  position:relative;
+  overflow:hidden;
+  min-height:118px;
+  padding:17px 16px;
+  border:1px solid rgba(255,139,31,.13);
+  border-radius:12px;
+  background:linear-gradient(180deg,rgba(13,16,21,.80),rgba(7,9,12,.76));
+  box-shadow:0 16px 32px rgba(0,0,0,.18);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,background .24s ease;
+}
+.hero-point::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#ff8a18,transparent);
+  box-shadow:0 0 12px rgba(255,122,0,.48);
+  transform:translateX(-50%);
+  transition:width .32s ease;
+}
+.hero-point::after{
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  right:-74px;
+  bottom:-78px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,122,0,.18) 0%,rgba(255,122,0,0) 70%);
+  transform:scale(.55);
+  opacity:0;
+  transition:transform .34s ease,opacity .26s ease;
+  pointer-events:none;
+}
+.hero-point b,
+.hero-point span{position:relative;z-index:1}
+.hero-point b{
+  display:block;
+  color:#fff;
+  font-size:14px;
+  margin-bottom:8px;
+  transition:color .22s ease,transform .22s ease,text-shadow .22s ease;
+}
+.hero-point span{
+  display:block;
+  color:#979da6;
+  font-size:12px;
+  line-height:1.5;
+  transition:color .22s ease,transform .22s ease;
+}
+.hero-point:hover,
+.hero-point:focus-visible{
+  transform:translateY(-5px);
+  border-color:rgba(255,139,31,.38);
+  background:linear-gradient(180deg,rgba(18,18,19,.88),rgba(8,9,11,.92));
+  box-shadow:0 22px 42px rgba(0,0,0,.30),0 0 20px rgba(255,122,0,.075);
+  outline:none;
+}
+.hero-point:hover::before,
+.hero-point:focus-visible::before{width:76%}
+.hero-point:hover::after,
+.hero-point:focus-visible::after{opacity:1;transform:scale(1)}
+.hero-point:hover b,
+.hero-point:focus-visible b{
+  color:#ff9828;
+  transform:translateX(3px);
+  text-shadow:0 0 12px rgba(255,126,12,.24);
+}
+.hero-point:hover span,
+.hero-point:focus-visible span{
+  color:#c2c6cc;
+  transform:translateX(3px);
+}
+
+/* The TO image itself is shown without the earlier processing filter. */
+.hero-art img{filter:none!important}
+
+/* Same seam divider as the V100 homepage. */
+.services-divider{
+  position:relative;
+  z-index:4;
+  width:min(1480px,calc(100% - 104px));
+  margin:0 auto;
+  height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  opacity:.92;
+}
+.services-divider::before,
+.services-divider::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,rgba(255,138,24,0),rgba(255,138,24,.38),rgba(255,138,24,0));
+}
+.services-divider span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#ff8a18;
+  box-shadow:0 0 0 2px rgba(255,138,24,.10),0 0 16px rgba(255,138,24,.65);
+}
+
+/* With a fixed header, anchor landings must remain visible. */
+#services,#prices,#faq,#contacts{scroll-margin-top:116px}
+
+@media(max-width:1040px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-copy{width:100%;max-width:690px}
+  .hero-art{max-width:760px}
+}
+@media(max-width:860px){
+  .hero{padding:112px 0 68px}
+  .hero-copy{width:100%;max-width:590px;transform:none}
+  .eyebrow{font-size:12px;gap:8px}
+  .eyebrow::before{width:26px}
+  .hero-address{margin-left:36px;margin-bottom:15px;font-size:12px}
+  .hero h1{max-width:560px;font-size:clamp(40px,7.3vw,52px);line-height:1}
+  .hero-lead{max-width:560px;margin-top:17px;font-size:15px;line-height:1.48}
+  .hero-actions{grid-template-columns:repeat(2,minmax(0,220px));gap:14px}
+  .hero-actions .btn{width:100%;height:60px;min-height:60px;font-size:16px}
+  .hero-points{grid-template-columns:1fr}
+  .services-divider{width:calc(100% - 44px);gap:14px}
+}
+@media(max-width:560px){
+  .hero{padding:96px 0 60px}
+  .hero-address{margin-left:34px;margin-bottom:16px;font-size:12px}
+  .hero h1{font-size:clamp(35px,10.8vw,43px)}
+  .hero-lead{font-size:13.5px;line-height:1.44}
+  .hero-actions{grid-template-columns:1fr;gap:9px;width:min(100%,360px)}
+  .hero-actions .btn{width:100%;height:56px;min-height:56px;font-size:14px}
+  .services-divider{width:calc(100% - 32px);gap:12px}
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
@@ -717,19 +1004,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 <span class="worktime">Ежедневно с 9:00 до 21:00</span>
 </span>
 </a>
-<span aria-hidden="true" class="header-action-separator"></span>
-<a aria-label="Перейти к записи" class="header-book header-web-book" href="#contacts">
-<span aria-hidden="true" class="header-web-calendar">
-<svg focusable="false" role="img" viewBox="0 0 32 32">
-<rect fill="none" height="19" rx="2.2" stroke="currentColor" stroke-width="2.3" width="21" x="5.5" y="7.5"></rect>
-<path d="M10 4.8v5.3M22 4.8v5.3M5.5 12.2h21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.3"></path>
-<path d="m11.4 19.1 3.1 3.1 6.3-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-</span>
-<span aria-hidden="true" class="header-web-divider"></span>
-<span class="header-web-label">ЗАПИСАТЬСЯ</span>
-<span aria-hidden="true" class="header-web-arrow">→</span>
-</a>
+
 </div>
 <button aria-controls="mobileNavPanel" aria-expanded="false" aria-label="Открыть меню" class="mobile-menu-toggle" type="button">
 <span></span><span></span><span></span>
@@ -755,22 +1030,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   <div class="container hero-grid">
     <div class="hero-copy">
       <div class="breadcrumbs"><a href="../">КАД Бокс778</a> → Техническое обслуживание</div>
-      <div class="kicker">Порошкино • рядом с КАД</div>
-      <h1>Техническое <span class="accent">обслуживание</span></h1>
+      <div class="eyebrow">Санкт-Петербург • на КАДе</div>
+      <div class="hero-address">Богородская 3Б, Бокс №7</div>
+      <h1>Техническое обслуживание</h1>
       <p class="hero-lead">Плановое и сезонное ТО автомобиля: замена моторного масла, фильтров, свечей зажигания и охлаждающей жидкости. Подбираем объём работ по автомобилю и его состоянию.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contacts" data-book-link>Записаться на ТО →</a>
         <a class="btn btn-outline" href="#prices">Смотреть цены</a>
       </div>
       <div class="hero-points">
-        <div class="hero-point"><b>Плановое ТО</b><span>Регламентные работы и базовое обслуживание автомобиля.</span></div>
-        <div class="hero-point"><b>Масло и фильтры</b><span>Двигатель, масляный, воздушный и салонный фильтры.</span></div>
-        <div class="hero-point"><b>Сезонное обслуживание</b><span>ТО после зимы и проверка автомобиля после покупки.</span></div>
+        <div class="hero-point" tabindex="0"><b>Плановое ТО</b><span>Регламентные работы и базовое обслуживание автомобиля.</span></div>
+        <div class="hero-point" tabindex="0"><b>Масло и фильтры</b><span>Двигатель, масляный, воздушный и салонный фильтры.</span></div>
+        <div class="hero-point" tabindex="0"><b>Сезонное обслуживание</b><span>ТО после зимы и проверка автомобиля после покупки.</span></div>
       </div>
     </div>
     <div class="hero-art"><img src="../assets/embedded/embedded_018_2f99448354a30c23.webp" alt="Техническое обслуживание автомобиля в КАД Бокс778" fetchpriority="high" decoding="async"></div>
   </div>
 </section>
+<div aria-hidden="true" class="services-divider"><span></span></div>
 
 <section class="section" id="services">
   <div class="container">
