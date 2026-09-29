@@ -30,7 +30,7 @@ jobs:
           source = path.read_text(encoding="utf-8")
 
           old = '<a href="../assets/embedded/embedded_040_bd1aaf159a476e3f.webp" target="_blank" rel="noopener"><img src="../assets/embedded/embedded_040_bd1aaf159a476e3f.webp" alt="Прайс-лист на ремонт подвески КАД Бокс778" loading="lazy" decoding="async"></a>'
-          new = '<a href="../assets/media/suspension-price-2026-09-30.webp" target="_blank" rel="noopener"><img src="../assets/media/suspension-price-2026-09-30.webp" alt="Прайс-лист на ремонт подвески КАД Бокс778" width="1024" height="1536" loading="lazy" decoding="async"></a>'
+          new = '<a href="../assets/media/suspension-price-2026-09-30.webp" target="_blank" rel="noopener"><img src="../assets/media/suspension-price-2026-09-30.webp" alt="Прайс-лист на ремонт подвески КАД Бокс778" width="800" height="1200" loading="lazy" decoding="async"></a>'
 
           if old not in source:
               raise SystemExit("Expected old suspension price poster reference was not found")
@@ -41,7 +41,7 @@ jobs:
 
           test -s assets/media/suspension-price-2026-09-30.webp
           bytes=$(wc -c < assets/media/suspension-price-2026-09-30.webp)
-          test "$bytes" -gt 300000
+          test "$bytes" -gt 150000
 
       - name: Commit approved suspension price
         shell: bash
