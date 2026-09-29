@@ -2278,12 +2278,33 @@ h1,h2,h3,h4,h5,h6{
 }
 </style>
 
-<style id="technical-service-nav-subpixel-v1">
-/* Measured optical correction for the rendered Cyrillic label.
-   transform keeps the fractional offset in Chromium instead of integer-snapping like top. */
-@media(min-width:761px){
-  .main-nav > a:first-child{
-    transform:translate3d(0,-0.4px,0);
+<style id="technical-service-nav-linebox-v1">
+/* One identical text line box for every desktop navigation label. */
+@media(min-width:861px){
+  .main-nav{
+    align-items:flex-start!important;
+  }
+  .main-nav > a{
+    display:block!important;
+    height:14px!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0!important;
+    line-height:14px!important;
+    position:relative!important;
+    top:auto!important;
+    transform:none!important;
+    vertical-align:top!important;
+  }
+  .main-nav-label{
+    display:block;
+    height:14px;
+    margin:0;
+    padding:0;
+    line-height:14px;
+    font:inherit;
+    letter-spacing:inherit;
+    white-space:nowrap;
   }
 }
 </style>
@@ -2296,11 +2317,11 @@ h1,h2,h3,h4,h5,h6{
 <img alt="КАД Бокс 778" decoding="async" fetchpriority="high" height="262" src="../assets/media/96e845fc06623561.webp" width="480"/>
 </a>
 <nav aria-label="Навигация по странице" class="main-nav">
-<a href="../">Главная</a>
-<a href="#services">Работы</a>
-<a href="#prices">Цены</a>
-<a href="#faq">Вопросы</a>
-<a href="#contacts">Запись</a>
+<a href="../"><span class="main-nav-label">Главная</span></a>
+<a href="#services"><span class="main-nav-label">Работы</span></a>
+<a href="#prices"><span class="main-nav-label">Цены</span></a>
+<a href="#faq"><span class="main-nav-label">Вопросы</span></a>
+<a href="#contacts"><span class="main-nav-label">Запись</span></a>
 </nav>
 <div class="header-actions">
 <a aria-label="Позвонить для записи: +7 921 636-04-02" class="contact-card" href="tel:+79216360402">
