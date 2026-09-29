@@ -2306,6 +2306,244 @@ h1,h2,h3,h4,h5,h6{
 }
 </style>
 
+<style id="technical-service-contact-v2">
+/* V100 technical-service contact / booking block. */
+.technical-contact-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.92fr) minmax(460px,1.08fr);
+  gap:20px;
+  align-items:stretch;
+}
+.technical-contact-card{
+  position:relative;
+  overflow:hidden;
+  min-width:0;
+  border:1px solid rgba(255,139,31,.18);
+  border-radius:0!important;
+  background:linear-gradient(135deg,rgba(14,17,21,.97),rgba(7,9,12,.99) 68%,rgba(14,10,7,.96));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.024),0 20px 44px rgba(0,0,0,.23);
+}
+.technical-contact-card::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:2px;
+  background:linear-gradient(180deg,#ff9d24,#ff7200 38%,rgba(255,114,0,.16) 78%,transparent);
+  box-shadow:0 0 12px rgba(255,122,0,.25);
+}
+.technical-contact-info{padding:30px}
+.technical-contact-head{padding:0 0 22px;border-bottom:1px solid rgba(255,255,255,.055)}
+.technical-contact-head .kicker{margin-bottom:12px}
+.technical-contact-head h3{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:28px;
+  line-height:1.05;
+  letter-spacing:-.025em;
+}
+.technical-contact-head p{
+  margin:0;
+  max-width:560px;
+  color:#959ca5;
+  font-size:13px;
+  line-height:1.6;
+}
+.technical-contact-list{display:grid;margin-top:16px}
+.technical-contact-row{
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr) 30px;
+  align-items:center;
+  gap:15px;
+  min-height:82px;
+  padding:10px 6px;
+  color:inherit;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  transition:background .22s ease,border-color .22s ease;
+}
+.technical-contact-row:last-child{border-bottom:0}
+a.technical-contact-row:hover{
+  background:linear-gradient(90deg,rgba(255,122,0,.055),transparent 58%);
+  border-color:rgba(255,139,31,.14);
+}
+.technical-contact-icon{
+  width:54px;height:54px;
+  display:grid;place-items:center;
+}
+.technical-contact-icon img{
+  display:block;
+  max-width:50px;max-height:50px;
+  width:auto;height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 0 8px rgba(255,122,0,.15));
+}
+.technical-contact-copy{min-width:0;display:flex;flex-direction:column;gap:4px}
+.technical-contact-copy small{
+  color:#737b85;
+  font-size:9.5px;
+  font-weight:850;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.technical-contact-copy strong{
+  color:#f4f5f6;
+  font-size:14px;
+  line-height:1.35;
+  font-weight:780;
+}
+.technical-contact-arrow{
+  justify-self:end;
+  color:#ff9d24;
+  font-size:18px;
+  opacity:.72;
+  transition:transform .22s ease,color .22s ease,text-shadow .22s ease;
+}
+a.technical-contact-row:hover .technical-contact-arrow{
+  color:#ffb55b;
+  transform:translate(2px,-2px);
+  text-shadow:0 0 12px rgba(255,122,0,.35);
+}
+.technical-contact-arrow--static{font-size:16px;opacity:.35}
+
+.technical-form-card{
+  padding:30px 30px 28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.technical-form-card h3{
+  margin:0 0 7px;
+  color:#fff;
+  font-size:28px;
+  line-height:1.05;
+  font-weight:900;
+  letter-spacing:-.025em;
+}
+.technical-form-note{
+  margin:0 0 22px;
+  color:rgba(226,230,235,.60);
+  font-size:12.5px;
+  line-height:1.45;
+}
+.technical-form{display:grid;gap:12px}
+.technical-field{position:relative}
+.technical-field-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  width:18px;height:18px;
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  transform:translateY(-50%);
+  color:#ff9a35;
+  pointer-events:none;
+  opacity:.95;
+  z-index:2;
+}
+.technical-field-icon svg{
+  width:18px;height:18px;
+  display:block;
+  stroke:currentColor;
+  fill:none;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.technical-field--textarea .technical-field-icon{top:16px;transform:none}
+.technical-form input,
+.technical-form textarea{
+  width:100%;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:0!important;
+  background:rgba(4,6,9,.72)!important;
+  color:#fff!important;
+  font:600 13px/1.3 Inter,Manrope,"Segoe UI",Arial,sans-serif;
+  outline:none;
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.technical-form input{
+  height:48px;
+  padding:0 14px 0 44px!important;
+}
+.technical-form textarea{
+  min-height:112px;
+  resize:vertical;
+  padding:13px 14px 13px 44px!important;
+}
+.technical-form input::placeholder,
+.technical-form textarea::placeholder{color:rgba(230,233,237,.42)}
+.technical-form input:focus,
+.technical-form textarea:focus{
+  border-color:rgba(255,132,20,.62)!important;
+  background:rgba(8,8,9,.82)!important;
+  box-shadow:0 0 0 3px rgba(255,122,0,.07);
+}
+.technical-field--service input{
+  color:#ffb15a!important;
+  font-weight:780;
+  border-color:rgba(255,145,34,.22)!important;
+  background:linear-gradient(90deg,rgba(255,122,0,.05),rgba(255,122,0,.01)),rgba(4,6,9,.72)!important;
+}
+.technical-consent{
+  display:flex!important;
+  align-items:flex-start!important;
+  gap:9px!important;
+  color:rgba(225,229,234,.48)!important;
+  font-size:10px!important;
+  line-height:1.4!important;
+}
+.technical-consent input{
+  width:14px!important;
+  height:14px!important;
+  min-height:14px!important;
+  margin:1px 0 0!important;
+  padding:0!important;
+  accent-color:#ff7a00;
+  flex:0 0 auto;
+  cursor:pointer;
+}
+.technical-consent span{min-width:0}
+.technical-consent a{
+  color:rgba(239,242,245,.68);
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,145,34,.30);
+  transition:color .18s ease,border-color .18s ease,text-shadow .18s ease;
+}
+.technical-consent a:hover,
+.technical-consent a:focus-visible{
+  color:#ff9a35;
+  border-bottom-color:#ff9a35;
+  text-shadow:0 0 10px rgba(255,128,20,.14);
+}
+.technical-consent:has(input:not(:checked)) span{color:rgba(225,229,234,.42)}
+.technical-consent:has(input:checked) span{color:rgba(225,229,234,.62)}
+
+.technical-submit{
+  border-radius:0!important;
+}
+.technical-submit:disabled{
+  cursor:not-allowed!important;
+  opacity:.42!important;
+  filter:saturate(.55) brightness(.78)!important;
+  transform:none!important;
+  box-shadow:none!important;
+}
+.technical-submit:not(:disabled){opacity:1!important}
+
+@media(max-width:900px){
+  .technical-contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .technical-contact-info,
+  .technical-form-card{padding:24px 20px}
+  .technical-contact-head h3,
+  .technical-form-card h3{font-size:24px}
+  .technical-contact-row{grid-template-columns:50px minmax(0,1fr) 26px;gap:12px;min-height:74px}
+  .technical-contact-icon{width:46px;height:46px}
+  .technical-contact-icon img{max-width:44px;max-height:44px}
+  .technical-contact-copy strong{font-size:13px}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header" id="top">
@@ -2489,27 +2727,70 @@ h1,h2,h3,h4,h5,h6{
 </section>
 <div aria-hidden="true" class="services-divider section-seam-divider"><span></span></div>
 
-<section class="section" id="contacts">
-  <div class="container contact-grid">
-    <div class="contact-card">
-      <div class="kicker">КАД Бокс778</div><h3>Запись на техническое обслуживание</h3>
-      <div class="contact-list">
-        <div class="contact-item"><small>Адрес</small><b>ЛО, д. Порошкино, ул. Богородская, 3Б, бокс 7</b></div>
-        <div class="contact-item"><small>Телефон</small><a href="tel:+79216360402"><b>+7-921-636-04-02</b></a></div>
-        <div class="contact-item"><small>График</small><b>Ежедневно 09:00–21:00</b></div>
-        <div class="contact-item"><small>Маршрут</small><a href="https://yandex.ru/maps/org/kad_boks778/180399555505/?ll=30.304899%2C60.096475&z=17" target="_blank" rel="noopener"><b>Открыть в Яндекс Картах →</b></a></div>
+<section class="section technical-contact-section" id="contacts">
+  <div class="container technical-contact-grid">
+    <div class="technical-contact-card technical-contact-info">
+      <div class="technical-contact-head">
+        <div class="kicker">КАД Бокс778</div>
+        <h3>Запись на техническое обслуживание</h3>
+        <p>Свяжитесь с нами удобным способом или оставьте заявку — уточним детали и подберём время.</p>
+      </div>
+      <div class="technical-contact-list">
+        <a class="technical-contact-row" href="https://yandex.ru/maps/org/kad_boks778/180399555505/?ll=30.304899%2C60.096475&z=17" target="_blank" rel="noopener">
+          <span class="technical-contact-icon"><img src="../assets/media/de0e807788f9fc4d.webp" alt="" aria-hidden="true"></span>
+          <span class="technical-contact-copy"><small>Адрес</small><strong>ЛО, д. Порошкино, ул. Богородская, 3Б, бокс 7</strong></span>
+          <span class="technical-contact-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="technical-contact-row" href="tel:+79216360402">
+          <span class="technical-contact-icon"><img src="../assets/media/b968276bc295e4d2.webp" alt="" aria-hidden="true"></span>
+          <span class="technical-contact-copy"><small>Телефон</small><strong>+7 921 636-04-02</strong></span>
+          <span class="technical-contact-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="technical-contact-row">
+          <span class="technical-contact-icon"><img src="../assets/media/18815b320908954d.webp" alt="" aria-hidden="true"></span>
+          <span class="technical-contact-copy"><small>График</small><strong>Ежедневно 09:00–21:00</strong></span>
+          <span class="technical-contact-arrow technical-contact-arrow--static" aria-hidden="true">•</span>
+        </div>
+        <a class="technical-contact-row" href="https://yandex.ru/maps/org/kad_boks778/180399555505/?ll=30.304899%2C60.096475&z=17" target="_blank" rel="noopener">
+          <span class="technical-contact-icon"><img src="../assets/media/4332ecbc5ad3a930.webp" alt="" aria-hidden="true"></span>
+          <span class="technical-contact-copy"><small>Маршрут</small><strong>Открыть в Яндекс Картах</strong></span>
+          <span class="technical-contact-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
-    <div class="form-card">
+
+    <div class="technical-contact-card technical-form-card">
       <h3>Оставить заявку</h3>
-      <form class="form" id="technicalServiceForm">
+      <p class="technical-form-note">Оставьте контакты — уточним детали и свяжемся с вами в ближайшее время.</p>
+      <form class="form technical-form" id="technicalServiceForm">
         <input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none">
-        <input autocomplete="name" name="name" placeholder="Ваше имя" required>
-        <input autocomplete="tel" inputmode="tel" name="phone" placeholder="Телефон" required type="tel">
-        <input name="service" value="ТО — Техническое обслуживание" readonly>
-        <textarea name="comment" placeholder="Марка, модель, пробег или какие работы нужны"></textarea>
-        <label><input required type="checkbox"> <span>Согласен(на) с обработкой персональных данных и ознакомлен(а) с <a href="../privacy-policy.html" target="_blank" rel="noopener" style="text-decoration:underline">Политикой обработки персональных данных</a>.</span></label>
-        <button class="btn btn-primary" type="submit">Отправить заявку →</button>
+
+        <div class="technical-field">
+          <span class="technical-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"></path><path d="M4.5 19.5a8.5 8.5 0 0 1 15 0"></path></svg></span>
+          <input autocomplete="name" name="name" placeholder="Ваше имя" required>
+        </div>
+
+        <div class="technical-field">
+          <span class="technical-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 16.2v2.4a1.8 1.8 0 0 1-2 1.8A17.8 17.8 0 0 1 3.6 5a1.8 1.8 0 0 1 1.8-2H7.8A1.8 1.8 0 0 1 9.6 4.6l.5 3a1.8 1.8 0 0 1-.5 1.6l-1.2 1.2a14.4 14.4 0 0 0 5.2 5.2l1.2-1.2a1.8 1.8 0 0 1 1.6-.5l3 .5A1.8 1.8 0 0 1 21 16.2Z"></path></svg></span>
+          <input autocomplete="tel" inputmode="tel" name="phone" placeholder="Телефон" required type="tel">
+        </div>
+
+        <div class="technical-field technical-field--service">
+          <span class="technical-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 15h14l-1.3-4a2 2 0 0 0-1.9-1.4H8.2A2 2 0 0 0 6.3 11L5 15Z"></path><path d="M4 15v3a1 1 0 0 0 1 1h1"></path><path d="M20 15v3a1 1 0 0 1-1 1h-1"></path><path d="M7 19h10"></path></svg></span>
+          <input name="service" value="ТО — Техническое обслуживание" readonly>
+        </div>
+
+        <div class="technical-field technical-field--textarea">
+          <span class="technical-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H10l-4 4v-4H6.5A2.5 2.5 0 0 1 4 13.5Z"></path><path d="M8 8.5h8"></path><path d="M8 11.5h5"></path></svg></span>
+          <textarea name="comment" placeholder="Марка, модель, пробег или какие работы нужны"></textarea>
+        </div>
+
+        <label class="technical-consent">
+          <input required type="checkbox">
+          <span>Согласен(на) с обработкой персональных данных и ознакомлен(а) с <a href="../privacy-policy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a>.</span>
+        </label>
+
+        <button class="btn btn-primary technical-submit" type="submit" disabled aria-disabled="true">Отправить заявку →</button>
       </form>
     </div>
   </div>
@@ -2592,7 +2873,7 @@ h1,h2,h3,h4,h5,h6{
   const workCards=[...document.querySelectorAll('[data-service-choice]')];
   const baseService='ТО — Техническое обслуживание';
   function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('show'),3500)}
-  function sync(){const c=form.querySelector('input[type="checkbox"]');const b=form.querySelector('button[type="submit"]');b.disabled=!c.checked}
+  function sync(){const c=form.querySelector('input[type="checkbox"]');const b=form.querySelector('button[type="submit"]');const disabled=!c.checked;b.disabled=disabled;b.setAttribute('aria-disabled',String(disabled))}
   function selectWork(card){
     const work=String(card.dataset.serviceChoice||'').trim();
     if(!work)return;
