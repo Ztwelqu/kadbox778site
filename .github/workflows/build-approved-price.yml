@@ -1,0 +1,56 @@
+name: Build approved technical-service price
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/.price-approved-parts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble approved price poster and update page
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat assets/.price-approved-parts/part*.txt | tr -d '\n\r' | base64 -d > assets/media/technical-service-price-approved.webp
+          
+          python3 - <<'PY'
+          from pathlib import Path
+          
+          path = Path("technical-service/index.html")
+          source = path.read_text(encoding="utf-8")
+          old = "../assets/embedded/embedded_037_ade7a8c82ce369a2.webp"
+          new = "../assets/media/technical-service-price-approved.webp"
+          
+          count = source.count(old)
+          if count != 2:
+              raise SystemExit(f"Expected old price poster path exactly twice, found {count}")
+          
+          source = source.replace(old, new)
+          path.write_text(source, encoding="utf-8")
+          PY
+          
+          test -s assets/media/technical-service-price-approved.webp
+          bytes=$(wc -c < assets/media/technical-service-price-approved.webp)
+          test "$bytes" -gt 200000
+          test "$bytes" -lt 220000
+
+      - name: Commit approved price poster
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/media/technical-service-price-approved.webp technical-service/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace technical-service price poster"
+          git push
