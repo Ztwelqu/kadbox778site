@@ -1,0 +1,58 @@
+name: Build approved engine hero
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/.engine-hero-parts/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble approved hero and update engine page
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat assets/.engine-hero-parts/part*.txt | base64 -d > assets/media/engine-repair-hero-approved.webp
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("engine-repair/index.html")
+          source = path.read_text(encoding="utf-8")
+
+          old_rel = "../assets/embedded/embedded_019_e10649f968e73ee8.webp"
+          new_rel = "../assets/media/engine-repair-hero-approved.webp"
+          old_abs = "https://kad-box778.ru/assets/embedded/embedded_019_e10649f968e73ee8.webp"
+          new_abs = "https://kad-box778.ru/assets/media/engine-repair-hero-approved.webp"
+
+          if old_rel not in source:
+              raise SystemExit("Expected old engine hero asset reference was not found")
+
+          source = source.replace(old_rel, new_rel)
+          source = source.replace(old_abs, new_abs)
+          path.write_text(source, encoding="utf-8")
+          PY
+
+          test -s assets/media/engine-repair-hero-approved.webp
+          bytes=$(wc -c < assets/media/engine-repair-hero-approved.webp)
+          test "$bytes" -gt 100000
+
+      - name: Commit approved hero
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/media/engine-repair-hero-approved.webp engine-repair/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Use approved engine repair hero background"
+          git push
