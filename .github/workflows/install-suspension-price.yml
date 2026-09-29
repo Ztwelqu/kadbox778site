@@ -1,0 +1,58 @@
+name: Install suspension price poster
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/install-suspension-price.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install updated suspension price poster
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cat \
+            .price-upload/chunk00.txt \
+            .price-upload/chunk01.txt \
+            .price-upload/chunk02.txt \
+            .price-upload/chunk03.txt \
+            .price-upload/chunk04.txt \
+            > /tmp/suspension-price.b64
+
+          test "$(wc -c < /tmp/suspension-price.b64)" -eq 233852
+          base64 -d /tmp/suspension-price.b64 > assets/embedded/suspension-price-2026-09-30.webp
+          echo "d659497fbd6f6241bf71103fcfb5497f08265b5a7c30c9050e92f4d641914e19  assets/embedded/suspension-price-2026-09-30.webp" | sha256sum -c -
+
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("suspension-repair/index.html")
+          s = p.read_text(encoding="utf-8")
+          old = "../assets/embedded/embedded_040_bd1aaf159a476e3f.webp"
+          new = "../assets/embedded/suspension-price-2026-09-30.webp"
+          count = s.count(old)
+          if count != 2:
+              raise SystemExit(f"Expected exactly 2 old poster references, found {count}")
+          p.write_text(s.replace(old, new), encoding="utf-8")
+          PY
+
+          rm -rf .price-upload
+          rm -f .github/workflows/install-suspension-price.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update suspension repair price poster"
+          git push
