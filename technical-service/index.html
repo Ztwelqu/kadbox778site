@@ -1445,6 +1445,251 @@ h1,h2,h3,h4,h5,h6{
 }
 </style>
 
+
+<style id="technical-service-prices-v1">
+/* V100 price section: strict rectangular geometry, premium technical treatment. */
+#prices .price-layout{
+  grid-template-columns:minmax(0,1.48fr) minmax(330px,.52fr);
+  gap:22px;
+}
+
+#prices .price-groups{
+  gap:14px;
+  counter-reset:price-group;
+}
+
+#prices .price-group{
+  counter-increment:price-group;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,139,31,.18);
+  border-radius:0!important;
+  background:
+    linear-gradient(135deg,rgba(14,17,21,.96),rgba(7,9,12,.98) 70%,rgba(13,10,7,.96));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.022),
+    0 18px 38px rgba(0,0,0,.20);
+}
+
+#prices .price-group::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:2px;
+  height:100%;
+  background:linear-gradient(180deg,#ff9d24 0%,#ff7200 34%,rgba(255,114,0,.16) 76%,transparent 100%);
+  box-shadow:0 0 12px rgba(255,122,0,.28);
+  pointer-events:none;
+}
+
+#prices .price-group h3{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-height:64px;
+  margin:0;
+  padding:18px 22px 18px 24px;
+  color:#fff;
+  font-size:16px;
+  font-weight:820;
+  letter-spacing:-.012em;
+  border:0;
+  border-bottom:1px solid rgba(255,139,31,.12);
+  background:
+    linear-gradient(90deg,rgba(255,122,0,.055),rgba(255,122,0,.012) 48%,transparent);
+}
+
+#prices .price-group h3::before{
+  content:"0" counter(price-group);
+  flex:0 0 auto;
+  color:#ff8b16;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+  opacity:.82;
+}
+
+#prices .price-group h3::after{
+  content:"";
+  width:30px;
+  height:1px;
+  margin-left:auto;
+  background:linear-gradient(90deg,rgba(255,122,0,.72),transparent);
+  box-shadow:0 0 8px rgba(255,122,0,.20);
+}
+
+#prices .price-row{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:22px;
+  min-height:56px;
+  padding:15px 22px 15px 24px;
+  border:0;
+  border-top:1px solid rgba(255,255,255,.045);
+  background:transparent;
+  transition:background .24s ease,border-color .24s ease;
+}
+
+#prices .price-row:first-of-type{border-top:0}
+
+#prices .price-row::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:0;
+  height:1px;
+  background:#ff8a18;
+  box-shadow:0 0 9px rgba(255,122,0,.38);
+  transform:translateY(-50%);
+  transition:width .24s ease;
+}
+
+#prices .price-row:hover{
+  background:linear-gradient(90deg,rgba(255,122,0,.052),rgba(255,122,0,.012) 46%,transparent);
+  border-color:rgba(255,139,31,.10);
+}
+
+#prices .price-row:hover::before{width:12px}
+
+#prices .price-row span{
+  color:#c2c7cd;
+  font-size:13.5px;
+  line-height:1.45;
+  transition:color .24s ease,transform .24s ease;
+}
+
+#prices .price-row:hover span{
+  color:#f2f3f4;
+  transform:translateX(4px);
+}
+
+#prices .price-row b{
+  min-width:96px;
+  color:#ffb25a;
+  font-size:14px;
+  font-weight:860;
+  line-height:1.2;
+  text-align:right;
+  letter-spacing:.01em;
+  white-space:nowrap;
+  text-shadow:0 0 12px rgba(255,122,0,.11);
+}
+
+#prices .price-note{
+  position:relative;
+  margin:6px 0 0;
+  padding:15px 18px 15px 20px;
+  color:#8e959d;
+  font-size:12px;
+  line-height:1.6;
+  border-left:1px solid rgba(255,139,31,.32);
+  background:linear-gradient(90deg,rgba(255,122,0,.035),transparent 65%);
+}
+
+#prices .price-poster{
+  position:sticky;
+  top:116px;
+  padding:0;
+  overflow:hidden;
+  border:1px solid rgba(255,139,31,.18);
+  border-radius:0!important;
+  background:linear-gradient(180deg,rgba(13,16,20,.98),rgba(6,8,11,.99));
+  box-shadow:0 20px 44px rgba(0,0,0,.26);
+}
+
+#prices .price-poster::before{
+  content:"ПРАЙС • КАД БОКС 778";
+  display:block;
+  padding:14px 16px;
+  color:#ff8b16;
+  font-size:10px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.14em;
+  border-bottom:1px solid rgba(255,139,31,.12);
+  background:linear-gradient(90deg,rgba(255,122,0,.05),transparent);
+}
+
+#prices .price-poster a{
+  display:block;
+  position:relative;
+  overflow:hidden;
+}
+
+#prices .price-poster a::after{
+  content:"Открыть в полном размере ↗";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:2;
+  padding:14px 16px;
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  background:linear-gradient(180deg,transparent,rgba(4,5,7,.90));
+  opacity:0;
+  transform:translateY(5px);
+  transition:opacity .25s ease,transform .25s ease;
+}
+
+#prices .price-poster a:hover::after,
+#prices .price-poster a:focus-visible::after{
+  opacity:1;
+  transform:translateY(0);
+}
+
+#prices .price-poster img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:0!important;
+  filter:saturate(.92) contrast(1.035) brightness(.96);
+  transform:scale(1);
+  transition:transform .38s cubic-bezier(.2,.7,.2,1),filter .38s ease;
+}
+
+#prices .price-poster a:hover img,
+#prices .price-poster a:focus-visible img{
+  transform:scale(1.018);
+  filter:saturate(.98) contrast(1.05) brightness(1);
+}
+
+#prices .price-poster p{
+  margin:0;
+  padding:13px 16px 15px;
+  color:#858c95;
+  font-size:11.5px;
+  line-height:1.5;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+
+.footer-seam-divider{
+  position:relative!important;
+  z-index:8!important;
+}
+
+@media(max-width:900px){
+  #prices .price-layout{grid-template-columns:1fr}
+  #prices .price-poster{position:static;max-width:560px}
+}
+
+@media(max-width:560px){
+  #prices .price-group h3{min-height:58px;padding:16px 16px 16px 19px;font-size:15px}
+  #prices .price-row{gap:14px;min-height:52px;padding:13px 15px 13px 19px}
+  #prices .price-row span{font-size:12.5px}
+  #prices .price-row b{min-width:80px;font-size:13px}
+  #prices .price-note{padding:13px 14px 13px 17px}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header" id="top">
@@ -1453,6 +1698,7 @@ h1,h2,h3,h4,h5,h6{
 <img alt="КАД Бокс 778" decoding="async" fetchpriority="high" height="262" src="../assets/media/96e845fc06623561.webp" width="480"/>
 </a>
 <nav aria-label="Навигация по странице" class="main-nav">
+<a href="../">Главная</a>
 <a href="#services">Работы</a>
 <a href="#prices">Цены</a>
 <a href="#faq">Вопросы</a>
@@ -1475,6 +1721,7 @@ h1,h2,h3,h4,h5,h6{
 <div aria-hidden="true" class="mobile-menu-panel" id="mobileNavPanel">
 <div class="mobile-menu-kicker">Навигация</div>
 <nav aria-label="Мобильная навигация" class="mobile-menu-links">
+<a href="../">Главная</a>
 <a href="#services">Работы</a>
 <a href="#prices">Цены</a>
 <a href="#faq">Вопросы</a>
@@ -1603,6 +1850,7 @@ h1,h2,h3,h4,h5,h6{
     </div>
   </div>
 </section>
+<div aria-hidden="true" class="services-divider section-seam-divider"><span></span></div>
 
 <section class="section">
   <div class="container info-grid">
@@ -1610,6 +1858,7 @@ h1,h2,h3,h4,h5,h6{
     <div class="panel"><div class="kicker">Расходники</div><h3>Материалы считаются отдельно</h3><p>Цены на странице относятся к работам. Масло, фильтры, свечи, антифриз и другие расходные материалы оплачиваются отдельно.</p></div>
   </div>
 </section>
+<div aria-hidden="true" class="services-divider section-seam-divider"><span></span></div>
 
 <section class="section" id="faq">
   <div class="container">
@@ -1622,6 +1871,7 @@ h1,h2,h3,h4,h5,h6{
     </div>
   </div>
 </section>
+<div aria-hidden="true" class="services-divider section-seam-divider"><span></span></div>
 
 <section class="section" id="contacts">
   <div class="container contact-grid">
@@ -1648,6 +1898,7 @@ h1,h2,h3,h4,h5,h6{
     </div>
   </div>
 </section>
+<div aria-hidden="true" class="services-divider section-seam-divider footer-seam-divider"><span></span></div>
 </div>
 </main>
 
