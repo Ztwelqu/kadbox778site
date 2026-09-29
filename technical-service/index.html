@@ -2278,33 +2278,30 @@ h1,h2,h3,h4,h5,h6{
 }
 </style>
 
-<style id="technical-service-nav-linebox-v1">
-/* One identical text line box for every desktop navigation label. */
+<style id="technical-service-nav-cyrillic-typography-v1">
+/* Same stable Cyrillic navigation typography as the homepage. */
 @media(min-width:861px){
   .main-nav{
-    align-items:flex-start!important;
+    align-items:center!important;
   }
-  .main-nav > a{
-    display:block!important;
-    height:14px!important;
+  .main-nav > a,
+  .main-nav > a .main-nav-label{
+    display:inline-block!important;
+    height:auto!important;
     min-height:0!important;
     margin:0!important;
     padding:0!important;
-    line-height:14px!important;
     position:relative!important;
     top:auto!important;
     transform:none!important;
-    vertical-align:top!important;
-  }
-  .main-nav-label{
-    display:block;
-    height:14px;
-    margin:0;
-    padding:0;
-    line-height:14px;
-    font:inherit;
-    letter-spacing:inherit;
-    white-space:nowrap;
+    vertical-align:baseline!important;
+    font-family:Tahoma,Arial,sans-serif!important;
+    font-size:14px!important;
+    font-weight:700!important;
+    line-height:1!important;
+    letter-spacing:.015em!important;
+    font-kerning:normal;
+    font-synthesis:none;
   }
 }
 </style>
