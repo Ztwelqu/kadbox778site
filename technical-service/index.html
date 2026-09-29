@@ -2278,6 +2278,16 @@ h1,h2,h3,h4,h5,h6{
 }
 </style>
 
+<style id="technical-service-nav-subpixel-v1">
+/* Measured optical correction for the rendered Cyrillic label.
+   transform keeps the fractional offset in Chromium instead of integer-snapping like top. */
+@media(min-width:761px){
+  .main-nav > a:first-child{
+    transform:translate3d(0,-0.4px,0);
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="site-header" id="top">
