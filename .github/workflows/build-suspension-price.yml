@@ -1,0 +1,55 @@
+name: Build approved suspension price
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/.suspension-price-parts/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble approved suspension price and update page
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat assets/.suspension-price-parts/part*.txt | base64 -d > assets/media/suspension-price-2026-09-30.webp
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("suspension-repair/index.html")
+          source = path.read_text(encoding="utf-8")
+
+          old = '<a href="../assets/embedded/embedded_040_bd1aaf159a476e3f.webp" target="_blank" rel="noopener"><img src="../assets/embedded/embedded_040_bd1aaf159a476e3f.webp" alt="Прайс-лист на ремонт подвески КАД Бокс778" loading="lazy" decoding="async"></a>'
+          new = '<a href="../assets/media/suspension-price-2026-09-30.webp" target="_blank" rel="noopener"><img src="../assets/media/suspension-price-2026-09-30.webp" alt="Прайс-лист на ремонт подвески КАД Бокс778" width="1024" height="1536" loading="lazy" decoding="async"></a>'
+
+          if old not in source:
+              raise SystemExit("Expected old suspension price poster reference was not found")
+
+          source = source.replace(old, new, 1)
+          path.write_text(source, encoding="utf-8")
+          PY
+
+          test -s assets/media/suspension-price-2026-09-30.webp
+          bytes=$(wc -c < assets/media/suspension-price-2026-09-30.webp)
+          test "$bytes" -gt 300000
+
+      - name: Commit approved suspension price
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/media/suspension-price-2026-09-30.webp suspension-repair/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace suspension price poster with approved September 30 image"
+          git push
