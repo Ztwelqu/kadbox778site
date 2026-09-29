@@ -1152,6 +1152,299 @@ h1,h2,h3,h4,h5,h6{
 }
 </style>
 
+
+<style id="technical-service-works-v1">
+/* Technical-service works cards: rectangular V100 treatment + premium pointer lighting. */
+.section-seam-divider{
+  position:relative!important;
+  z-index:8!important;
+  pointer-events:none;
+}
+.post-hero-background > .section-seam-divider{z-index:8!important}
+
+#services .service-grid{
+  gap:18px;
+}
+
+#services .service-card{
+  --mx:82%;
+  --my:18%;
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:236px;
+  padding:28px;
+  overflow:hidden;
+  color:inherit;
+  text-align:left;
+  border:1px solid rgba(255,139,31,.18);
+  border-radius:0!important;
+  background:
+    linear-gradient(135deg,rgba(15,18,23,.94),rgba(7,9,12,.96) 68%,rgba(12,10,8,.95));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 18px 42px rgba(0,0,0,.24);
+  transform:none!important;
+  transition:
+    border-color .34s ease,
+    box-shadow .34s ease,
+    background .34s ease;
+}
+
+#services .service-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:0;
+  background:
+    radial-gradient(300px circle at var(--mx) var(--my),
+      rgba(255,151,43,.18) 0%,
+      rgba(255,122,0,.09) 26%,
+      rgba(255,122,0,.025) 48%,
+      transparent 72%);
+  transition:opacity .28s ease;
+}
+
+#services .service-card::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  top:-28%;
+  bottom:-28%;
+  left:-44%;
+  width:28%;
+  pointer-events:none;
+  opacity:0;
+  transform:skewX(-18deg);
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,.015) 18%,
+    rgba(255,174,78,.13) 50%,
+    rgba(255,255,255,.025) 82%,
+    transparent 100%
+  );
+}
+
+#services .service-card:hover,
+#services .service-card:focus-visible,
+#services .service-card.is-selected{
+  border-color:rgba(255,151,43,.52);
+  background:
+    linear-gradient(135deg,rgba(18,20,24,.97),rgba(8,10,13,.98) 65%,rgba(18,12,7,.96));
+  box-shadow:
+    inset 0 1px 0 rgba(255,186,102,.07),
+    inset 0 0 0 1px rgba(255,122,0,.055),
+    0 20px 48px rgba(0,0,0,.30),
+    0 0 28px rgba(255,122,0,.085);
+}
+
+#services .service-card:hover::before,
+#services .service-card:focus-visible::before,
+#services .service-card.is-selected::before{
+  opacity:1;
+}
+
+#services .service-card:hover::after,
+#services .service-card:focus-visible::after{
+  opacity:1;
+  animation:technical-card-sheen .78s cubic-bezier(.22,.72,.18,1) both;
+}
+
+@keyframes technical-card-sheen{
+  0%{left:-44%;opacity:0}
+  14%{opacity:1}
+  100%{left:118%;opacity:0}
+}
+
+#services .service-card > .service-icon{
+  position:relative;
+  z-index:2;
+  width:48px;
+  height:48px;
+  margin:0 0 26px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 9px rgba(255,122,0,.24));
+  transform:scale(1);
+  transition:transform .34s cubic-bezier(.2,.7,.2,1),filter .34s ease;
+}
+
+#services .service-card:hover > .service-icon,
+#services .service-card:focus-visible > .service-icon,
+#services .service-card.is-selected > .service-icon{
+  transform:scale(1.075);
+  filter:
+    drop-shadow(0 0 10px rgba(255,140,25,.46))
+    drop-shadow(0 0 22px rgba(255,122,0,.16));
+}
+
+#services .service-card-copy{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex:1 1 auto;
+  flex-direction:column;
+  min-width:0;
+}
+
+#services .service-card-kicker{
+  display:block;
+  margin:0 0 11px;
+  color:#ff8b16;
+  font-size:10px;
+  font-weight:850;
+  line-height:1;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  opacity:.74;
+}
+
+#services .service-card-title-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 28px;
+  align-items:start;
+  column-gap:18px;
+}
+
+#services .service-card h3{
+  position:relative;
+  margin:0 0 15px;
+  padding-bottom:12px;
+  color:#fff;
+  font-size:20px;
+  line-height:1.16;
+  letter-spacing:-.02em;
+}
+
+#services .service-card h3::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:34px;
+  height:2px;
+  background:#ff7a00;
+  box-shadow:0 0 8px rgba(255,112,0,.38);
+  transition:width .34s ease,background .34s ease,box-shadow .34s ease;
+}
+
+#services .service-card:hover h3::after,
+#services .service-card:focus-visible h3::after,
+#services .service-card.is-selected h3::after{
+  width:62px;
+  background:#ff9d24;
+  box-shadow:0 0 12px rgba(255,136,24,.55);
+}
+
+#services .service-card-arrow{
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  color:rgba(255,157,36,.72);
+  font-size:18px;
+  line-height:1;
+  border-left:1px solid rgba(255,139,31,.16);
+  transition:color .3s ease,text-shadow .3s ease,transform .3s ease,border-color .3s ease;
+}
+
+#services .service-card:hover .service-card-arrow,
+#services .service-card:focus-visible .service-card-arrow,
+#services .service-card.is-selected .service-card-arrow{
+  color:#ffb457;
+  border-color:rgba(255,157,36,.45);
+  text-shadow:0 0 14px rgba(255,122,0,.45);
+  transform:translate(2px,2px);
+}
+
+#services .service-card-description{
+  display:block;
+  margin:0;
+  color:#9da4ad;
+  font-size:13.5px;
+  line-height:1.62;
+  transition:color .3s ease;
+}
+
+#services .service-card:hover .service-card-description,
+#services .service-card:focus-visible .service-card-description,
+#services .service-card.is-selected .service-card-description{
+  color:#c4c9cf;
+}
+
+#services .service-card-action{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:auto;
+  padding-top:22px;
+  color:#777f88;
+  font-size:10.5px;
+  font-weight:780;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  transition:color .3s ease;
+}
+
+#services .service-card-action::before{
+  content:"";
+  width:18px;
+  height:1px;
+  background:rgba(255,122,0,.48);
+  box-shadow:0 0 7px rgba(255,122,0,.20);
+  transition:width .3s ease,background .3s ease,box-shadow .3s ease;
+}
+
+#services .service-card:hover .service-card-action,
+#services .service-card:focus-visible .service-card-action,
+#services .service-card.is-selected .service-card-action{
+  color:#ffad4b;
+}
+
+#services .service-card:hover .service-card-action::before,
+#services .service-card:focus-visible .service-card-action::before,
+#services .service-card.is-selected .service-card-action::before{
+  width:30px;
+  background:#ff8a18;
+  box-shadow:0 0 10px rgba(255,122,0,.38);
+}
+
+#services .service-card:focus-visible{
+  outline:2px solid rgba(255,157,36,.80);
+  outline-offset:3px;
+}
+
+.form input[name="service"].has-selection{
+  color:#ffbd70;
+  border-color:rgba(255,151,43,.48);
+  box-shadow:0 0 0 3px rgba(255,122,0,.055),0 0 20px rgba(255,122,0,.06);
+}
+
+@media(max-width:900px){
+  #services .service-card{min-height:224px;padding:24px}
+}
+
+@media(max-width:560px){
+  #services .service-card{min-height:210px;padding:22px}
+  #services .service-card h3{font-size:18px}
+  #services .service-card-description{font-size:13px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  #services .service-card,
+  #services .service-card::before,
+  #services .service-card::after,
+  #services .service-card *{
+    animation:none!important;
+    transition:none!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="site-header" id="top">
@@ -1221,16 +1514,65 @@ h1,h2,h3,h4,h5,h6{
 <section class="section" id="services">
   <div class="container">
     <div class="section-head"><div><div class="kicker">Что делаем</div><h2>Работы по <span class="accent">ТО</span></h2><p>Основные регламентные операции, которые уже есть в актуальном прайсе КАД Бокс778.</p></div></div>
-    <div class="service-grid">
-      <article class="service-card"><img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt=""><h3>Масло двигателя</h3><p>Замена моторного масла и масляного фильтра.</p></article>
-      <article class="service-card"><img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt=""><h3>Воздушный фильтр</h3><p>Замена фильтрующего элемента системы впуска двигателя.</p></article>
-      <article class="service-card"><img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt=""><h3>Салонный фильтр</h3><p>Замена фильтра системы вентиляции и климатической установки.</p></article>
-      <article class="service-card"><img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt=""><h3>Свечи зажигания</h3><p>Замена свечей зажигания с расчётом стоимости по количеству.</p></article>
-      <article class="service-card"><img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt=""><h3>Охлаждающая жидкость</h3><p>Замена антифриза в системе охлаждения автомобиля.</p></article>
-      <article class="service-card"><img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt=""><h3>Сезонное и контрольное ТО</h3><p>Плановое ТО, обслуживание после зимы и после покупки автомобиля.</p></article>
+    <div class="service-grid" aria-label="Работы по техническому обслуживанию">
+      <a class="service-card" href="#contacts" data-service-choice="Масло двигателя" aria-label="Выбрать работу Масло двигателя и перейти к записи">
+        <img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt="" aria-hidden="true">
+        <div class="service-card-copy">
+          <span class="service-card-kicker">ТО / 01</span>
+          <div class="service-card-title-row"><h3>Масло двигателя</h3><span class="service-card-arrow" aria-hidden="true">↘</span></div>
+          <span class="service-card-description">Замена моторного масла и масляного фильтра.</span>
+          <span class="service-card-action">Выбрать и записаться</span>
+        </div>
+      </a>
+      <a class="service-card" href="#contacts" data-service-choice="Воздушный фильтр" aria-label="Выбрать работу Воздушный фильтр и перейти к записи">
+        <img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt="" aria-hidden="true">
+        <div class="service-card-copy">
+          <span class="service-card-kicker">ТО / 02</span>
+          <div class="service-card-title-row"><h3>Воздушный фильтр</h3><span class="service-card-arrow" aria-hidden="true">↘</span></div>
+          <span class="service-card-description">Замена фильтрующего элемента системы впуска двигателя.</span>
+          <span class="service-card-action">Выбрать и записаться</span>
+        </div>
+      </a>
+      <a class="service-card" href="#contacts" data-service-choice="Салонный фильтр" aria-label="Выбрать работу Салонный фильтр и перейти к записи">
+        <img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt="" aria-hidden="true">
+        <div class="service-card-copy">
+          <span class="service-card-kicker">ТО / 03</span>
+          <div class="service-card-title-row"><h3>Салонный фильтр</h3><span class="service-card-arrow" aria-hidden="true">↘</span></div>
+          <span class="service-card-description">Замена фильтра системы вентиляции и климатической установки.</span>
+          <span class="service-card-action">Выбрать и записаться</span>
+        </div>
+      </a>
+      <a class="service-card" href="#contacts" data-service-choice="Свечи зажигания" aria-label="Выбрать работу Свечи зажигания и перейти к записи">
+        <img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt="" aria-hidden="true">
+        <div class="service-card-copy">
+          <span class="service-card-kicker">ТО / 04</span>
+          <div class="service-card-title-row"><h3>Свечи зажигания</h3><span class="service-card-arrow" aria-hidden="true">↘</span></div>
+          <span class="service-card-description">Замена свечей зажигания с расчётом стоимости по количеству.</span>
+          <span class="service-card-action">Выбрать и записаться</span>
+        </div>
+      </a>
+      <a class="service-card" href="#contacts" data-service-choice="Охлаждающая жидкость" aria-label="Выбрать работу Охлаждающая жидкость и перейти к записи">
+        <img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt="" aria-hidden="true">
+        <div class="service-card-copy">
+          <span class="service-card-kicker">ТО / 05</span>
+          <div class="service-card-title-row"><h3>Охлаждающая жидкость</h3><span class="service-card-arrow" aria-hidden="true">↘</span></div>
+          <span class="service-card-description">Замена антифриза в системе охлаждения автомобиля.</span>
+          <span class="service-card-action">Выбрать и записаться</span>
+        </div>
+      </a>
+      <a class="service-card" href="#contacts" data-service-choice="Сезонное и контрольное ТО" aria-label="Выбрать работу Сезонное и контрольное ТО и перейти к записи">
+        <img class="service-icon" src="../assets/perf/optimized/icons/tools.webp" alt="" aria-hidden="true">
+        <div class="service-card-copy">
+          <span class="service-card-kicker">ТО / 06</span>
+          <div class="service-card-title-row"><h3>Сезонное и контрольное ТО</h3><span class="service-card-arrow" aria-hidden="true">↘</span></div>
+          <span class="service-card-description">Плановое ТО, обслуживание после зимы и после покупки автомобиля.</span>
+          <span class="service-card-action">Выбрать и записаться</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
+<div aria-hidden="true" class="services-divider section-seam-divider"><span></span></div>
 
 <section class="section" id="prices">
   <div class="container">
@@ -1318,8 +1660,42 @@ h1,h2,h3,h4,h5,h6{
   const form=document.getElementById('technicalServiceForm');
   const toast=document.getElementById('toast');
   const endpoint=String((window.KADBOX_CONFIG||{}).leadEndpoint||'').trim();
+  const serviceInput=form.querySelector('input[name="service"]');
+  const workCards=[...document.querySelectorAll('[data-service-choice]')];
+  const baseService='ТО — Техническое обслуживание';
   function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('show'),3500)}
   function sync(){const c=form.querySelector('input[type="checkbox"]');const b=form.querySelector('button[type="submit"]');b.disabled=!c.checked}
+  function selectWork(card){
+    const work=String(card.dataset.serviceChoice||'').trim();
+    if(!work)return;
+    workCards.forEach(item=>{
+      const selected=item===card;
+      item.classList.toggle('is-selected',selected);
+      if(selected)item.setAttribute('aria-current','true');else item.removeAttribute('aria-current');
+    });
+    serviceInput.value=baseService+' — '+work;
+    serviceInput.classList.add('has-selection');
+    const comment=form.querySelector('textarea[name="comment"]');
+    if(comment)comment.placeholder='Марка, модель, пробег — '+work;
+    showToast('Выбрано: '+work);
+    document.getElementById('contacts')?.scrollIntoView({behavior:'smooth',block:'start'});
+    if(typeof window.kadboxTrackGoal==='function')window.kadboxTrackGoal('booking_open',{service:serviceInput.value,source:'technical-service-card'});
+  }
+  workCards.forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      if(e.pointerType==='touch')return;
+      const rect=card.getBoundingClientRect();
+      const x=((e.clientX-rect.left)/rect.width)*100;
+      const y=((e.clientY-rect.top)/rect.height)*100;
+      card.style.setProperty('--mx',x.toFixed(1)+'%');
+      card.style.setProperty('--my',y.toFixed(1)+'%');
+    },{passive:true});
+    card.addEventListener('pointerleave',()=>{
+      card.style.setProperty('--mx','82%');
+      card.style.setProperty('--my','18%');
+    },{passive:true});
+    card.addEventListener('click',e=>{e.preventDefault();selectWork(card)});
+  });
   sync();form.querySelector('input[type="checkbox"]').addEventListener('change',sync);
   form.addEventListener('submit',async function(e){
     e.preventDefault();
@@ -1328,17 +1704,24 @@ h1,h2,h3,h4,h5,h6{
     if(!consent.checked){showToast('Подтвердите согласие на обработку персональных данных.');return}
     if(!endpoint){showToast('Форма временно недоступна. Позвоните нам по +7-921-636-04-02.');return}
     const data=Object.fromEntries(new FormData(form).entries());
-    const payload={type:'booking',name:String(data.name||'').trim(),phone:String(data.phone||'').trim(),service:'ТО — Техническое обслуживание',comment:String(data.comment||'').trim(),website:String(data.website||'').trim(),consent:true,page_url:location.href,source:'kadbox778-site'};
+    const selectedService=String(data.service||baseService).trim()||baseService;
+    const payload={type:'booking',name:String(data.name||'').trim(),phone:String(data.phone||'').trim(),service:selectedService,comment:String(data.comment||'').trim(),website:String(data.website||'').trim(),consent:true,page_url:location.href,source:'kadbox778-site'};
     btn.disabled=true;btn.textContent='Отправляем…';
     try{
       const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
       let result={};try{result=await response.json()}catch(_){}
       if(!response.ok||!result.ok)throw new Error(result.error||('HTTP '+response.status));
       if(typeof window.kadboxTrackGoal==='function'){
-        window.kadboxTrackGoal('lead_success',{lead_type:'booking',service:'ТО — Техническое обслуживание'});
-        window.kadboxTrackGoal('booking_success',{service:'ТО — Техническое обслуживание'});
+        window.kadboxTrackGoal('lead_success',{lead_type:'booking',service:selectedService});
+        window.kadboxTrackGoal('booking_success',{service:selectedService});
       }
-      form.reset();form.querySelector('input[name="service"]').value='ТО — Техническое обслуживание';showToast('Заявка отправлена. Мы скоро свяжемся с Вами.');
+      form.reset();
+      serviceInput.value=baseService;
+      serviceInput.classList.remove('has-selection');
+      workCards.forEach(item=>{item.classList.remove('is-selected');item.removeAttribute('aria-current')});
+      const comment=form.querySelector('textarea[name="comment"]');
+      if(comment)comment.placeholder='Марка, модель, пробег или какие работы нужны';
+      showToast('Заявка отправлена. Мы скоро свяжемся с Вами.');
     }catch(err){
       console.error('Lead submit failed:',err);
       showToast('Не удалось отправить заявку. Позвоните нам по +7-921-636-04-02 или попробуйте ещё раз.');
