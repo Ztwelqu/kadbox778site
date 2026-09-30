@@ -2090,18 +2090,44 @@ a.technical-contact-row:hover .technical-contact-arrow{
 </style>
 
 <style id="steering-rack-repair-hero-cta-fix-v1">
-/* Keep the longer steering-rack-repair CTA visually centered on one line. */
+/* Long steering-rack CTA: give the primary button enough real width instead of squeezing the label. */
+.hero-actions{
+  grid-template-columns:292px 220px;
+}
 .hero-actions .btn{
   white-space:nowrap;
 }
 .hero-actions .btn-primary{
-  font-size:16.5px;
+  width:292px;
+  font-size:16px;
+}
+.hero-actions .btn-outline{
+  width:220px;
 }
 @media(max-width:860px){
-  .hero-actions .btn-primary{font-size:15px}
+  .hero-actions{
+    grid-template-columns:270px 210px;
+  }
+  .hero-actions .btn-primary{
+    width:270px;
+    font-size:14.5px;
+  }
+  .hero-actions .btn-outline{
+    width:210px;
+  }
 }
 @media(max-width:560px){
-  .hero-actions .btn-primary{font-size:14px}
+  .hero-actions{
+    grid-template-columns:1fr;
+    width:min(100%,360px);
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline{
+    width:100%;
+  }
+  .hero-actions .btn-primary{
+    font-size:14px;
+  }
 }
 </style>
 
