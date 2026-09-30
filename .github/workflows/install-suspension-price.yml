@@ -32,16 +32,16 @@ jobs:
             .price-upload/chunk04.txt \
             > /tmp/suspension-price.b64
 
-          test "$(wc -c < /tmp/suspension-price.b64)" -eq 233852
-          base64 -d /tmp/suspension-price.b64 > assets/embedded/suspension-price-2026-09-30.webp
-          echo "d659497fbd6f6241bf71103fcfb5497f08265b5a7c30c9050e92f4d641914e19  assets/embedded/suspension-price-2026-09-30.webp" | sha256sum -c -
+          test "$(wc -c < /tmp/suspension-price.b64)" -eq 98468
+          base64 -d /tmp/suspension-price.b64 > assets/embedded/suspension-price-2026-09-30.avif
+          echo "dc059a03c13305924816cd4f54e4aaaac3ea43858aec58896126af0bae67f188  assets/embedded/suspension-price-2026-09-30.avif" | sha256sum -c -
 
           python3 - <<'PY'
           from pathlib import Path
           p = Path("suspension-repair/index.html")
           s = p.read_text(encoding="utf-8")
           old = "../assets/embedded/embedded_040_bd1aaf159a476e3f.webp"
-          new = "../assets/embedded/suspension-price-2026-09-30.webp"
+          new = "../assets/embedded/suspension-price-2026-09-30.avif"
           count = s.count(old)
           if count != 2:
               raise SystemExit(f"Expected exactly 2 old poster references, found {count}")
