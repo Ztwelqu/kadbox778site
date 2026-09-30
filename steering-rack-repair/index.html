@@ -1825,7 +1825,47 @@ a.technical-contact-row:hover .technical-contact-arrow{
 }
 </style>
 
-<style id="steering-rack-repair-hero-content-v100">
+<style id="steering-rack-repair-hero-v100">
+/* Approved V100 HERO system for steering rack repair. */
+.site-header .header-actions{gap:0}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:132px 0 84px;
+  border-bottom:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,7,10,.96) 0%,
+      rgba(5,7,10,.91) 18%,
+      rgba(5,7,10,.81) 36%,
+      rgba(5,7,10,.62) 55%,
+      rgba(5,7,10,.34) 74%,
+      rgba(5,7,10,.08) 100%
+    ),
+    url('../assets/media/steering-rack-repair-hero.webp') center center / cover no-repeat!important;
+}
+.hero::before,
+.hero::after{
+  display:none!important;
+  content:none!important;
+}
+.hero-grid{
+  position:relative;
+  z-index:2;
+  min-height:610px;
+  grid-template-columns:minmax(0,760px) 1fr!important;
+  gap:70px;
+  align-items:center;
+}
+.hero-copy{
+  position:relative;
+  z-index:3;
+  width:min(690px,54vw);
+  max-width:690px;
+  transform:translateY(-14px);
+}
 .eyebrow{
   display:inline-flex;
   align-items:center;
@@ -2009,25 +2049,44 @@ a.technical-contact-row:hover .technical-contact-arrow{
   transform:translateX(3px);
 }
 
+.hero-art{display:none!important}
 
-.hero{margin-top:94px}
-.hero > .container{width:min(var(--container),calc(100% - 36px))}
-@media(max-width:1040px) and (min-width:901px){.hero-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hero-actions .btn{width:100%;font-size:14px}}
+@media(max-width:1040px){
+  .hero{background-position:62% center!important}
+  .hero-grid{grid-template-columns:1fr!important}
+  .hero-copy{width:100%;max-width:690px}
+}
 @media(max-width:860px){
-.hero{margin-top:72px}
-.eyebrow{font-size:12px;gap:8px}.eyebrow::before{width:26px}
-.hero-address{margin-left:36px;margin-bottom:15px;font-size:12px}
-.hero h1{max-width:560px;font-size:clamp(40px,7.3vw,52px);line-height:1}
-.hero-lead{max-width:560px;margin-top:17px;font-size:15px;line-height:1.48}
-.hero-actions{grid-template-columns:repeat(2,minmax(0,220px));gap:14px}
-.hero-actions .btn{width:100%;height:60px;min-height:60px;font-size:16px}
-.hero-points{grid-template-columns:1fr}}
+  .hero{padding:112px 0 68px}
+  .hero-copy{width:100%;max-width:590px;transform:none}
+  .eyebrow{font-size:12px;gap:8px}
+  .eyebrow::before{width:26px}
+  .hero-address{margin-left:36px;margin-bottom:15px;font-size:12px}
+  .hero h1{max-width:560px;font-size:clamp(40px,7.3vw,52px);line-height:1}
+  .hero-lead{max-width:560px;margin-top:17px;font-size:15px;line-height:1.48}
+  .hero-actions{grid-template-columns:repeat(2,minmax(0,220px));gap:14px}
+  .hero-actions .btn{width:100%;height:60px;min-height:60px;font-size:16px}
+  .hero-points{grid-template-columns:1fr}
+}
 @media(max-width:560px){
-.hero{margin-top:66px}
-.hero h1{font-size:clamp(35px,10.8vw,43px)}
-.hero-lead{font-size:13.5px;line-height:1.44}
-.hero-actions{grid-template-columns:1fr;gap:9px;width:min(100%,360px)}
-.hero-actions .btn{width:100%;height:56px;min-height:56px;font-size:14px}}
+  .hero{
+    padding:96px 0 60px;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5,7,10,.97) 0%,
+        rgba(5,7,10,.93) 38%,
+        rgba(5,7,10,.75) 68%,
+        rgba(5,7,10,.38) 100%
+      ),
+      url('../assets/media/steering-rack-repair-hero.webp') 64% center / cover no-repeat!important;
+  }
+  .hero-address{margin-left:34px;margin-bottom:16px;font-size:12px}
+  .hero h1{font-size:clamp(35px,10.8vw,43px)}
+  .hero-lead{font-size:13.5px;line-height:1.44}
+  .hero-actions{grid-template-columns:1fr;gap:9px;width:min(100%,360px)}
+  .hero-actions .btn{width:100%;height:56px;min-height:56px;font-size:14px}
+}
 </style>
 
 <style id="steering-rack-repair-hero-cta-fix-v1">
@@ -2046,13 +2105,7 @@ a.technical-contact-row:hover .technical-contact-arrow{
 }
 </style>
 
-<style id="steering-rack-repair-hero-art-preserve">
-.hero{position:relative;overflow:hidden}
-.hero-grid{position:relative}
-.hero-copy{position:relative;z-index:4}
-.hero-art{z-index:0}
-@media(max-width:900px){.hero-copy{padding-bottom:24px}}
-</style>
+
 
 </head>
 <body>
