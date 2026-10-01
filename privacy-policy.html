@@ -7,40 +7,206 @@
 <meta name="robots" content="noindex,follow"/>
 <link rel="canonical" href="https://kad-box778.ru/privacy-policy.html"/>
 <meta name="theme-color" content="#050607"/>
+<link href="./assets/favicon/favicon-64.png?v=v100-k" rel="icon" sizes="64x64" type="image/png"/>
+<link href="./assets/favicon/favicon-64.png?v=v100-k" rel="shortcut icon" type="image/png"/>
 <style>
-:root{color-scheme:dark;--bg:#070809;--card:#101214;--text:#f2f3f4;--muted:#a8adb3;--orange:#ff8a1f;--line:rgba(255,255,255,.09)}
+:root{
+  color-scheme:dark;
+  --bg:#050607;--panel:#0a0c0f;--panel2:#0d1014;--text:#f5f6f7;--muted:#9ba3ad;
+  --orange:#ff6900;--orange2:#ff9a32;--line:rgba(255,255,255,.09);--line-orange:rgba(255,105,0,.36);
+}
 *{box-sizing:border-box}
 html{background:var(--bg);scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 70% -10%,rgba(255,112,16,.12),transparent 34%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.62}
-.wrap{width:min(920px,calc(100% - 28px));margin:0 auto;padding:34px 0 70px}
-.top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:26px}
-.brand{font-weight:900;letter-spacing:.04em}.brand span{color:var(--orange)}
-.back{color:var(--orange);text-decoration:none;font-weight:700}
-.card{background:linear-gradient(180deg,rgba(19,21,23,.96),rgba(10,11,12,.98));border:1px solid var(--line);border-radius:22px;padding:clamp(20px,4vw,42px);box-shadow:0 24px 70px rgba(0,0,0,.36)}
-h1{font-size:clamp(30px,6vw,46px);line-height:1.06;margin:0 0 12px}
-h2{font-size:22px;margin:30px 0 10px;color:#fff}
-p,li{color:var(--muted)}
-strong{color:#fff}
-a{color:var(--orange)}
-.note{padding:14px 16px;border:1px solid rgba(255,138,31,.22);background:rgba(255,138,31,.06);border-radius:14px}
-.meta{color:#747b83;font-size:13px;margin-bottom:26px}
-ul{padding-left:22px}
-@media(max-width:600px){.wrap{padding-top:18px}.top{align-items:flex-start;flex-direction:column}.card{border-radius:17px}}
+body{
+  margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.65;
+  background:
+    radial-gradient(circle at 82% 5%,rgba(255,105,0,.15),transparent 27%),
+    radial-gradient(circle at 16% 28%,rgba(255,105,0,.05),transparent 24%),
+    linear-gradient(180deg,#050607 0%,#080a0d 48%,#050607 100%);
+}
+a{color:inherit}
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(5,6,7,.86);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,105,0,.22);
+}
+.header-inner{
+  width:min(1280px,calc(100% - 32px));height:82px;margin:auto;
+  display:flex;align-items:center;gap:28px;
+}
+.brand{display:flex;align-items:center;flex:0 0 auto}
+.brand img{display:block;width:142px;height:auto;filter:drop-shadow(0 0 16px rgba(255,105,0,.16))}
+.main-nav{display:flex;align-items:center;gap:7px;margin-left:auto}
+.main-nav a{
+  text-decoration:none;color:#c5cbd2;font-weight:800;font-size:14px;letter-spacing:.02em;
+  padding:11px 14px;border-radius:10px;transition:.2s ease;
+}
+.main-nav a:hover{color:#fff;background:rgba(255,105,0,.09)}
+.header-phone{
+  text-decoration:none;border:1px solid rgba(255,105,0,.3);border-radius:12px;padding:9px 13px;
+  display:flex;flex-direction:column;line-height:1.15;background:rgba(255,105,0,.045);
+}
+.header-phone strong{font-size:15px}.header-phone span{font-size:10px;color:var(--muted);margin-top:4px}
+.mobile-menu-toggle{display:none;background:none;border:0;padding:9px;cursor:pointer}
+.mobile-menu-toggle span{display:block;width:25px;height:2px;background:#fff;margin:5px 0}
+.mobile-menu{display:none}
+
+.policy-hero{
+  position:relative;overflow:hidden;border-bottom:1px solid rgba(255,105,0,.18);
+}
+.policy-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(5,6,7,.98) 0%,rgba(5,6,7,.9) 50%,rgba(5,6,7,.72) 100%),
+    radial-gradient(circle at 88% 42%,rgba(255,105,0,.22),transparent 30%);
+}
+.policy-hero::after{
+  content:"";position:absolute;inset:auto 0 0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--orange),transparent);opacity:.85;
+}
+.hero-inner{
+  position:relative;z-index:1;width:min(1180px,calc(100% - 32px));margin:auto;
+  padding:88px 0 72px;max-width:1180px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;color:var(--orange2);font-size:13px;
+  text-transform:uppercase;letter-spacing:.14em;font-weight:900;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--orange)}
+h1{
+  margin:0;max-width:850px;font-size:clamp(38px,6.5vw,78px);line-height:.98;letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+h1 .accent{color:var(--orange);text-shadow:0 0 28px rgba(255,105,0,.2)}
+.hero-lead{max-width:760px;color:#b5bbc3;font-size:17px;margin:22px 0 0}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;
+}
+.hero-chip{
+  border:1px solid rgba(255,255,255,.09);background:rgba(12,14,17,.74);border-radius:12px;
+  padding:9px 12px;color:#d6d9dd;font-size:13px;font-weight:700;
+}
+.hero-chip strong{color:var(--orange2)}
+
+.content-shell{
+  width:min(1180px,calc(100% - 32px));margin:0 auto;padding:48px 0 70px;
+  display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start;
+}
+.policy-nav{
+  position:sticky;top:106px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(13,16,20,.92),rgba(8,10,12,.96));
+  border-radius:18px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.28);
+}
+.policy-nav .nav-title{font-size:11px;color:var(--orange2);font-weight:900;text-transform:uppercase;letter-spacing:.14em;margin:2px 0 11px}
+.policy-nav a{
+  display:block;text-decoration:none;color:#aab1ba;padding:8px 9px;border-radius:9px;font-size:13px;font-weight:700;
+}
+.policy-nav a:hover{background:rgba(255,105,0,.08);color:#fff}
+
+.policy-card{
+  border:1px solid var(--line);border-radius:22px;padding:clamp(24px,4vw,46px);
+  background:
+    linear-gradient(180deg,rgba(14,17,21,.96),rgba(8,10,13,.98));
+  box-shadow:0 32px 90px rgba(0,0,0,.3);
+}
+.policy-card>.meta{
+  display:inline-flex;align-items:center;gap:8px;color:#8c949e;font-size:12px;margin-bottom:20px;
+  padding:7px 10px;border:1px solid rgba(255,255,255,.08);border-radius:9px;background:#090b0e;
+}
+.policy-card h1{display:none}
+.policy-card h2{
+  scroll-margin-top:105px;position:relative;margin:35px 0 12px;padding-top:4px;
+  font-size:21px;line-height:1.25;color:#fff;letter-spacing:-.01em;
+}
+.policy-card h2::before{
+  content:"";position:absolute;left:-18px;top:9px;width:4px;height:20px;border-radius:4px;
+  background:linear-gradient(var(--orange2),var(--orange));box-shadow:0 0 14px rgba(255,105,0,.35);
+}
+.policy-card p,.policy-card li{color:#aeb5bd}
+.policy-card strong{color:#f4f5f6}
+.policy-card a{color:var(--orange2);text-decoration-color:rgba(255,154,50,.45)}
+.policy-card ul{padding-left:21px}
+.policy-card li{margin:5px 0}
+.note{
+  margin-top:34px;padding:18px 19px;border:1px solid rgba(255,105,0,.28);
+  background:linear-gradient(135deg,rgba(255,105,0,.08),rgba(255,105,0,.025));
+  border-radius:14px;color:#b9c0c8;
+}
+.note strong{color:var(--orange2)}
+
+.footer-seam{height:1px;background:linear-gradient(90deg,transparent,rgba(255,105,0,.72),transparent)}
+.site-footer{background:#050607;padding:38px 0 22px}
+.footer-inner{width:min(1180px,calc(100% - 32px));margin:auto}
+.footer-main{display:grid;grid-template-columns:240px 1px 1fr;gap:34px;align-items:start}
+.footer-brand img{width:180px;height:auto;display:block}
+.footer-rail{width:1px;height:100%;min-height:145px;background:linear-gradient(transparent,rgba(255,105,0,.5),transparent)}
+.footer-heading{font-weight:900;font-size:18px;margin-bottom:13px}
+.footer-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px 18px}
+.footer-links a{text-decoration:none;color:#9fa6af;font-size:13px;font-weight:700}
+.footer-links a:hover{color:var(--orange2)}
+.footer-bottom{
+  margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;gap:20px;color:#727a84;font-size:12px;
+}
+.footer-bottom a{color:#8c949d}
+
+@media(max-width:900px){
+  .main-nav,.header-phone{display:none}.mobile-menu-toggle{display:block;margin-left:auto}
+  .content-shell{grid-template-columns:1fr}.policy-nav{position:static}
+  .policy-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}
+  .policy-nav .nav-title{grid-column:1/-1}
+  .footer-main{grid-template-columns:1fr}.footer-rail{display:none}.footer-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .header-inner{height:70px;width:min(100% - 22px,1280px)}.brand img{width:118px}
+  .hero-inner{padding:64px 0 54px}.hero-lead{font-size:15px}
+  .content-shell{width:min(100% - 22px,1180px);padding:30px 0 48px}
+  .policy-card{border-radius:16px;padding:22px 18px}
+  .policy-card h2::before{left:-10px}
+  .footer-links{grid-template-columns:1fr}.footer-bottom{flex-direction:column}
+}
 </style>
 </head>
 <body>
-<main class="wrap">
-<div class="top">
-  <div class="brand">КАД <span>БОКС 778</span></div>
-  <a class="back" href="./">← Вернуться на сайт</a>
-</div>
-<article class="card">
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a aria-label="КАД Бокс 778 — на главную" class="brand" href="./"><img alt="КАД Бокс 778" decoding="async" fetchpriority="high" src="./assets/media/96e845fc06623561.webp"/></a>
+    <nav aria-label="Навигация" class="main-nav">
+      <a href="./">Главная</a><a href="./#services">Услуги</a><a href="./#prices">Цены</a><a href="./#contacts">Контакты</a>
+    </nav>
+    <a class="header-phone" href="tel:+79216360402"><strong>+7 921 636-04-02</strong><span>Ежедневно с 9:00 до 21:00</span></a>
+    <button aria-label="Открыть меню" class="mobile-menu-toggle" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="policy-hero">
+  <div class="hero-inner">
+    <div class="eyebrow">КАД Бокс778 • официальный документ</div>
+    <h1>Политика обработки <span class="accent">персональных данных</span></h1>
+    <p class="hero-lead">Правила обработки данных, которые пользователь добровольно передаёт через формы обратной связи и онлайн-записи на сайте КАД Бокс778.</p>
+    <div class="hero-meta">
+      <div class="hero-chip"><strong>Редакция:</strong> 15 сентября 2026</div>
+      <div class="hero-chip"><strong>Оператор:</strong> ООО «ТК РУСЬ»</div>
+      <div class="hero-chip"><strong>ИНН:</strong> 7751280241</div>
+    </div>
+  </div>
+</section>
+
+<div class="content-shell">
+  <aside class="policy-nav" aria-label="Содержание">
+    <div class="nav-title">Содержание</div>
+    <a href="#s1">1. Оператор</a><a href="#s2">2. Данные</a><a href="#s3">3. Цели</a>
+    <a href="#s4">4. Основание</a><a href="#s5">5. Действия</a><a href="#s6">6. Срок</a>
+    <a href="#s7">7. Защита</a><a href="#s8">8. Отзыв</a><a href="#s9">9. Изменение</a>
+  </aside>
+  <article class="policy-card">
+
 <h1>Политика обработки персональных данных</h1>
 <div class="meta">Редакция от 15 сентября 2026 года</div>
 
 <p>Настоящая Политика определяет порядок обработки персональных данных посетителей сайта автосервиса <strong>«КАД Бокс778»</strong>, оператором которого является <strong>ООО «ТК РУСЬ»</strong>, которые добровольно направляют свои данные через формы обратной связи и онлайн-записи.</p>
 
-<h2>1. Оператор и контакты</h2>
+<h2 id="s1">1. Оператор и контакты</h2>
 <p><strong>Оператор персональных данных:</strong> ООО «ТК РУСЬ» (бренд «КАД Бокс778»).</p>
 <p><strong>ИНН:</strong> 7751280241<br/>
 <strong>ОГРН:</strong> 1237700847097<br/>
@@ -49,7 +215,7 @@ ul{padding-left:22px}
 <p><strong>Адрес проведения работ:</strong> Ленинградская область, д. Порошкино, ул. Богородская, 3Б, бокс 7.</p>
 <p><strong>Телефон:</strong> <a href="tel:+79216360402">+7-921-636-04-02</a>.</p>
 
-<h2>2. Какие данные обрабатываются</h2>
+<h2 id="s2">2. Какие данные обрабатываются</h2>
 <ul>
 <li>имя;</li>
 <li>номер телефона;</li>
@@ -58,7 +224,7 @@ ul{padding-left:22px}
 <li>технические сведения, необходимые для защиты формы от злоупотреблений и обеспечения её работы.</li>
 </ul>
 
-<h2>3. Цели обработки</h2>
+<h2 id="s3">3. Цели обработки</h2>
 <ul>
 <li>обработка заявки пользователя;</li>
 <li>обратная связь и уточнение деталей ремонта или обслуживания;</li>
@@ -66,26 +232,53 @@ ul{padding-left:22px}
 <li>предотвращение спама и технических злоупотреблений.</li>
 </ul>
 
-<h2>4. Основание обработки</h2>
+<h2 id="s4">4. Основание обработки</h2>
 <p>Персональные данные обрабатываются на основании согласия пользователя, выраженного путём установки отметки в соответствующем поле формы и последующей отправки заявки.</p>
 
-<h2>5. Действия с персональными данными</h2>
+<h2 id="s5">5. Действия с персональными данными</h2>
 <p>В рамках указанных целей могут осуществляться сбор, запись, систематизация, накопление, хранение, уточнение, извлечение, использование, передача привлечённым техническим сервисам в объёме, необходимом для обработки заявки, блокирование и удаление персональных данных.</p>
 
-<h2>6. Срок обработки</h2>
+<h2 id="s6">6. Срок обработки</h2>
 <p>Данные обрабатываются до достижения целей обработки, отзыва согласия либо наступления иных оснований для прекращения обработки, если более длительное хранение не требуется законодательством.</p>
 
-<h2>7. Защита данных</h2>
+<h2 id="s7">7. Защита данных</h2>
 <p>Оператор принимает разумные организационные и технические меры для ограничения несанкционированного доступа к данным. Доступ к заявкам предоставляется только лицам, которым он необходим для работы с обращениями клиентов.</p>
 
-<h2>8. Отзыв согласия и обращения</h2>
+<h2 id="s8">8. Отзыв согласия и обращения</h2>
 <p>Пользователь вправе обратиться по контактам, указанным на сайте, по вопросам обработки своих персональных данных, их уточнения или удаления, а также для отзыва ранее предоставленного согласия.</p>
 
-<h2>9. Изменение Политики</h2>
+<h2 id="s9">9. Изменение Политики</h2>
 <p>Политика может обновляться при изменении используемых сервисов, порядка работы сайта или применимых требований. Актуальная версия публикуется по постоянной ссылке на сайте.</p>
 
 <div class="note"><strong>Важно:</strong> отправляя форму, пользователь подтверждает, что ознакомился с настоящей Политикой и добровольно предоставляет ООО «ТК РУСЬ» указанные в форме данные для обработки своей заявки.</div>
-</article>
+
+  </article>
+</div>
 </main>
+
+<div aria-hidden="true" class="footer-seam"></div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-main">
+      <div><a class="footer-brand" href="#top" aria-label="Наверх"><img src="./assets/media/96e845fc06623561.webp" alt="КАД Бокс 778"></a></div>
+      <div class="footer-rail" aria-hidden="true"></div>
+      <div>
+        <div class="footer-heading">Навигация и услуги</div>
+        <div class="footer-links">
+          <a href="./">Главная</a><a href="./technical-service/">Техническое обслуживание</a><a href="./engine-repair/">Двигатель и навесное</a>
+          <a href="./transmission-repair/">Трансмиссия</a><a href="./suspension-repair/">Ходовая и подвеска</a><a href="./brake-repair/">Тормозная система</a>
+          <a href="./steering-rack-repair/">Рулевые рейки</a><a href="./turbo-repair/">Турбины</a><a href="./tire-service/">Шиномонтаж</a>
+          <a href="./auto-electrician/">Автоэлектрика</a><a href="./chip-tuning/">Чип-тюнинг</a><a href="./car-wash/">Автомойка</a>
+          <a href="./cooling-system/">Система охлаждения</a><a href="./car-ac-service/">Кондиционер и климат-контроль</a><a href="./fuel-system/">Топливная система</a>
+          <a href="./exhaust-system/">Выхлопная система</a><a href="./welding-services/">Сварочные работы</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2024–2026 КАД БОКС 778. Все права защищены.</div>
+      <div>ООО «ТК РУСЬ» · ИНН 7751280241 · <a href="./privacy-policy.html">Политика обработки персональных данных</a></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
