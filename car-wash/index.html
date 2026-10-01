@@ -1816,8 +1816,8 @@ a.technical-contact-row:hover .technical-contact-arrow{
 }
 </style>
 
-<style id="car-wash-hero-content-v100">
-/* Approved V100 HERO system for chip tuning. */
+<style id="car-wash-hero-v100">
+/* Approved V100 HERO system for car wash. */
 .site-header .header-actions{gap:0}
 
 .hero{
@@ -1826,8 +1826,16 @@ a.technical-contact-row:hover .technical-contact-arrow{
   padding:132px 0 84px;
   border-bottom:0;
   background:
-    radial-gradient(circle at 88% 14%,rgba(255,122,0,.10),transparent 31%),
-    linear-gradient(180deg,#0a0c10 0%,#08090c 100%)!important;
+    linear-gradient(
+      90deg,
+      rgba(5,7,10,.96) 0%,
+      rgba(5,7,10,.91) 18%,
+      rgba(5,7,10,.81) 36%,
+      rgba(5,7,10,.62) 55%,
+      rgba(5,7,10,.34) 74%,
+      rgba(5,7,10,.08) 100%
+    ),
+    url('../assets/media/car-wash-hero.webp') center center / cover no-repeat!important;
 }
 .hero::before,
 .hero::after{
@@ -2032,7 +2040,7 @@ a.technical-contact-row:hover .technical-contact-arrow{
   transform:translateX(3px);
 }
 
-.hero-art{display:block!important;position:relative;z-index:1}
+.hero-art{display:none!important}
 
 @media(max-width:1040px){
   .hero{background-position:62% center!important}
@@ -2062,7 +2070,7 @@ a.technical-contact-row:hover .technical-contact-arrow{
         rgba(5,7,10,.75) 68%,
         rgba(5,7,10,.38) 100%
       ),
-      url('../assets/media/chip-tuning-hero.webp') 64% center / cover no-repeat!important;
+      url('../assets/media/car-wash-hero.webp') 64% center / cover no-repeat!important;
   }
   .hero-address{margin-left:34px;margin-bottom:16px;font-size:12px}
   .hero h1{font-size:clamp(35px,10.8vw,43px)}
@@ -2072,14 +2080,7 @@ a.technical-contact-row:hover .technical-contact-arrow{
 }
 </style>
 
-<style id="car-wash-hero-art-preserve">
-.hero{position:relative;overflow:hidden}
-.hero-grid{position:relative}
-.hero-copy{position:relative;z-index:4}
-.hero-art{z-index:1}
-.hero-art img{display:block;max-width:100%;height:auto}
-@media(max-width:900px){.hero-copy{padding-bottom:24px}}
-</style>
+
 <style id="car-wash-hero-cta-fix-v1">
 .hero-actions{grid-template-columns:300px 220px}
 .hero-actions .btn{white-space:nowrap}
