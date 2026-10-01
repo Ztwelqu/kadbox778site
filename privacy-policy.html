@@ -568,6 +568,77 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 </style>
+
+<style id="privacy-service-background-v1">
+.post-hero-background{
+  position:relative;
+  isolation:isolate;
+  background-color:#06080b;
+  background-image:
+    linear-gradient(180deg,rgba(5,7,10,.18),rgba(5,7,10,.28)),
+    url("./assets/media/technical-service-content-bg-hq.webp");
+  background-position:center top,center top;
+  background-size:cover,cover;
+  background-repeat:no-repeat,no-repeat;
+}
+.post-hero-background::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,#05070a 0,rgba(5,7,10,.82) 70px,rgba(5,7,10,.30) 230px,rgba(5,7,10,0) 430px),
+    linear-gradient(0deg,#040609 0,rgba(4,6,9,.80) 90px,rgba(4,6,9,.28) 260px,rgba(4,6,9,0) 470px);
+}
+.post-hero-background > .services-divider,
+.post-hero-background > .policy-shell{
+  position:relative;
+  z-index:1;
+}
+.services-divider{
+  position:relative;
+  z-index:8;
+  width:min(1480px,calc(100% - 104px));
+  margin:0 auto;
+  height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  opacity:.92;
+  pointer-events:none;
+}
+.services-divider::before,
+.services-divider::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,rgba(255,138,24,0),rgba(255,138,24,.38),rgba(255,138,24,0));
+}
+.services-divider span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#ff8a18;
+  box-shadow:0 0 0 2px rgba(255,138,24,.10),0 0 16px rgba(255,138,24,.65);
+}
+.privacy-bottom-divider{
+  margin-top:0;
+}
+@media(max-width:860px){
+  .post-hero-background{
+    background-position:center top,center top;
+    background-size:cover,cover;
+  }
+  .post-hero-background::before{
+    background:
+      linear-gradient(180deg,#05070a 0,rgba(5,7,10,.82) 55px,rgba(5,7,10,.30) 180px,rgba(5,7,10,0) 330px),
+      linear-gradient(0deg,#040609 0,rgba(4,6,9,.80) 70px,rgba(4,6,9,.24) 210px,rgba(4,6,9,0) 360px);
+  }
+  .services-divider{width:calc(100% - 32px);gap:12px}
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top"><div class="header-inner"><a aria-label="КАД Бокс 778 — на главную" class="brand" href="./"><img alt="КАД Бокс 778" decoding="async" fetchpriority="high" height="262" src="./assets/media/96e845fc06623561.webp" width="480"/></a><nav aria-label="Навигация по сайту" class="main-nav"><a href="./"><span class="main-nav-label">Главная</span></a><a href="./#services"><span class="main-nav-label">Работы</span></a><a href="./#prices"><span class="main-nav-label">Цены</span></a><a href="./#faq"><span class="main-nav-label">Вопросы</span></a><a href="./#contacts"><span class="main-nav-label">Запись</span></a></nav><div class="header-actions"><a aria-label="Позвонить для записи: +7 921 636-04-02" class="contact-card" href="tel:+79216360402"><img alt="" aria-hidden="true" class="phone-icon" decoding="async" height="112" loading="lazy" src="./assets/media/8ba64eaabc30aeba.webp" width="107"/><span class="contact-copy"><span class="phone-number">+7 921 636-04-02</span><span class="worktime">Ежедневно с 9:00 до 21:00</span></span></a></div><button aria-controls="mobileNavPanel" aria-expanded="false" aria-label="Открыть меню" class="mobile-menu-toggle" type="button"><span></span><span></span><span></span></button></div><div aria-hidden="true" class="mobile-menu-panel" id="mobileNavPanel"><div class="mobile-menu-kicker">Навигация</div><nav aria-label="Мобильная навигация" class="mobile-menu-links"><a href="./">Главная</a><a href="./#services">Работы</a><a href="./#prices">Цены</a><a href="./#faq">Вопросы</a><a href="./#contacts">Запись</a></nav><div class="mobile-menu-meta"><div><strong>+7 921 636-04-02</strong>Ежедневно с 9:00 до 21:00</div><div><strong>Богородская 3Б, Бокс №7</strong>Санкт-Петербург • на КАДе</div></div></div></header>
@@ -585,6 +656,9 @@ h1,h2,h3,h4,h5,h6{
     </div>
   </div>
 </section>
+
+<div class="post-hero-background">
+<div aria-hidden="true" class="services-divider"><span></span></div>
 
 <div class="policy-shell">
   <aside class="policy-nav" aria-label="Содержание">
@@ -647,6 +721,9 @@ h1,h2,h3,h4,h5,h6{
 <div class="note"><strong>Важно:</strong> отправляя форму, пользователь подтверждает, что ознакомился с настоящей Политикой и добровольно предоставляет ООО «ТК РУСЬ» указанные в форме данные для обработки своей заявки.</div>
 
   </article>
+</div>
+
+<div aria-hidden="true" class="services-divider privacy-bottom-divider"><span></span></div>
 </div>
 </main>
 
