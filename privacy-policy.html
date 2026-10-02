@@ -13,7 +13,14 @@
 *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(circle at 14% 9%,rgba(255,122,0,.08),transparent 26%),radial-gradient(circle at 88% 28%,rgba(255,122,0,.05),transparent 24%),var(--bg);color:var(--text);line-height:1.62}
 a{text-decoration:none}main{padding-top:94px}
-.policy-hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,138,24,.16);background:linear-gradient(90deg,rgba(5,7,10,.98),rgba(5,7,10,.75)),radial-gradient(circle at 86% 32%,rgba(255,122,0,.14),transparent 32%),#05070a}
+.policy-hero{
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,138,24,.16);
+  background:
+    linear-gradient(90deg,rgba(5,7,10,.97) 0%,rgba(5,7,10,.86) 42%,rgba(5,7,10,.55) 100%),
+    url("./assets/media/privacy-policy-hero.webp") center center / cover no-repeat;
+}
 .policy-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,138,24,.55),transparent)}
 .hero-inner{position:relative;z-index:1;width:min(1320px,calc(100% - 44px));margin:0 auto;padding:92px 0 80px}
 .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--orange2);font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.eyebrow::before{content:"";width:34px;height:1px;background:#ff7a00}
