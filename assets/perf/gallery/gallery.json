@@ -1,5 +1,8 @@
 {
   "images": [
+    "assets/perf/gallery/BMW.webp",
+    "assets/perf/gallery/Changan UNI-T.webp",
+    "assets/perf/gallery/Mercedes.webp",
     "assets/perf/gallery/work_01.webp",
     "assets/perf/gallery/work_02.webp",
     "assets/perf/gallery/work_03.webp",
@@ -17,6 +20,13 @@
     "assets/perf/gallery/work_15.webp",
     "assets/perf/gallery/work_16.webp",
     "assets/perf/gallery/work_17.webp",
-    "assets/perf/gallery/work_18.webp"
+    "assets/perf/gallery/work_18.webp",
+    "assets/perf/gallery/А Пришёл Миша.webp",
+    "assets/perf/gallery/А этот тут что забыл.webp",
+    "assets/perf/gallery/Бонтли.webp",
+    "assets/perf/gallery/Все никак не уедет.webp",
+    "assets/perf/gallery/Ждут Серегу.webp",
+    "assets/perf/gallery/Живём.webp",
+    "assets/perf/gallery/Квадропоптер.webp"
   ]
 }
