@@ -5369,12 +5369,12 @@ textarea:focus-visible{
 <p class="works-subtitle">Реальные автомобили и рабочие процессы КАД Бокс778</p>
 </div>
 <button class="works-all-btn" id="openWorksGallery" type="button">
-<span>Смотреть все 18 работ</span><span aria-hidden="true">→</span>
+<span id="worksGalleryButtonLabel">Смотреть все работы</span><span aria-hidden="true">→</span>
 </button>
 </div>
 <div class="works-stage">
 <button aria-label="Открыть фото работы 1" class="work-tile" data-work-index="0" type="button">
-<img alt="Работа КАД Бокс778 — автомобиль на подъёмнике" decoding="async" height="1280" loading="lazy" src="assets/media/6c632a1e73124100.webp" width="960"/>
+<img alt="Работа КАД Бокс778 — автомобиль на подъёмнике" decoding="async" height="1280" loading="lazy" src="assets/perf/gallery/work_01.webp" width="960"/>
 <span class="work-tile-index">Работа 01</span>
 </button>
 <button aria-label="Открыть фото работы 2" class="work-tile" data-work-index="1" type="button">
@@ -5962,36 +5962,17 @@ loadFullPriceData();
 <img alt="Работа КАД Бокс778" decoding="async" height="1280" id="worksModalImage" loading="lazy" src="assets/media/6c632a1e73124100.webp" width="960"/>
 <button aria-label="Следующая фотография" class="works-modal-arrow next" id="worksNext" type="button">›</button>
 </div>
-<div class="works-thumbs" id="worksThumbs">
-<button class="works-thumb active" data-thumb-index="0" type="button"><img alt="Работа КАД Бокс778 — фото 01" decoding="async" height="1280" loading="lazy" src="assets/media/6c632a1e73124100.webp" width="960"/></button>
-<button class="works-thumb" data-thumb-index="1" type="button"><img alt="Работа КАД Бокс778 — фото 02" decoding="async" height="960" loading="lazy" src="assets/media/1b014aedb04bf855.webp" width="1280"/></button>
-<button class="works-thumb" data-thumb-index="2" type="button"><img alt="Работа КАД Бокс778 — фото 03" decoding="async" height="1280" loading="lazy" src="assets/media/436dca41c11b0ecb.webp" width="960"/></button>
-<button class="works-thumb" data-thumb-index="3" type="button"><img alt="Работа КАД Бокс778 — фото 04" decoding="async" height="960" loading="lazy" src="assets/media/f788a7be6a1ad1cf.webp" width="1280"/></button>
-<button class="works-thumb" data-thumb-index="4" type="button"><img alt="Работа КАД Бокс778 — фото 05" decoding="async" height="960" loading="lazy" src="assets/media/9b5963d8e2c8b902.webp" width="1280"/></button>
-<button class="works-thumb" data-thumb-index="5" type="button"><img alt="Работа КАД Бокс778 — фото 06" decoding="async" loading="lazy" src="assets/perf/gallery/work_06.webp"/></button>
-<button class="works-thumb" data-thumb-index="6" type="button"><img alt="Работа КАД Бокс778 — фото 07" decoding="async" loading="lazy" src="assets/perf/gallery/work_07.webp"/></button>
-<button class="works-thumb" data-thumb-index="7" type="button"><img alt="Работа КАД Бокс778 — фото 08" decoding="async" loading="lazy" src="assets/perf/gallery/work_08.webp"/></button>
-<button class="works-thumb" data-thumb-index="8" type="button"><img alt="Работа КАД Бокс778 — фото 09" decoding="async" loading="lazy" src="assets/perf/gallery/work_09.webp"/></button>
-<button class="works-thumb" data-thumb-index="9" type="button"><img alt="Работа КАД Бокс778 — фото 10" decoding="async" loading="lazy" src="assets/perf/gallery/work_10.webp"/></button>
-<button class="works-thumb" data-thumb-index="10" type="button"><img alt="Работа КАД Бокс778 — фото 11" decoding="async" loading="lazy" src="assets/perf/gallery/work_11.webp"/></button>
-<button class="works-thumb" data-thumb-index="11" type="button"><img alt="Работа КАД Бокс778 — фото 12" decoding="async" loading="lazy" src="assets/perf/gallery/work_12.webp"/></button>
-<button class="works-thumb" data-thumb-index="12" type="button"><img alt="Работа КАД Бокс778 — фото 13" decoding="async" loading="lazy" src="assets/perf/gallery/work_13.webp"/></button>
-<button class="works-thumb" data-thumb-index="13" type="button"><img alt="Работа КАД Бокс778 — фото 14" decoding="async" loading="lazy" src="assets/perf/gallery/work_14.webp"/></button>
-<button class="works-thumb" data-thumb-index="14" type="button"><img alt="Работа КАД Бокс778 — фото 15" decoding="async" loading="lazy" src="assets/perf/gallery/work_15.webp"/></button>
-<button class="works-thumb" data-thumb-index="15" type="button"><img alt="Работа КАД Бокс778 — фото 16" decoding="async" loading="lazy" src="assets/perf/gallery/work_16.webp"/></button>
-<button class="works-thumb" data-thumb-index="16" type="button"><img alt="Работа КАД Бокс778 — фото 17" decoding="async" loading="lazy" src="assets/perf/gallery/work_17.webp"/></button>
-<button class="works-thumb" data-thumb-index="17" type="button"><img alt="Работа КАД Бокс778 — фото 18" decoding="async" loading="lazy" src="assets/perf/gallery/work_18.webp"/></button>
-</div>
+<div class="works-thumbs" id="worksThumbs"></div>
 </div>
 </div>
 <script id="v65-works-js">
 (() => {
-  const images = [
-    'assets/media/6c632a1e73124100.webp',
-    'assets/media/1b014aedb04bf855.webp',
-    'assets/media/436dca41c11b0ecb.webp',
-    'assets/media/f788a7be6a1ad1cf.webp',
-    'assets/media/9b5963d8e2c8b902.webp',
+  const fallbackImages = [
+    'assets/perf/gallery/work_01.webp',
+    'assets/perf/gallery/work_02.webp',
+    'assets/perf/gallery/work_03.webp',
+    'assets/perf/gallery/work_04.webp',
+    'assets/perf/gallery/work_05.webp',
     'assets/perf/gallery/work_06.webp',
     'assets/perf/gallery/work_07.webp',
     'assets/perf/gallery/work_08.webp',
@@ -6006,10 +5987,14 @@ loadFullPriceData();
     'assets/perf/gallery/work_17.webp',
     'assets/perf/gallery/work_18.webp'
   ];
+
   const modal = document.getElementById('worksModal');
   const modalImage = document.getElementById('worksModalImage');
-  const thumbs = [...document.querySelectorAll('[data-thumb-index]')];
+  const thumbsWrap = document.getElementById('worksThumbs');
   const previewTiles = [...document.querySelectorAll('[data-work-index]')];
+  const galleryButtonLabel = document.getElementById('worksGalleryButtonLabel');
+
+  let images = [...fallbackImages];
   let current = 0;
 
   function randomPreviewIndexes(count=5){
@@ -6039,16 +6024,34 @@ loadFullPriceData();
     });
   }
 
-  renderRandomPreviews();
+  function renderThumbs(){
+    if(!thumbsWrap) return;
+    thumbsWrap.innerHTML = images.map((src, index) => {
+      const number = String(index + 1).padStart(2, '0');
+      return '<button class="works-thumb' + (index === current ? ' active' : '') + '" data-thumb-index="' + index + '" type="button">' +
+        '<img alt="Работа КАД Бокс778 — фото ' + number + '" decoding="async" loading="lazy" src="' + src + '"/>' +
+      '</button>';
+    }).join('');
+  }
+
+  function updateGalleryCount(){
+    if(galleryButtonLabel){
+      galleryButtonLabel.textContent = 'Смотреть все ' + images.length + ' работ';
+    }
+  }
 
   function show(index){
     current = (index + images.length) % images.length;
     if(modalImage) modalImage.src = images[current];
-    thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === current));
+    thumbsWrap?.querySelectorAll('[data-thumb-index]').forEach((thumb, i) => {
+      thumb.classList.toggle('active', i === current);
+    });
+    const active = thumbsWrap?.querySelector('[data-thumb-index="' + current + '"]');
+    active?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
 
   function open(index=0){
-    if(!modal) return;
+    if(!modal || !images.length) return;
     show(index);
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden','false');
@@ -6062,14 +6065,35 @@ loadFullPriceData();
     document.body.classList.remove('works-modal-open');
   }
 
+  async function loadGallery(){
+    try{
+      const response = await fetch('assets/perf/gallery/gallery.json', {cache:'no-store'});
+      if(!response.ok) throw new Error('Gallery manifest HTTP ' + response.status);
+      const data = await response.json();
+      if(Array.isArray(data.images) && data.images.length){
+        images = data.images.filter(item => typeof item === 'string' && item.trim());
+      }
+    }catch(error){
+      console.warn('Works gallery manifest unavailable, using fallback list.', error);
+    }
+    current = 0;
+    updateGalleryCount();
+    renderThumbs();
+    renderRandomPreviews();
+  }
+
   document.getElementById('openWorksGallery')?.addEventListener('click', () => open(0));
-  document.querySelectorAll('[data-work-index]').forEach(tile => {
+  previewTiles.forEach(tile => {
     tile.addEventListener('click', () => open(Number(tile.dataset.workIndex || 0)));
   });
   document.getElementById('closeWorksModal')?.addEventListener('click', close);
   document.getElementById('worksPrev')?.addEventListener('click', () => show(current - 1));
   document.getElementById('worksNext')?.addEventListener('click', () => show(current + 1));
-  thumbs.forEach(thumb => thumb.addEventListener('click', () => show(Number(thumb.dataset.thumbIndex || 0))));
+  thumbsWrap?.addEventListener('click', event => {
+    const thumb = event.target.closest('[data-thumb-index]');
+    if(!thumb) return;
+    show(Number(thumb.dataset.thumbIndex || 0));
+  });
   modal?.addEventListener('click', e => { if(e.target === modal) close(); });
   document.addEventListener('keydown', e => {
     if(!modal?.classList.contains('is-open')) return;
@@ -6077,6 +6101,8 @@ loadFullPriceData();
     if(e.key === 'ArrowLeft') show(current - 1);
     if(e.key === 'ArrowRight') show(current + 1);
   });
+
+  loadGallery();
 })();
 </script>
 <script id="v100-contact-form">
