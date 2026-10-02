@@ -1,0 +1,53 @@
+name: Update works gallery manifest
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "assets/perf/gallery/*.webp"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-gallery-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build gallery manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          folder = Path("assets/perf/gallery")
+          files = sorted(
+              [p for p in folder.glob("*.webp") if p.is_file()],
+              key=lambda p: p.name.lower()
+          )
+          data = {"images": [p.as_posix() for p in files]}
+          (folder / "gallery.json").write_text(
+              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+          print(f"Found {len(files)} gallery images")
+          PY
+
+      - name: Commit manifest when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/perf/gallery/gallery.json; then
+            echo "Gallery manifest is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/perf/gallery/gallery.json
+          git commit -m "Update works gallery manifest"
+          git push
