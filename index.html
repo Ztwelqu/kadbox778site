@@ -6009,7 +6009,37 @@ loadFullPriceData();
   const modal = document.getElementById('worksModal');
   const modalImage = document.getElementById('worksModalImage');
   const thumbs = [...document.querySelectorAll('[data-thumb-index]')];
+  const previewTiles = [...document.querySelectorAll('[data-work-index]')];
   let current = 0;
+
+  function randomPreviewIndexes(count=5){
+    const pool = images.map((_, index) => index);
+    for(let i = pool.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    return pool.slice(0, Math.min(count, pool.length));
+  }
+
+  function renderRandomPreviews(){
+    const selected = randomPreviewIndexes(previewTiles.length);
+    previewTiles.forEach((tile, slot) => {
+      const imageIndex = selected[slot];
+      if(imageIndex == null) return;
+      const img = tile.querySelector('img');
+      const label = tile.querySelector('.work-tile-index');
+      const number = String(imageIndex + 1).padStart(2, '0');
+      tile.dataset.workIndex = String(imageIndex);
+      tile.setAttribute('aria-label', 'Открыть фото работы ' + (imageIndex + 1));
+      if(img){
+        img.src = images[imageIndex];
+        img.alt = 'Работа КАД Бокс778 — фото ' + number;
+      }
+      if(label) label.textContent = 'Работа ' + number;
+    });
+  }
+
+  renderRandomPreviews();
 
   function show(index){
     current = (index + images.length) % images.length;
